@@ -1,0 +1,29 @@
+@import './Zonixzvariables/Zonixzvariables.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+
+  * {
+    font-family: 'Nexa', sans-serif !important;
+  }
+}
+
+.container {
+  max-width: 1640px;
+  margin: 0 auto;
+  padding: 0 1.2rem;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  display: none;
+}
