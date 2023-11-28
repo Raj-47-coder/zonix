@@ -1,9 +1,21 @@
-import React from "react";
-import { Box, TextField, Typography } from "@mui/material";
+import React, { useState } from "react";
+import { Box, Button, TextField, Typography } from "@mui/material";
 import { Logo, Pin, Magnifyglass, User, Heart, CartIcon, Humburgar } from "../../Zonixzsvgs/Zonixzsvgs";
 import "./Header.scss";
 
 export default function Header() {
+  const [handleSidebar, setHandleSidebar] = useState('');
+  const [handleunlayer, setHandlelayout] = useState('');
+
+  const openSidebar = () => {
+    if (handleSidebar === '') {
+      setHandleSidebar('open')
+      setHandlelayout('open')
+    } else {
+      setHandleSidebar('')
+      setHandlelayout('')
+    }
+  }
   return (
     <>
       <Box component={"div"} className="header">
@@ -56,12 +68,40 @@ export default function Header() {
                 </Box>
               </Box>
               <Box component={"div"} className="status_bar">
-                <Humburgar />
+                <Button className="humbargur" onClick={openSidebar}>
+                  <Humburgar />
+                </Button>
               </Box>
             </Box>
           </Box>
         </Box>
+
+        <Box component={'div'} className={`header_menu ${handleSidebar}`}>
+          <Box component={'div'} className='menu_title'>
+            <Typography component={'div'} className='logo'><Logo /></Typography>
+            <Button className='close_button' onClick={openSidebar}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.57 5.93005L3.5 12.0001L9.57 18.0701" stroke="#FFFFFF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M20.5 12H3.66998" stroke="#FFFFFF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </Button>
+          </Box>
+          <Box component={"div"} className="container">
+            <Box component={'div'} className='menu_items'>
+              <Typography component={'a'} href='#'><Humburgar />All</Typography>
+              <Typography component={'a'} href='#'>SELL</Typography>
+              <Typography component={'a'} href='#'>BEST SELLERS</Typography>
+              <Typography component={'a'} href='#'>TODAY’S DEALS</Typography>
+              <Typography component={'a'} href='#'>CUSTOMER SERVICE</Typography>
+              <Typography component={'a'} href='#'>NEW RELEASES</Typography>
+              <Typography component={'a'} href='#'>GIFT IDEAS</Typography>
+              <Typography component={'a'} href='#'>ABOUT US</Typography>
+            </Box>
+          </Box>
+        </Box>
       </Box>
+
+      <Box component={'div'} className={`unlayer ${handleunlayer}`} onClick={openSidebar}></Box>
     </>
   );
 }
