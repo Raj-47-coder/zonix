@@ -1,0 +1,53 @@
+.benifits {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3.3rem;
+  margin-top: 3.2rem;
+
+  .benifits_item {
+    background-color: var(--theme_light);
+    padding: 2.4rem;
+    display: flex;
+    align-items: center;
+
+    .icon {
+      height: 3.8rem;
+      width: 3.8rem;
+      margin-right: 2rem;
+
+      svg {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .content {
+      width: calc(100% - 3.8rem);
+
+      h6 {
+        font-size: 1.4rem;
+        color: var(--theme_dark);
+        font-weight: 500;
+      }
+
+      p {
+        font-size: 1.4rem;
+        color: var(--theme_darkgrey);
+      }
+    }
+
+    @media screen and (max-width:1199px) {
+      padding: 1.8rem;
+    }
+  }
+
+  @media screen and (max-width:991px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  @media screen and (max-width:575px) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
+}
