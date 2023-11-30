@@ -1,14 +1,12 @@
 import React from "react";
 import Header from "../Header/Header";
-import Benifits from '../Benifits/Benifits';
-import Categories from '../Categories/Categories';
+import Home from "../Mainpages/Home";
 
 export default function Mainlayout() {
   return (
     <>
       <Header />
-      <Benifits />
-      <Categories />
+      <Home />
     </>
   );
 }

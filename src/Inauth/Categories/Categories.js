@@ -1,31 +1,80 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import { Delivery, Guarantee, Payment, Support } from "../../Zonixzsvgs/Zonixzsvgs";
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import concert from '../../images/concert.png';
+import steel from '../../images/steel.png';
+import wood from '../../images/wood.png';
+import brick from '../../images/brick.png';
+import cement from '../../images/cement.png';
+import metal from '../../images/metal.png';
+import { ArrowRight } from '../../Zonixzsvgs/Zonixzsvgs'
 import 'swiper/css';
 import './Categories.scss';
 
-function Benifits() {
+function Categories() {
+
+  const categoriesList = [
+    { img: concert, title: 'Concert' },
+    { img: steel, title: 'Steel' },
+    { img: wood, title: 'Wood' },
+    { img: brick, title: 'Brick' },
+    { img: cement, title: 'Cement' },
+    { img: metal, title: 'Metal' },
+    { img: concert, title: 'Concert' },
+    { img: steel, title: 'Steel' },
+    { img: wood, title: 'Wood' },
+    { img: brick, title: 'Brick' },
+    { img: cement, title: 'Cement' },
+    { img: metal, title: 'Metal' },
+  ]
   return (
     <>
       <Box component={'div'} className='container'>
+        <Box component={'div'} className='section_title'>
+          <Typography component={'h2'}>Shop by Category</Typography>
+          <Typography component={'a'} href='#'>Browse All Category <ArrowRight /></Typography>
+        </Box>
         <Swiper
-          spaceBetween={50}
-          slidesPerView={6}
-          onSlideChange={() => console.log('slide change')}
-          onSwiper={(swiper) => console.log(swiper)}
+          spaceBetween={30}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          loop={true}
+          modules={[Autoplay, Pagination, Navigation]}
+          breakpoints={{
+            375: {
+              slidesPerView: 2,
+            },
+            575: {
+              slidesPerView: 2.5,
+            },
+            768: {
+              slidesPerView: 4,
+            },
+            1200: {
+              slidesPerView: 5,
+            },
+            1350: {
+              slidesPerView: 6,
+            },
+          }}
         >
-          <SwiperSlide>Slide 1</SwiperSlide>
-          <SwiperSlide>Slide 2</SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
+          {categoriesList.map((items, i) => (
+            <SwiperSlide key={i}>
+              <Box component={'div'} className='category_card'>
+                <Box component={"div"} className='card_img'>
+                  <img src={items.img} alt={items.img} />
+                </Box>
+                <Typography component={'p'}>{items.title}</Typography>
+              </Box>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </Box>
     </>
   );
 }
 
-export default Benifits;
+export default Categories;
