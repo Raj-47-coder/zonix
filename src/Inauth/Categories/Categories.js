@@ -40,10 +40,8 @@ function Categories() {
         </Box>
         <Swiper
           spaceBetween={30}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
+          autoplay={true}
+          speed={1000}
           loop={true}
           modules={[Autoplay, Pagination, Navigation]}
           breakpoints={{

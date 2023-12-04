@@ -4,6 +4,7 @@ import Benifits from '../Benifits/Benifits';
 import Categories from '../Categories/Categories';
 import Bestdeals from '../Bestdeals/Bestdeals';
 import Brands from '../Brands/Brands';
+import Featuresproducts from '../Featuresproducts/Featuresproducts';
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
       <Categories />
       <Bestdeals />
       <Brands />
+      <Featuresproducts />
     </>
   );
 }

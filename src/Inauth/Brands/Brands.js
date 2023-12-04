@@ -42,10 +42,8 @@ function Brands() {
 
       <Swiper
         spaceBetween={20}
-        autoplay={{
-          delay: 100,
-          disableOnInteraction: false,
-        }}
+        autoplay={true}
+        speed={1000}
         centeredSlides={true}
         loop={true}
         modules={[Autoplay, Pagination, Navigation]}
@@ -79,7 +77,7 @@ function Brands() {
             </Box>
           </SwiperSlide>
         ))}
-      </Swiper>
+      </Swiper >
     </>
   );
 }

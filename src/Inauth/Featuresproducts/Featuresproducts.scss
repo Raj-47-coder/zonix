@@ -1,0 +1,14 @@
+.product_box {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.6rem;
+
+  @media screen and (max-width:1299px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  @media screen and (max-width:991px) {
+    display: flex;
+    overflow-x: auto;
+  }
+}
