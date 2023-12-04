@@ -33,7 +33,10 @@ function Categories() {
       <Box component={'div'} className='container'>
         <Box component={'div'} className='section_title'>
           <Typography component={'h2'}>Shop by Category</Typography>
-          <Typography component={'a'} href='#'>Browse All Category <ArrowRight /></Typography>
+          <Typography component={'a'} href='#'>
+            <Typography component={'span'}>Browse All Category</Typography>
+            <ArrowRight />
+          </Typography>
         </Box>
         <Swiper
           spaceBetween={30}

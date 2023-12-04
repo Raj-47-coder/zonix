@@ -120,6 +120,11 @@
         height: 1.6rem;
         width: 1.6rem;
       }
+
+      @media screen and (max-width:767px) {
+        height: 1.2rem;
+        width: 1.2rem;
+      }
     }
   }
 }
