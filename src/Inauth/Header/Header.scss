@@ -1,5 +1,8 @@
 .header {
   background-image: var(--theme_primarylinear);
+  position: sticky;
+  top: 0;
+  z-index: 99;
 
   .header_top {
     display: flex;
@@ -94,7 +97,7 @@
           height: auto;
 
           @media screen and (max-width:991px) {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             padding: 1rem;
             padding-left: 4rem;
           }

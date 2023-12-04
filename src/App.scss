@@ -94,4 +94,8 @@ a {
       margin-left: 1rem;
     }
   }
+
+  @media screen and (max-width:991px) {
+    margin: 3rem 0 !important;
+  }
 }

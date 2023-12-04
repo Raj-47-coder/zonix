@@ -8,15 +8,8 @@
   }
 
   @media screen and (max-width:991px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  @media screen and (max-width:767px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media screen and (max-width:575px) {
-    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    overflow-x: auto;
   }
 }
 
@@ -127,8 +120,12 @@
         margin-right: 0.5rem;
       }
 
-      @media screen and (max-width:767px) {
+      @media screen and (max-width:991px) {
         padding: 1rem 1.6rem;
+
+        svg {
+          height: 2.2rem;
+        }
       }
     }
   }

@@ -10,6 +10,11 @@
       font-size: 2.4rem;
       text-transform: uppercase;
       margin-bottom: 3rem;
+
+      @media screen and (max-width:991px) {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+      }
     }
 
     .toprated_columan {
@@ -39,6 +44,11 @@
             height: 8rem;
             width: 10rem;
           }
+
+          @media screen and (max-width:767px) {
+            height: 6rem;
+            width: 8rem;
+          }
         }
 
         .toprated_desc {
@@ -54,15 +64,37 @@
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
+
+            @media screen and (max-width:991px) {
+              font-size: 1.4rem;
+              margin-bottom: 0.8rem;
+            }
           }
 
           h4 {
             font-size: 2rem;
             color: var(--theme_primary);
             font-weight: 500;
+
+            @media screen and (max-width:991px) {
+              font-size: 1.6rem;
+            }
+          }
+
+          @media screen and (max-width:1199px) {
+            width: calc(100% - 10rem);
+          }
+
+          @media screen and (max-width:767px) {
+            width: calc(100% - 8rem);
           }
         }
       }
     }
+  }
+
+  @media screen and (max-width:991px) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
   }
 }
