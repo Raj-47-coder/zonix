@@ -3,6 +3,7 @@ import Bannerslider from '../Bannerslider/Bannerslider'
 import Benifits from '../Benifits/Benifits';
 import Categories from '../Categories/Categories';
 import Bestdeals from '../Bestdeals/Bestdeals';
+import Brands from '../Brands/Brands';
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
       <Benifits />
       <Categories />
       <Bestdeals />
+      <Brands />
     </>
   );
 }
