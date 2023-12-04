@@ -5,6 +5,8 @@ import Categories from '../Categories/Categories';
 import Bestdeals from '../Bestdeals/Bestdeals';
 import Brands from '../Brands/Brands';
 import Featuresproducts from '../Featuresproducts/Featuresproducts';
+import Announcement from '../Announcement/Announcement';
+import Toprated from '../Toprated/Toprated';
 
 function Home() {
   return (
@@ -15,6 +17,8 @@ function Home() {
       <Bestdeals />
       <Brands />
       <Featuresproducts />
+      <Announcement />
+      <Toprated />
     </>
   );
 }
