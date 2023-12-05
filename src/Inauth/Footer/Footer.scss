@@ -1,0 +1,32 @@
+.footer_container {
+  max-width: 1408px;
+  margin: 0 auto;
+}
+
+.footer {
+  background-color: var(--theme_darkprimary);
+  padding: 7.2rem 0;
+
+  .footer_rows {
+    display: flex;
+    justify-content: space-between;
+
+    .footer_cols {
+      &.first {
+        max-width: 25%;
+      }
+
+      &.second {
+        max-width: 20%;
+      }
+
+      &.third {
+        max-width: 20%;
+      }
+
+      &.last {
+        max-width: 35%;
+      }
+    }
+  }
+}

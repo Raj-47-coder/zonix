@@ -55,7 +55,6 @@ function Bestdeals() {
                   <Typography component={'span'}>₹442.12</Typography>
                 </Box>
 
-
                 <Typography component={'a'} href='#' className='add_cart'>
                   <CartIcon />
                   Add to cart
