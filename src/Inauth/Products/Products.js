@@ -9,7 +9,7 @@ function Products(props) {
   return (
     <>
       {props.productsList.map((items, i) => (
-        <Box component={'div'} className='deals_card' key={i}>
+        <Box component={'div'} className='product_card' key={i}>
           <Box component={"div"} className='card_img'>
             <img src={items.img} alt={items.img} />
             {i === 1 || i === 2 ?
