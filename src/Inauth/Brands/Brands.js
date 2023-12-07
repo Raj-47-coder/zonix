@@ -8,7 +8,6 @@ import wood from '../../images/wood.png';
 import brick from '../../images/brick.png';
 import cement from '../../images/cement.png';
 import metal from '../../images/metal.png';
-import { ArrowRight } from '../../Zonixzsvgs/Zonixzsvgs'
 import 'swiper/css';
 import './Brands.scss';
 

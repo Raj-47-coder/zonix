@@ -4,6 +4,8 @@ import product1 from '../../images/product-1.png';
 import { ArrowRight, Rattingstart, CartIcon } from '../../Zonixzsvgs/Zonixzsvgs'
 import 'swiper/css';
 import './Bestdeals.scss';
+import { Link } from "react-router-dom";
+
 
 function Bestdeals() {
 
@@ -23,10 +25,10 @@ function Bestdeals() {
             <Typography component={'span'}>Deals ends in</Typography>
             <Typography component={'span'} className='badges_timer'>16d : 21h : 57m :23s</Typography>
           </Typography>
-          <Typography component={'a'} href='#'>
+          <Link component={'a'} to='/store'>
             <Typography component={'span'}>Browse All Product </Typography>
             <ArrowRight />
-          </Typography>
+          </Link>
         </Box>
 
         <Box component={'div'} className='deals_box'>

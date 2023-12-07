@@ -5,6 +5,8 @@ import { ArrowRight } from '../../Zonixzsvgs/Zonixzsvgs';
 import Products from '../Products/Products';
 import './Featuresproducts.scss';
 import 'swiper/css';
+import { Link } from "react-router-dom";
+
 
 function Bestdeals() {
 
@@ -27,10 +29,10 @@ function Bestdeals() {
       <Box component={'div'} className='container'>
         <Box component={'div'} className='section_title'>
           <Typography component={'h2'}>Featured Products</Typography>
-          <Typography component={'a'} href='#'>
+          <Link component={'a'} to='/store'>
             <Typography component={'span'}>Browse All Product </Typography>
             <ArrowRight />
-          </Typography>
+          </Link>
         </Box>
 
         <Box component={'div'} className='product_box'>

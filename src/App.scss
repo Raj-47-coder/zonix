@@ -99,3 +99,89 @@ a {
     margin: 3rem 0 !important;
   }
 }
+
+// ================ Store page 
+.store_box {
+  display: flex;
+  align-items: start;
+
+  .fiters_box {
+    max-width: 39rem;
+    width: 100%;
+
+    button.close_filter {
+      height: 3.5rem;
+      width: 3.5rem;
+      min-width: 3.5rem;
+      border-radius: 50%;
+      color: var(--theme_white);
+      background-color: var(--theme_primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0rem;
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+
+      svg {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    @media screen and (max-width:1299px) {
+      max-width: 32rem;
+    }
+
+    @media screen and (max-width:991px) {
+      max-width: 100%;
+      width: 100%;
+      background-color: var(--theme_white);
+      position: fixed;
+      bottom: -100%;
+      left: 0;
+      z-index: 992;
+      max-height: 54rem;
+      overflow-y: auto;
+      padding: 2rem;
+      border-radius: 3rem 3rem 0 0;
+      box-shadow: rgba(0, 0, 0, 0.45) 0px -25px 20px -20px;
+      transition: 0.3s;
+      border: 1px solid var(--theme_light);
+
+      &.open {
+        bottom: 0;
+      }
+    }
+  }
+
+  .Storeproduct_box {
+    max-width: 100%;
+    width: 100%;
+    margin-left: 2.4rem;
+
+    .product_listBox {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+
+      @media screen and (max-width:1299px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media screen and (max-width:767px) {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+
+    @media screen and (max-width:991px) {
+      margin-left: 0;
+    }
+  }
+
+  @media screen and (max-width:991px) {
+    display: block;
+  }
+}

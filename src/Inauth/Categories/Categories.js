@@ -11,6 +11,8 @@ import metal from '../../images/metal.png';
 import { ArrowRight } from '../../Zonixzsvgs/Zonixzsvgs'
 import 'swiper/css';
 import './Categories.scss';
+import { Link } from "react-router-dom";
+
 
 function Categories() {
 
@@ -33,10 +35,10 @@ function Categories() {
       <Box component={'div'} className='container'>
         <Box component={'div'} className='section_title'>
           <Typography component={'h2'}>Shop by Category</Typography>
-          <Typography component={'a'} href='#'>
+          <Link component={'a'} to='/store'>
             <Typography component={'span'}>Browse All Category</Typography>
             <ArrowRight />
-          </Typography>
+          </Link>
         </Box>
         <Swiper
           spaceBetween={30}

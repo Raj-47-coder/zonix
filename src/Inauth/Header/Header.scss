@@ -2,7 +2,7 @@
   background-image: var(--theme_primarylinear);
   position: sticky;
   top: 0;
-  z-index: 99;
+  z-index: 996;
 
   .header_top {
     display: flex;
@@ -308,7 +308,7 @@
   right: -100%;
   width: 100%;
   height: 100%;
-  z-index: 998;
+  z-index: 995;
   opacity: 0.4;
 
   &.open {
