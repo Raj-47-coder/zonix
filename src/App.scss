@@ -41,6 +41,11 @@ a {
     ul {
       li {
         font-size: 1.4rem;
+
+        @media screen and (max-width:991px) {
+          min-height: 34px;
+          font-size: 1.3rem;
+        }
       }
     }
   }
@@ -237,6 +242,10 @@ a {
             margin-right: 2rem;
             display: block;
             white-space: nowrap;
+
+            @media screen and (max-width:767px) {
+              margin-bottom: 0.5rem;
+            }
           }
 
           .sort_select {

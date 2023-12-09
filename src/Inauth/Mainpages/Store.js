@@ -65,8 +65,6 @@ function Store() {
                   </FormControl>
                 </Box>
               </Box>
-
-
               <Box component={'div'} className='sorting_result'>
                 <Box component={"div"} className="fliter_tags">
                   <Typography component={'h5'}>Active Filters:</Typography>
