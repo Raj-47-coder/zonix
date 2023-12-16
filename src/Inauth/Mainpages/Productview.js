@@ -12,7 +12,7 @@ import brick from '../../images/brick.png';
 import cement from '../../images/cement.png';
 import concert from '../../images/concert.png';
 import steel from '../../images/steel.png';
-import { CloseRound, Magnifyglass } from '../../Zonixzsvgs/Zonixzsvgs';
+import { Heart, currentColor } from '../../Zonixzsvgs/Zonixzsvgs';
 
 
 function Productview() {
@@ -47,10 +47,26 @@ function Productview() {
             <Swiper
               loop={true}
               spaceBetween={15}
-              slidesPerView={4}
               freeMode={true}
               watchSlidesProgress={true}
               modules={[FreeMode, Navigation, Thumbs]}
+              breakpoints={{
+                280: {
+                  slidesPerView: 3,
+                },
+                400: {
+                  slidesPerView: 4,
+                },
+                768: {
+                  slidesPerView: 6,
+                },
+                992: {
+                  slidesPerView: 7,
+                },
+                1200: {
+                  slidesPerView: 4,
+                },
+              }}
               className="thumbNails"
             >
               <SwiperSlide className='thumbs' onClick={() => handleClick(product1)}>
@@ -160,14 +176,19 @@ function Productview() {
                   <Typography component={'p'}>₹43.00</Typography>
                 </ListItem>
               </List>
-
-
               <Button className='addToCart' fullWidth>Add to Cart</Button>
               <Button className='butNow' fullWidth>Buy Now</Button>
+
+
+              <Box component={'div'} className='addWachlist'>
+                <Button>
+                  <Heart /> Add to Watchlist
+                </Button>
+              </Box>
             </Box>
           </Box>
         </Box>
-      </Box>
+      </Box >
     </>
   );
 }

@@ -3,7 +3,7 @@ import Breadcrumb from '../Breadcrumb/Breadcrumb'
 import Filters from '../Filters/Filters';
 import Products from "../Products/Products";
 import product1 from '../../images/product-1.png';
-import { CloseRound, Magnifyglass } from '../../Zonixzsvgs/Zonixzsvgs';
+import { CloseRound, Magnifyglass, Filter } from '../../Zonixzsvgs/Zonixzsvgs';
 import { Box, TextField, Typography, MenuItem, FormControl, Select, Button } from "@mui/material";
 
 const productsList = [
@@ -40,7 +40,6 @@ function Store() {
     <>
       <Breadcrumb />
       <Box component={'div'} className='container'>
-        <Button className='close_filter' color='primary' onClick={HandleFilter}>Open Filter</Button>
         <Box component={'div'} className='store_box'>
           <Box component={'div'} className={`fiters_box ${filterOpen}`}>
             <Button className='close_filter' onClick={HandleFilter}><CloseRound /></Button>
@@ -50,8 +49,9 @@ function Store() {
             <Box component={'div'} className='Storeproduct_action'>
               <Box component={'div'} className='sort_product'>
                 <Box component={"div"} className="search_product">
-                  <Magnifyglass />
+                  <Magnifyglass className='search_icon' />
                   <TextField type='text' fullWidth placeholder='Search for anything...' />
+                  <Button className='filter_mobile' onClick={HandleFilter}><Filter /></Button>
                 </Box>
 
                 <Box component={"div"} className="sorting_box">
@@ -67,21 +67,15 @@ function Store() {
               </Box>
               <Box component={'div'} className='sorting_result'>
                 <Box component={"div"} className="fliter_tags">
-                  <Typography component={'h5'}>Active Filters:</Typography>
+                  <Typography component={'h5'}>Active Filters :</Typography>
                   <Box component={'div'} className='tag_bdage'>
                     <Typography component={'span'} className='tag'>Category 1 <Button className='remove_tag'>x</Button>  </Typography>
                   </Box>
                 </Box>
 
-                <Box component={"div"} className="sorting_box">
-                  <Typography component={'label'} className='label'>Sort by :</Typography>
-                  <FormControl className='sort_select' fullWidth>
-                    <Select value={sortBy} onChange={handleChange} className='menu_list'>
-                      <MenuItem value={0}>Most Popular</MenuItem>
-                      <MenuItem value={1}>Hight to Low</MenuItem>
-                      <MenuItem value={3}>Low to high</MenuItem>
-                    </Select>
-                  </FormControl>
+                <Box component={"div"} className="result_box">
+                  <Typography component={'h5'}>65,867</Typography>
+                  <Typography component={'p'}>Results found.</Typography>
                 </Box>
               </Box>
             </Box>
