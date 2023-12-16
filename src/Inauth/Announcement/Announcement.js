@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 import announesment from '../../images/announesment.png';
+import { Link } from "react-router-dom";
 import './Announcement.scss';
 
 function Announcement() {
@@ -13,7 +14,7 @@ function Announcement() {
             <Typography component={'span'} className='badge warning'>SAVE UP TO ₹200.00</Typography>
             <Typography component={'h3'} className='name'>Cement PPC -50Kgs</Typography>
             <Typography component={'p'} className='desc'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</Typography>
-            <Typography component={'a'} href='#' className='show_now'>Shop now</Typography>
+            <Link component={'a'} to='/store' className='show_now'>Shop now</Link>
           </Box>
 
           <Box component={'div'} className='announcement_right'>

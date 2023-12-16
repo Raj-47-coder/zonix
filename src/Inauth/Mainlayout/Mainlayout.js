@@ -11,9 +11,9 @@ export default function Mainlayout() {
     <>
       <Header />
       <Routes>
-        <Route path='/home' element={<Home />} />
+        <Route path='/' element={<Home />} />
         <Route path='/store' element={<Store />} />
-        <Route path='/' element={<Productview />} />
+        <Route path='/productview' element={<Productview />} />
       </Routes>
       <Footer />
     </>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Box, Button, TextField, Typography } from "@mui/material";
 import { Logo, Pin, Magnifyglass, User, Heart, CartIcon, Humburgar } from "../../Zonixzsvgs/Zonixzsvgs";
+import { Link } from "react-router-dom";
 import "./Header.scss";
 
 export default function Header() {
@@ -22,9 +23,9 @@ export default function Header() {
         <Box component={"div"} className="container">
           <Box component={"div"} className="header_top">
             <Box component={"div"} className="header_left">
-              <Typography component={"a"} href="#" className='logo'>
+              <Link component={"a"} to="/" className='logo'>
                 <Logo />
-              </Typography>
+              </Link>
 
               <Box component={"div"} className="user_location">
                 <Pin />

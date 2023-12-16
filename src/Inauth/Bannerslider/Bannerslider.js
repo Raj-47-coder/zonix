@@ -3,6 +3,7 @@ import { Box, Typography } from "@mui/material";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import banner_img from '../../images/banner_img.png';
+import { Link } from "react-router-dom";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import './Bannerslider.scss';
@@ -32,7 +33,7 @@ function Bannerslider() {
                 <Typography component={'p'}>Find great deals on ebay for Wallpaper</Typography>
                 <Typography component={'h3'}>sponge tools</Typography>
                 <Typography component={'p'}>There are many variations of passagesges be Lorem Lorem Ipsum available</Typography>
-                <Typography component={'a'} href='#' className='btn_banner'>Shop Now</Typography>
+                <Link component={'a'} to='/store' className='btn_banner'>Shop Now</Link>
               </Box>
 
             </Box>
@@ -47,7 +48,7 @@ function Bannerslider() {
                 <Typography component={'p'}>Find great deals on ebay for Wallpaper</Typography>
                 <Typography component={'h3'}>sponge tools</Typography>
                 <Typography component={'p'}>There are many variations of passagesges be Lorem Lorem Ipsum available</Typography>
-                <Typography component={'a'} href='#' className='btn_banner'>Shop Now</Typography>
+                <Link component={'a'} to='/store' className='btn_banner'>Shop Now</Link>
               </Box>
 
             </Box>
@@ -62,7 +63,7 @@ function Bannerslider() {
                 <Typography component={'p'}>Find great deals on ebay for Wallpaper</Typography>
                 <Typography component={'h3'}>sponge tools</Typography>
                 <Typography component={'p'}>There are many variations of passagesges be Lorem Lorem Ipsum available</Typography>
-                <Typography component={'a'} href='#' className='btn_banner'>Shop Now</Typography>
+                <Link component={'a'} to='/store' className='btn_banner'>Shop Now</Link>
               </Box>
 
             </Box>
@@ -77,7 +78,7 @@ function Bannerslider() {
                 <Typography component={'p'}>Find great deals on ebay for Wallpaper</Typography>
                 <Typography component={'h3'}>sponge tools</Typography>
                 <Typography component={'p'}>There are many variations of passagesges be Lorem Lorem Ipsum available</Typography>
-                <Typography component={'a'} href='#' className='btn_banner'>Shop Now</Typography>
+                <Link component={'a'} to='/store' className='btn_banner'>Shop Now</Link>
               </Box>
 
             </Box>
@@ -92,7 +93,7 @@ function Bannerslider() {
                 <Typography component={'p'}>Find great deals on ebay for Wallpaper</Typography>
                 <Typography component={'h3'}>sponge tools</Typography>
                 <Typography component={'p'}>There are many variations of passagesges be Lorem Lorem Ipsum available</Typography>
-                <Typography component={'a'} href='#' className='btn_banner'>Shop Now</Typography>
+                <Link component={'a'} to='/store' className='btn_banner'>Shop Now</Link>
               </Box>
 
             </Box>
@@ -107,7 +108,7 @@ function Bannerslider() {
                 <Typography component={'p'}>Find great deals on ebay for Wallpaper</Typography>
                 <Typography component={'h3'}>sponge tools</Typography>
                 <Typography component={'p'}>There are many variations of passagesges be Lorem Lorem Ipsum available</Typography>
-                <Typography component={'a'} href='#' className='btn_banner'>Shop Now</Typography>
+                <Link component={'a'} to='/store' className='btn_banner'>Shop Now</Link>
               </Box>
 
             </Box>
