@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Box, TextField, Typography, MenuItem, FormControl, Select, Button, ListItem, List } from "@mui/material";
+import { Box, TextField, Typography, Button, ListItem, List, Table, TableBody, TableCell, TableRow } from "@mui/material";
 import Breadcrumb from '../Breadcrumb/Breadcrumb'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation, FreeMode, Thumbs } from 'swiper/modules';
+import { Navigation, FreeMode, Thumbs } from 'swiper/modules';
 import 'swiper/css/thumbs';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -12,7 +12,8 @@ import brick from '../../images/brick.png';
 import cement from '../../images/cement.png';
 import concert from '../../images/concert.png';
 import steel from '../../images/steel.png';
-import { Heart, currentColor } from '../../Zonixzsvgs/Zonixzsvgs';
+import { Heart } from '../../Zonixzsvgs/Zonixzsvgs';
+import Similarproduct from "../Similarproduct/Similarproduct";
 
 
 function Productview() {
@@ -41,7 +42,7 @@ function Productview() {
         <Box component={'div'} className='product_viewBox'>
           <Box component={'div'} className='product_images'>
             <Box className='thumb_preview' >
-              <img src={selectedImagePath} />
+              <img src={selectedImagePath} alt={selectedImagePath} />
             </Box>
 
             <Swiper
@@ -113,7 +114,6 @@ function Productview() {
               </ListItem>
             </List>
 
-
             <Typography component={'h5'} className='desc_title'>About this item</Typography>
             <List className='desc_list'>
               <ListItem className='listed'>Standardize New Non Rusted Material.</ListItem>
@@ -122,7 +122,6 @@ function Productview() {
               <ListItem className='listed'>Quick delivery.</ListItem>
               <ListItem className='listed'>Reasonable Market Price.</ListItem>
             </List>
-
 
             <Typography component={'h5'} className='desc_title'>Shipping Information:</Typography>
             <List className='desc_list'>
@@ -149,7 +148,6 @@ function Productview() {
                 <Box component={'div'} className='closeOffer'>Until Jan 30, 2024</Box>
               </Box>
             </Box>
-
 
             <Box component={'div'} className='product_stock'>
               <Typography component={'h6'} className='title'>Set Order</Typography>
@@ -188,7 +186,71 @@ function Productview() {
             </Box>
           </Box>
         </Box>
-      </Box >
+
+        <Box component={'div'} className='product_info'>
+          <Typography component={'h4'}>Product information</Typography>
+
+          <Box component={'div'} className='techAdd_infoBox'>
+            <Box component={'div'} className='techAdd_info'>
+              <Typography component={'h6'}>Technical Details</Typography>
+
+              <Table className='productInfo_table'>
+                <TableBody>
+                  <TableRow>
+                    <TableCell>Material</TableCell>
+                    <TableCell>Construction</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>Brand</TableCell>
+                    <TableCell>S J Steel</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>Type</TableCell>
+                    <TableCell>TMT Bar</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>Grade</TableCell>
+                    <TableCell>Fe 500D</TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </Box>
+
+            <Box component={'div'} className='techAdd_info'>
+              <Typography component={'h6'}>Additional Information</Typography>
+
+              <Table className='productInfo_table'>
+                <TableBody>
+                  <TableRow>
+                    <TableCell>SKU</TableCell>
+                    <TableCell>BBAACBARB0004</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>Brand / Manufacturer</TableCell>
+                    <TableCell>Aerobild</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>Recommended Deals</TableCell>
+                    <TableCell>Yes</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>Previous Price</TableCell>
+                    <TableCell>N/A</TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </Box>
+          </Box>
+        </Box>
+
+
+        <Box component={'div'} className='product_description'>
+          <Typography component={'h5'}>Product description :</Typography>
+          <Typography component={'p'}>Experience the strength of top-quality TMT Bars with Shree Ji Steel Private Limited, (formally Shree Ji Steel Corporation), your trusted steel dealer from Kolkata,West Bengal. Our TMT Bars, sourced from Durgapur, West Bengal, Raipur, Raigarh, Chhattisgarh and Jalna, </Typography>
+        </Box>
+      </Box>
+
+      <Similarproduct />
     </>
   );
 }

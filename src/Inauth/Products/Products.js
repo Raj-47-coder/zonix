@@ -1,7 +1,6 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import product1 from '../../images/product-1.png';
-import { Rattingstart, CartIcon } from '../../Zonixzsvgs/Zonixzsvgs';
+import { Rattingstart } from '../../Zonixzsvgs/Zonixzsvgs';
 import 'swiper/css';
 import './Products.scss';
 import { Link } from "react-router-dom";
