@@ -11,6 +11,7 @@ function Filters() {
   };
   return (
     <>
+
       <Box component={'div'} className='filter_cols'>
         <Typography component={'h4'} className='filterCols_title'>Category</Typography>
 
