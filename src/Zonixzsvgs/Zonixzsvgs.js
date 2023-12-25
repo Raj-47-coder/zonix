@@ -262,4 +262,16 @@ const Filter = () => {
   );
 };
 
-export { CartIcon, Logo, Pin, Magnifyglass, User, Heart, Humburgar, Delivery, Guarantee, Payment, Support, ArrowRight, Rattingstart, ArrowRightYellow, HomeIcon, StarFilled, StarBordered, CloseRound, Filter };
+const Crossborder = () => {
+  return (
+    <>
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 26.25C21.2132 26.25 26.25 21.2132 26.25 15C26.25 8.7868 21.2132 3.75 15 3.75C8.7868 3.75 3.75 8.7868 3.75 15C3.75 21.2132 8.7868 26.25 15 26.25Z" stroke="#929FA5" stroke-width="1.87614" stroke-miterlimit="10" />
+        <path d="M18.75 11.25L11.25 18.75" stroke="#929FA5" stroke-width="1.87614" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M18.75 18.75L11.25 11.25" stroke="#929FA5" stroke-width="1.87614" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </>
+  );
+};
+
+export { CartIcon, Logo, Pin, Magnifyglass, User, Heart, Humburgar, Delivery, Guarantee, Payment, Support, ArrowRight, Rattingstart, ArrowRightYellow, HomeIcon, StarFilled, StarBordered, CloseRound, Filter, Crossborder };

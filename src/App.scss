@@ -926,3 +926,221 @@ input::-webkit-inner-spin-button {
     color: var(--theme_grey);
   }
 }
+
+.customreReview_box {
+  margin-top: 5rem;
+
+  h5 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--theme_dark);
+    margin-bottom: 1.5rem;
+
+    @media screen and (max-width:767px) {
+      font-size: 2rem;
+    }
+  }
+
+  .review_row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .review_col {
+      padding: 0 3rem;
+
+      h6 {
+        font-size: 3.2rem;
+        color: var(--theme_dark);
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        font-weight: 600;
+
+        sub {
+          font-size: 1.6rem;
+          color: var(--theme_grey);
+          font-weight: 400;
+
+          @media screen and (max-width:767px) {
+            font-size: 1.4rem;
+          }
+        }
+
+        @media screen and (max-width:767px) {
+          font-size: 2.4rem;
+        }
+      }
+
+      .rating_star {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1.8rem 0;
+
+        svg {
+          margin: 0 0.4rem;
+        }
+      }
+
+      p {
+        font-size: 2.2rem;
+        color: var(--theme_darkgrey);
+        font-weight: 500;
+        text-align: center;
+
+        @media screen and (max-width:767px) {
+          font-size: 1.4rem;
+        }
+      }
+
+      .rating_starProgress {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.6rem;
+
+        span {
+          font-size: 1.8rem;
+          color: var(--theme_darkgrey);
+          font-weight: 500;
+          display: inline-block;
+          margin: 0 0.5rem;
+
+          @media screen and (max-width:767px) {
+            font-size: 1.4rem;
+          }
+        }
+
+        .progress_box {
+          position: relative;
+          background-color: var(--theme_light);
+          height: 1rem;
+          max-width: 22rem;
+          min-width: 22rem;
+          border-radius: 1rem;
+          margin-left: 1rem;
+
+          .progress_count {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 50%;
+            background-color: var(--theme_primary);
+            height: 1rem;
+            max-width: 22rem;
+            border-radius: 1rem;
+            margin-left: 1rem;
+            z-index: 2;
+          }
+
+          @media screen and (max-width:767px) {
+            max-width: calc(100% - 10rem);
+            min-width: calc(100% - 10rem);
+          }
+        }
+
+        p {
+          font-size: 1.8rem;
+          color: var(--theme_dark);
+          font-weight: 500;
+          margin-left: 1rem;
+
+          @media screen and (max-width:767px) {
+            font-size: 1.4rem;
+          }
+        }
+      }
+
+      @media screen and (max-width:991px) {
+        max-width: 50%;
+        width: 50%;
+      }
+
+      @media screen and (max-width:767px) {
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 1.6rem;
+        padding: 1rem;
+      }
+    }
+  }
+}
+
+.writeReview_box {
+  margin-top: 5rem;
+
+  h5 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--theme_dark);
+    margin-bottom: 1.5rem;
+
+    @media screen and (max-width:767px) {
+      font-size: 2rem;
+    }
+  }
+
+  .write_review {
+    max-width: 50%;
+    width: 50%;
+
+    .write_reviewItems {
+      width: 100%;
+      margin-bottom: 2.8rem;
+
+      label.label {
+        font-size: 1.8rem;
+        color: var(--theme_dark);
+        display: block;
+        margin-bottom: 1rem;
+        font-weight: 500;
+
+        &.required {
+          position: relative;
+
+          &:after {
+            content: '*';
+            position: absolute;
+            top: 0;
+            left: auto;
+            color: #FF3434;
+            font-size: 1.4rem;
+          }
+        }
+      }
+
+      .MuiTextField-root {
+
+        .MuiInputBase-root {
+          padding: 0 !important;
+
+          .MuiInputBase-input {
+            background-color: var(--theme_white);
+            font-size: 1.6rem;
+            padding: 1rem 1.6rem;
+            border: 1px solid rgba(25, 28, 31, 24%);
+            border-radius: 0.4rem;
+          }
+        }
+      }
+
+      button.submit_btn {
+        font-size: 1.8rem;
+        padding: 1.2rem 2.5rem;
+        color: var(--theme_white);
+        background-color: var(--theme_primary);
+        text-transform: capitalize;
+
+        &:hover {
+          background-image: var(--theme_primarylinear);
+        }
+      }
+    }
+
+    @media screen and (max-width:767px) {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}

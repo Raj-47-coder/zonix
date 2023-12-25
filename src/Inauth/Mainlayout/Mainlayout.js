@@ -4,6 +4,7 @@ import Home from "../Mainpages/Home";
 import Store from "../Mainpages/Store";
 import Productview from "../Mainpages/Productview";
 import Footer from "../Footer/Footer";
+import Whishlist from "../Favourite/Whishlist";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 export default function Mainlayout() {
@@ -14,6 +15,7 @@ export default function Mainlayout() {
         <Route path='/' element={<Home />} />
         <Route path='/store' element={<Store />} />
         <Route path='/productview' element={<Productview />} />
+        <Route path='/whishlist' element={<Whishlist />} />
       </Routes>
       <Footer />
     </>

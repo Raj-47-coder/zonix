@@ -12,7 +12,7 @@ import brick from '../../images/brick.png';
 import cement from '../../images/cement.png';
 import concert from '../../images/concert.png';
 import steel from '../../images/steel.png';
-import { Heart } from '../../Zonixzsvgs/Zonixzsvgs';
+import { Heart, Rattingstart } from '../../Zonixzsvgs/Zonixzsvgs';
 import Similarproduct from "../Similarproduct/Similarproduct";
 
 
@@ -251,6 +251,98 @@ function Productview() {
       </Box>
 
       <Similarproduct />
+
+      <Box component={'div'} className='container'>
+        <Box component={'div'} className='customreReview_box'>
+          <Typography component={'h5'}>Customer reviews</Typography>
+
+          <Box component={'div'} className='review_row'>
+            <Box component={'div'} className='review_col'>
+              <Typography component={'h6'}>4.9
+                <Typography component={'sub'}>/ 5.5</Typography>
+              </Typography>
+
+              <Box component={'div'} className='rating_star'>
+                <Rattingstart />
+                <Rattingstart />
+                <Rattingstart />
+                <Rattingstart />
+                <Rattingstart />
+              </Box>
+              <Typography component={'p'}>2.3K+ Reviews</Typography>
+            </Box>
+
+            <Box component={'div'} className='review_col'>
+
+              <Box component={'div'} className='rating_starProgress'>
+                <Rattingstart />
+                <Typography component={'span'}>5</Typography>
+                <Box component={'div'} className='progress_box'>
+                  <Box component={'div'} className='progress_count'></Box>
+                </Box>
+                <Typography component={"p"}>1.5K</Typography>
+              </Box>
+              <Box component={'div'} className='rating_starProgress'>
+                <Rattingstart />
+                <Typography component={'span'}>4</Typography>
+                <Box component={'div'} className='progress_box'>
+                  <Box component={'div'} className='progress_count'></Box>
+                </Box>
+                <Typography component={"p"}>710</Typography>
+              </Box>
+              <Box component={'div'} className='rating_starProgress'>
+                <Rattingstart />
+                <Typography component={'span'}>3</Typography>
+                <Box component={'div'} className='progress_box'>
+                  <Box component={'div'} className='progress_count'></Box>
+                </Box>
+                <Typography component={"p"}>140</Typography>
+              </Box>
+              <Box component={'div'} className='rating_starProgress'>
+                <Rattingstart />
+                <Typography component={'span'}>2</Typography>
+                <Box component={'div'} className='progress_box'>
+                  <Box component={'div'} className='progress_count'></Box>
+                </Box>
+                <Typography component={"p"}>10</Typography>
+              </Box>
+              <Box component={'div'} className='rating_starProgress'>
+                <Rattingstart />
+                <Typography component={'span'}>1</Typography>
+                <Box component={'div'} className='progress_box'>
+                  <Box component={'div'} className='progress_count'></Box>
+                </Box>
+                <Typography component={"p"}>4</Typography>
+              </Box>
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+
+
+      <Box component={'div'} className='container'>
+        <Box component={'div'} className='writeReview_box'>
+          <Typography component={'h5'}>Write Your Review</Typography>
+
+          <Box component={'div'} className='write_review'>
+            <Box component={'div'} className='write_reviewItems'>
+              <Typography component={'label'} className='label required'>Nickname</Typography>
+              <TextField type='text' fullWidth />
+            </Box>
+            <Box component={'div'} className='write_reviewItems'>
+              <Typography component={'label'} className='label required'>Summary of Your Review</Typography>
+              <TextField type='text' fullWidth />
+            </Box>
+            <Box component={'div'} className='write_reviewItems'>
+              <Typography component={'label'} className='label required'>Review</Typography>
+              <TextField multiline rows={6} type='text' fullWidth />
+            </Box>
+            <Box component={'div'} className='write_reviewItems'>
+              <Button className='submit_btn'>Submit Review</Button>
+            </Box>
+          </Box>
+        </Box>
+      </Box>
     </>
   );
 }
