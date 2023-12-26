@@ -42,23 +42,23 @@ export default function Header() {
               </Box>
             </Box>
             <Box component={"div"} className="header_right">
-              <Box component={"div"} className="status_bar">
+              <Link component={"a"} to={'/'} className="status_bar">
                 <User />
                 <Box component={"div"} className="status_bar_name">
                   <Typography component={"p"} className="title">Login</Typography>
                   <Typography component={"p"} className="name">My Account</Typography>
                 </Box>
-              </Box>
+              </Link>
 
-              <Box component={"div"} className="status_bar">
+              <Link component={"a"} to={'/whishlist'} className="status_bar">
                 <Heart />
                 <Box component={"div"} className="status_bar_name">
                   <Typography component={"p"} className="title">Favorite</Typography>
                   <Typography component={"p"} className="name">My Wishlist</Typography>
                 </Box>
-              </Box>
+              </Link>
 
-              <Box component={"div"} className="status_bar">
+              <Link component={"a"} to={'/addcart'} className="status_bar">
                 <Box component={'div'} className='count'>
                   <CartIcon />
                   <Typography component={'span'}>2</Typography>
@@ -67,7 +67,7 @@ export default function Header() {
                   <Typography component={"p"} className="title">Your Cart :</Typography>
                   <Typography component={"p"} className="name">$00.00</Typography>
                 </Box>
-              </Box>
+              </Link>
               <Box component={"div"} className="status_bar">
                 <Button className="humbargur" onClick={openSidebar}>
                   <Humburgar />

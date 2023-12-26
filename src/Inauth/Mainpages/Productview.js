@@ -13,6 +13,7 @@ import cement from '../../images/cement.png';
 import concert from '../../images/concert.png';
 import steel from '../../images/steel.png';
 import { Heart, Rattingstart } from '../../Zonixzsvgs/Zonixzsvgs';
+import { Link } from "react-router-dom";
 import Similarproduct from "../Similarproduct/Similarproduct";
 
 
@@ -175,7 +176,7 @@ function Productview() {
                 </ListItem>
               </List>
               <Button className='addToCart' fullWidth>Add to Cart</Button>
-              <Button className='butNow' fullWidth>Buy Now</Button>
+              <Link component={'a'} to={'/addcart'} className='butNow' fullWidth>Buy Now</Link>
 
 
               <Box component={'div'} className='addWachlist'>

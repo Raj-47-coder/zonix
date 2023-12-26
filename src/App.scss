@@ -788,13 +788,15 @@ input::-webkit-inner-spin-button {
         }
       }
 
-      button.butNow {
+      a.butNow {
         font-size: 1.6rem;
         color: var(--theme_primary);
         border: 1px solid var(--theme_primary);
         padding: 1.2rem;
         margin-bottom: 1.2rem;
         border-radius: 1rem;
+        display: block;
+        text-align: center;
 
         &:hover {
           background-color: var(--theme_primary);

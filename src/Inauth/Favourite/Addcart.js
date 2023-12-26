@@ -84,7 +84,7 @@ function Addcart() {
                   <TableFooter>
                     <TableCell colSpan='4'>
                       <Box component={'div'} className='table_footer'>
-                        <Typography component={'a'} href={'/'} className='footer_btn'>Return to shop</Typography>
+                        <Link component={'a'} to={'/store'} className='footer_btn'>Return to shop</Link>
                         <Button className='footer_btn'>Update Cart</Button>
                       </Box>
                     </TableCell>
