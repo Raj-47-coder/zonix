@@ -77,9 +77,9 @@ input::-webkit-inner-spin-button {
 
       &.badges_timer {
         font-size: 1.6rem;
-        color: var(--theme_dark);
-        padding: 1.2rem 2.6rem;
-        background-color: var(--theme_warning);
+        color: var(--theme_white);
+        padding: 1rem 2rem;
+        background-color: var(--theme_danger);
         font-weight: 500;
         border-radius: 0.4rem;
 
@@ -118,6 +118,7 @@ input::-webkit-inner-spin-button {
 
     svg {
       margin-left: 1rem;
+      color: var(--theme_primary);
     }
   }
 

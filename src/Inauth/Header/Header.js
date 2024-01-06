@@ -89,7 +89,7 @@ export default function Header() {
           </Box>
           <Box component={"div"} className="container">
             <Box component={'div'} className='menu_items'>
-              <Typography component={'a'} href='#'><Humburgar />All</Typography>
+              <Typography component={'a'} href='#' className='active'><Humburgar />SHOP BY DEPARTMENT</Typography>
               <Typography component={'a'} href='#'>SELL</Typography>
               <Typography component={'a'} href='#'>BEST SELLERS</Typography>
               <Typography component={'a'} href='#'>TODAY’S DEALS</Typography>
