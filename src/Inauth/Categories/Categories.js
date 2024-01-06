@@ -66,12 +66,12 @@ function Categories() {
         >
           {categoriesList.map((items, i) => (
             <SwiperSlide key={i}>
-              <Box component={'div'} className='category_card'>
+              <Link component={'a'} to={'/store'} className='category_card'>
                 <Box component={"div"} className='card_img'>
                   <img src={items.img} alt={items.img} />
                 </Box>
                 <Typography component={'p'}>{items.title}</Typography>
-              </Box>
+              </Link>
             </SwiperSlide>
           ))}
         </Swiper>
