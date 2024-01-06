@@ -44,6 +44,12 @@
           background-color: var(--theme_primary);
           color: var(--theme_white);
         }
+
+        @media screen and (max-width:767px) {
+          height: 3rem;
+          width: 3rem;
+          padding: 0.6rem;
+        }
       }
     }
 
@@ -169,8 +175,8 @@
     }
   }
 
-  @media screen and (max-width:767px) {
-    max-width: calc(50% - 1rem);
-    width: calc(50% - 1rem);
-  }
+  // @media screen and (max-width:767px) {
+  //   max-width: calc(50% - 1rem);
+  //   width: calc(50% - 1rem);
+  // }
 }

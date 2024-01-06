@@ -41,7 +41,7 @@ function Categories() {
           </Link>
         </Box>
         <Swiper
-          spaceBetween={30}
+          spaceBetween={20}
           autoplay={true}
           speed={1000}
           loop={true}

@@ -37,7 +37,6 @@ function Similarproduct() {
           </Link>
         </Box>
         <Swiper
-          spaceBetween={30}
           autoplay={true}
           speed={1000}
           loop={true}
@@ -46,12 +45,14 @@ function Similarproduct() {
           breakpoints={{
             375: {
               slidesPerView: 2,
+              spaceBetween: 12
             },
             575: {
               slidesPerView: 2.5,
             },
             768: {
               slidesPerView: 4,
+              spaceBetween: 20
             },
             1200: {
               slidesPerView: 5,

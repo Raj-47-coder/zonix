@@ -405,11 +405,12 @@ input::-webkit-inner-spin-button {
 
       @media screen and (max-width:1299px) {
         grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
       }
 
       @media screen and (max-width:767px) {
-        display: flex;
-        flex-wrap: wrap;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
       }
     }
 
@@ -1137,6 +1138,11 @@ input::-webkit-inner-spin-button {
 
         &:hover {
           background-image: var(--theme_primarylinear);
+        }
+
+        @media screen and (max-width:767px) {
+          font-size: 1.3rem;
+          padding: 0.8rem 1.2rem;
         }
       }
     }

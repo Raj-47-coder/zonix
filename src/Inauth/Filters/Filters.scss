@@ -91,10 +91,12 @@
 
      .MuiSlider-track {
        background-color: var(--theme_primary);
+       color: var(--theme_primary);
      }
 
      span.MuiSlider-thumb {
        background-color: var(--theme_primary);
+       color: var(--theme_primary);
      }
    }
 
