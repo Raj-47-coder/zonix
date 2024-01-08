@@ -42,7 +42,7 @@ export default function Header() {
               </Box>
             </Box>
             <Box component={"div"} className="header_right">
-              <Link component={"a"} to={'/'} className="status_bar">
+              <Link component={"a"} to={'/signform'} className="status_bar">
                 <User />
                 <Box component={"div"} className="status_bar_name">
                   <Typography component={"p"} className="title">Login</Typography>

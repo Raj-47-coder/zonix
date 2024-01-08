@@ -1,0 +1,169 @@
+.sign_form {
+  max-width: 52.4rem;
+  width: 100%;
+  margin: 4rem auto;
+  box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.12);
+  background-color: var(--theme_white);
+  border-radius: 0.4rem;
+  overflow: hidden;
+
+  .MuiTabs-root {
+    border-bottom: 1px solid #99A1B7;
+
+    .MuiTabs-flexContainer {
+      button.MuiButtonBase-root {
+        max-width: 50%;
+        width: 50%;
+        font-size: 1.6rem;
+        color: var(--theme_dark);
+        text-transform: capitalize;
+      }
+    }
+
+    span.MuiTabs-indicator {
+      background-color: var(--theme_primary);
+    }
+  }
+
+
+  .MuiTabPanel-root {
+    padding: 3.2rem;
+
+    .sign_form_item {
+      margin-bottom: 1.6rem;
+
+      label.label {
+        font-size: 1.4rem;
+        color: var(--theme_dark);
+        margin-bottom: 0.8rem;
+        width: 100%;
+        display: block;
+      }
+
+      .sign_form_input {
+        input.MuiInputBase-input {
+          font-size: 1.4rem;
+          padding: 1rem 1.5rem;
+          border: 1px solid #E4E6E9;
+        }
+      }
+    }
+
+    button.sign_form_button {
+      background-color: var(--theme_primary);
+      font-size: 1.4rem;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--theme_white);
+      padding: 1rem 2rem;
+
+      svg {
+        margin-left: 0.5rem;
+      }
+    }
+
+    .sign_form_labelBox {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      a.fp_link {
+        font-size: 1.3rem;
+        color: var(--theme_primary);
+        white-space: noWrap;
+        margin-bottom: 0.8rem;
+      }
+
+    }
+
+    .sign_form_inputBox {
+      position: relative;
+
+      button.hideShow_pass {
+        min-width: 2rem;
+        width: 2.6rem;
+        height: 2.6rem;
+        color: var(--theme_dark);
+        padding: 0.5rem;
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%);
+      }
+
+    }
+
+    .divider {
+      border-bottom: 1px solid #E4E6E9;
+      position: relative;
+      margin: 3rem 0;
+
+      p {
+        font-size: 1.4rem;
+        color: var(--theme_grey);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        background-color: var(--theme_white);
+        padding: 0.5rem;
+      }
+    }
+
+    .connectOther_account {
+      button.connectOther_btn {
+        font-size: 1.4rem;
+        text-transform: capitalize;
+        color: var(--theme_grey);
+        border: 1px solid #E4E6E9;
+        padding: 1rem 1.5rem;
+        background-color: transparent;
+        margin-bottom: 1.6rem;
+
+        img {
+          position: absolute;
+          top: 50%;
+          left: 2rem;
+          transform: translateY(-50%);
+          height: 2.2rem;
+          width: 2.2rem;
+        }
+      }
+    }
+
+    .check_box {
+      .MuiFormControlLabel-root {
+        margin: 0;
+
+
+        .MuiCheckbox-root {
+          padding: 0.4rem;
+
+          .MuiSvgIcon-root {
+            font-size: 2.2rem;
+            color: var(--theme_primary);
+          }
+        }
+      }
+
+      p.MuiTypography-root {
+        font-size: 1.4rem;
+        color: var(--theme_dark);
+        font-weight: 500;
+
+        span {
+          font-size: 1.4rem;
+          color: var(--theme_primary);
+          font-weight: 500;
+        }
+      }
+    }
+
+    @media screen and (max-width:991px) {
+      padding: 1.6rem;
+    }
+  }
+}
