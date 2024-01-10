@@ -122,6 +122,10 @@ input::-webkit-inner-spin-button {
     }
   }
 
+  &.noSpace {
+    margin: 0rem !important;
+  }
+
   @media screen and (max-width:991px) {
     margin: 3rem 0 !important;
   }
@@ -1151,5 +1155,222 @@ input::-webkit-inner-spin-button {
       max-width: 100%;
       width: 100%;
     }
+  }
+}
+
+// ================= Faq
+.faq_container {
+  max-width: 1320px;
+  margin: 4rem auto;
+
+  .faq_row {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+
+    .faq_left {
+      max-width: 55%;
+      width: 55%;
+      padding: 1.5rem;
+
+      .faq_accordion {
+        margin-top: 3rem;
+
+        .MuiAccordion-root {
+          margin-bottom: 2rem;
+          box-shadow: none;
+          border: 1px solid var(--border);
+
+          &::before {
+            display: none;
+          }
+
+          .MuiButtonBase-root {
+            padding: 1.5rem 2rem;
+            min-height: auto;
+
+            .MuiAccordionSummary-content {
+              margin: 0;
+
+              p.MuiTypography-root {
+                font-size: 1.8rem;
+                color: var(--theme_dark);
+
+                @media screen and (max-width:991px) {
+                  font-size: 1.6rem;
+                }
+
+                @media screen and (max-width:575px) {
+                  font-size: 1.4rem;
+                }
+              }
+            }
+
+            @media screen and (max-width:991px) {
+              padding: 1.5rem 1.5rem;
+            }
+
+            @media screen and (max-width:575px) {
+              padding: 1rem 1.5rem;
+            }
+          }
+
+          .MuiCollapse-root {
+            .MuiAccordionDetails-root {
+              padding: 1.6rem;
+              font-size: 1.4rem;
+              color: var(--theme_darkgrey);
+
+              p {
+                font-size: 1.4rem;
+              }
+
+              ul {
+                margin: 0;
+                padding: 0;
+                margin-top: 1.5rem;
+                padding-left: 1.5rem;
+
+                li {
+                  margin: 0;
+                  font-size: 1.4rem;
+                  color: var(--theme_darkgrey);
+                  position: relative;
+
+                  &::after {
+                    content: '';
+                    height: 0.6rem;
+                    width: 0.6rem;
+                    background-color: var(--theme_darkgrey);
+                    border-radius: 50%;
+                    position: absolute;
+                    left: 0;
+                    top: 1.4rem;
+                  }
+                }
+              }
+            }
+          }
+
+          &.Mui-expanded {
+            box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.12);
+
+            .MuiButtonBase-root {
+              background-color: var(--theme_primary);
+
+              .MuiAccordionSummary-content {
+                margin: 0;
+
+                p.MuiTypography-root {
+                  color: var(--theme_white);
+                }
+
+                ul {
+                  list-style-type: circle;
+
+                  li {
+                    list-style: circle;
+                  }
+                }
+              }
+
+              div.Mui-expanded {
+                svg {
+                  color: var(--theme_white);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      @media screen and (max-width:1199px) {
+        max-width: 60%;
+        width: 60%;
+      }
+
+      @media screen and (max-width:991px) {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+
+    .faq_right {
+      max-width: 30%;
+      width: 30%;
+      padding: 1.5rem;
+
+      .ask_more_question {
+        background-color: rgba(251, 244, 206, 0.5);
+        padding: 2.4rem;
+
+        h3 {
+          font-size: 1.6rem;
+          color: var(--theme_dark);
+          font-weight: 600;
+          margin-bottom: 1rem;
+        }
+
+        p {
+          font-size: 1.3rem;
+          color: var(--theme_darkgrey);
+        }
+
+        .ask_questionInput {
+          margin-top: 1.4rem;
+
+          .MuiInputBase-root {
+            padding: 0;
+
+            input.MuiInputBase-input,
+            textarea.MuiInputBase-input {
+              font-size: 1.4rem;
+              padding: 1rem 1.5rem;
+              border: 1px solid #E4E6E9;
+              background-color: var(--theme_white);
+            }
+          }
+
+          button.sign_form_button {
+            background-color: var(--theme_primary);
+            font-size: 1.4rem;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--theme_white);
+            padding: 1rem 2rem;
+
+            svg {
+              margin-left: 0.5rem;
+            }
+          }
+        }
+      }
+
+      @media screen and (max-width:1199px) {
+        max-width: 40%;
+        width: 40%;
+      }
+
+      @media screen and (max-width:991px) {
+        max-width: 70%;
+        width: 70%;
+      }
+
+      @media screen and (max-width:767px) {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+
+    @media screen and (max-width:1199px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  @media screen and (max-width:767px) {
+    margin: 2rem auto;
   }
 }

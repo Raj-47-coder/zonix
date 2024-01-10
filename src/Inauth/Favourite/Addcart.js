@@ -84,7 +84,7 @@ function Addcart() {
                   <TableFooter>
                     <TableCell colSpan='4'>
                       <Box component={'div'} className='table_footer'>
-                        <Link component={'a'} to={'/store'} className='footer_btn'>Return to shop</Link>
+                        <Link component={'a'} to={'/store'} className='footer_btn solid_text'>Return to shop</Link>
                         <Button className='footer_btn'>Update Cart</Button>
                       </Box>
                     </TableCell>
@@ -128,7 +128,7 @@ function Addcart() {
 
               <Box component={'div'} className='apply_coupon'>
                 <TextField placeholder='Enter email' fullWidth />
-                <Button className='apply_couponBtn'>Apply Coupon</Button>
+                <Button className='apply_couponBtn'>Apply</Button>
               </Box>
             </Box>
           </Box>
