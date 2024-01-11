@@ -15,6 +15,7 @@
 
 .deals_card {
   border: 1px solid var(--theme_light);
+  border-radius: 1rem;
 
   .card_img {
     max-height: 30rem;
@@ -81,10 +82,10 @@
       }
     }
 
-    p.product_title {
-      font-size: 1.6rem;
-      color: var(--theme_dark);
-      margin-bottom: 1.6rem;
+    a.product_title {
+      font-size: 1.5rem;
+      color: var(--theme_darkgrey);
+      margin-bottom: 1.4rem;
       overflow: hidden;
       text-overflow: ellipsis;
       display: -webkit-box;
@@ -158,6 +159,10 @@
         }
       }
     }
+  }
+
+  &:hover {
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   }
 
   @media screen and (max-width:991px) {

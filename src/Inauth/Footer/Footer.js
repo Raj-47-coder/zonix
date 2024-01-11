@@ -1,8 +1,11 @@
 import React from "react";
 import { Box, TextField, Typography, Button } from "@mui/material";
-import { Logo, ArrowRightYellow } from '../../Zonixzsvgs/Zonixzsvgs'
+import { Logo, ArrowRightYellow } from '../../Zonixzsvgs/Zonixzsvgs';
+import Appstore from '../../images/app_store.png';
+import Googleplay from '../../images/google_play.png';
 import 'swiper/css';
 import './Footer.scss';
+import { Link } from "react-router-dom";
 
 function Footer() {
 
@@ -20,7 +23,7 @@ function Footer() {
               <Typography component={'p'}>Customer Supports :</Typography>
               <Typography component={'h5'}>(629) 555-0129</Typography>
               <Typography component={'p'}>4517 Washington Ave. Manchester, Kentucky 39495</Typography>
-              <Typography component={'h5'}>info@zinixz.com</Typography>
+              <Typography component={'h5'}>info@zonixz.com</Typography>
             </Box>
             <Box component={'div'} className='footer_cols second'>
               <Typography component={'h4'} className='title'>Top Category</Typography>
@@ -30,18 +33,16 @@ function Footer() {
               <Typography component={'a'} href='#' className='footer_navLink'>Category 3</Typography>
               <Typography component={'a'} href='#' className='footer_navLink'>Category 4</Typography>
               <Typography component={'a'} href='#' className='footer_navLink'>Category 5</Typography>
-              <Typography component={'a'} href='#' className='footer_navLink'>Category 6</Typography>
               <Typography component={'a'} href='#' className='footer_navLink all'>Browse All Products <ArrowRightYellow /></Typography>
             </Box>
             <Box component={'div'} className='footer_cols third'>
               <Typography component={'h4'} className='title'>Quick Links</Typography>
 
-              <Typography component={'a'} href='#' className='footer_navLink'>shop Product</Typography>
-              <Typography component={'a'} href='#' className='footer_navLink'>Shopping Cart</Typography>
-              <Typography component={'a'} href='#' className='footer_navLink'>Wishlist</Typography>
-              <Typography component={'a'} href='#' className='footer_navLink'>Track Order</Typography>
-              <Typography component={'a'} href='#' className='footer_navLink'>Customer Help</Typography>
-              <Typography component={'a'} href='#' className='footer_navLink'>About us</Typography>
+              <Link component={'a'} to='#' className='footer_navLink'>My Account</Link>
+              <Link component={'a'} to='#' className='footer_navLink'>About</Link>
+              <Link component={'a'} to='#' className='footer_navLink'>Privacy Policy</Link>
+              <Link component={'a'} to='/faq' className='footer_navLink'>FAQ</Link>
+              <Link component={'a'} to='#' className='footer_navLink'>Term & Conditions</Link>
             </Box>
             <Box component={'div'} className='footer_cols last'>
               <Typography component={'h4'} className='title'>Newsletter</Typography>
@@ -51,11 +52,20 @@ function Footer() {
                 <TextField fullWidth type='text' />
                 <Button className='newsletter'>Subscribe</Button>
               </Box>
+
+              <Box component={'div'} className='app_box'>
+                <Typography component={'a'} href=''>
+                  <img src={Googleplay} alt={Googleplay} />
+                </Typography>
+                <Typography component={'a'} href=''>
+                  <img src={Appstore} alt={Appstore} />
+                </Typography>
+              </Box>
             </Box>
           </Box>
         </Box>
         <Box component={'div'} className='footer_bottom'>
-          <Typography component={'p'}>Lorem - eCommerce online store © 2023. Design by Lorem</Typography>
+          <Typography component={'p'}>Zonixz - E-Commerce online store © 2024. Design by Brainfleck Graphics</Typography>
         </Box>
       </Box>
     </>

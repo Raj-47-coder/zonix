@@ -10,7 +10,7 @@
   .footer_rows {
     display: flex;
     justify-content: space-between;
-    padding: 7.2rem 0;
+    padding: 6rem 0 3rem 0;
     flex-wrap: wrap;
 
     .footer_cols {
@@ -30,7 +30,7 @@
         display: block;
         color: var(--theme_white);
         opacity: 72%;
-        margin-bottom: 1.6rem;
+        margin-bottom: 1.2rem;
 
         &.all {
           color: var(--theme_warning);
@@ -51,13 +51,13 @@
 
         .logo {
           height: 4rem;
-          max-width: 100%;
+          width: auto;
           display: block;
           margin-bottom: 2.4rem;
 
           svg {
             height: 100%;
-            max-width: 100%;
+            width: auto;
           }
 
           @media screen and (max-width:767px) {
@@ -139,6 +139,24 @@
 
             &:hover {
               background-color: var(--theme_darkprimary);
+            }
+          }
+        }
+
+        .app_box {
+          display: flex;
+          align-items: center;
+          margin-top: 3rem;
+
+          a {
+            display: block;
+            padding: 0.5rem;
+            color: var(--theme_darkprimary);
+            height: 6rem;
+
+            img {
+              height: 100%;
+              width: auto;
             }
           }
         }

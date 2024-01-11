@@ -17,7 +17,7 @@
       align-items: center;
 
       .logo {
-        height: 4rem;
+        height: 3.2rem;
         max-width: 100%;
         width: auto;
 
@@ -135,8 +135,8 @@
         }
 
         svg {
-          height: 2.6rem;
-          width: 2.6rem;
+          height: 3rem;
+          width: 3rem;
           color: var(--theme_white);
 
           @media screen and (max-width:991px) {
@@ -222,18 +222,15 @@
   }
 
   .header_menu {
-    padding: 0.5rem 0;
     background-color: var(--theme_white);
     transition: 0.3s;
 
     .menu_title {
-      width: calc(100% - 2rem);
+      width: calc(100% - 0%);
       align-items: center;
       justify-content: space-between;
       padding: 1rem;
-      background-color: var(--theme_primary);
-      margin: 0 1rem;
-      border-radius: 0.5rem;
+      background-color: var(--theme_darkprimary);
       margin-bottom: 1.5rem;
       display: none;
 
@@ -264,8 +261,8 @@
       justify-content: left;
 
       a {
-        font-size: 1.4rem;
-        text-transform: uppercase;
+        font-size: 1.5rem;
+        text-transform: capitalize;
         color: var(--theme_footer);
         padding: 1rem 1.4rem;
 
@@ -298,7 +295,7 @@
       left: -100%;
       height: 100%;
       z-index: 999;
-      max-width: 38rem;
+      max-width: 34rem;
       width: 100%;
       background-color: transparent;
       background-color: var(--theme_white);
@@ -318,7 +315,7 @@
   width: 100%;
   height: 100%;
   z-index: 995;
-  opacity: 0.4;
+  opacity: 0.6;
 
   &.open {
     right: 0;

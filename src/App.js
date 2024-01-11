@@ -11,7 +11,7 @@ function App() {
       <Router>
         <Routes>
           <Route exact path="/*" element={<Mainlayout />} />
-          <Route exact path="/*" element={<Signform />} />
+          <Route exact path="/signform" element={<Signform />} />
         </Routes>
       </Router>
     </>

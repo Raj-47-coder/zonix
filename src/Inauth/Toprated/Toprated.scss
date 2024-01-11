@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 4rem;
+  margin-bottom: 4rem;
 
   .toprated_block {
     margin-top: 4rem;
@@ -32,33 +33,28 @@
         border-radius: 0.6rem;
 
         .toprated_img {
-          height: 12rem;
-          width: 12rem;
+          height: 8rem;
+          width: 8rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
 
           img {
             height: 100%;
             width: 100%;
-          }
-
-          @media screen and (max-width:1199px) {
-            height: 8rem;
-            width: 10rem;
-          }
-
-          @media screen and (max-width:767px) {
-            height: 6rem;
-            width: 8rem;
+            object-fit: contain;
+            mix-blend-mode: color-burn;
           }
         }
 
         .toprated_desc {
-          width: calc(100% - 12rem);
+          width: calc(100% - 8rem);
           padding-left: 2rem;
 
           p {
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             color: var(--theme_dark);
-            margin-bottom: 1.4rem;
+            margin-bottom: 1rem;
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
@@ -67,12 +63,11 @@
 
             @media screen and (max-width:991px) {
               font-size: 1.4rem;
-              margin-bottom: 0.8rem;
             }
           }
 
           h4 {
-            font-size: 2rem;
+            font-size: 1.8rem;
             color: var(--theme_primary);
             font-weight: 500;
 

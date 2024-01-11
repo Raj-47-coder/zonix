@@ -49,10 +49,7 @@ function Products(props) {
               <Rattingstart />
               <Typography component={'span'} className='rating_count'>({52 + ',' + 23 + i})</Typography>
             </Box>
-            <Typography component={'p'} className='product_title'>
-              {items.name}
-            </Typography>
-
+            <Link component={'a'} to={'/productview'} className='product_title'>{items.name}</Link>
             <Box component={'div'} className='product_price'>
               <Typography component={'del'}>{items.delprice}</Typography>
               <Typography component={'span'}>{items.orgprice}</Typography>

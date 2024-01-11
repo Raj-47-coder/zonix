@@ -48,9 +48,9 @@ function Bestdeals() {
                   <Rattingstart />
                   <Typography component={'span'} className='rating_count'>(52,677)</Typography>
                 </Box>
-                <Typography component={'p'} className='product_title'>
+                <Link component={'a'} to={'/store'} className='product_title'>
                   Lorem Ipsum is simply dummy text of the printing and typesetting.
-                </Typography>
+                </Link>
 
                 <Box component={'div'} className='product_price'>
                   <Typography component={'del'}>₹865.99</Typography>
@@ -65,7 +65,7 @@ function Bestdeals() {
             </Box>
           ))}
         </Box>
-      </Box>
+      </Box >
     </>
   );
 }

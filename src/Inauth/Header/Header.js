@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import { Box, Button, TextField, Typography } from "@mui/material";
 import { Logo, Pin, Magnifyglass, User, Heart, CartIcon, Humburgar } from "../../Zonixzsvgs/Zonixzsvgs";
+import Categorysidevar from '../Categorysidebar/Categorysidebar'
 import { Link } from "react-router-dom";
 import "./Header.scss";
 
 export default function Header() {
   const [handleSidebar, setHandleSidebar] = useState('');
   const [handleunlayer, setHandlelayout] = useState('');
+  const [open, setOpen] = React.useState(true)
+
+  const toggleDrawer = () => {
+    setOpen(!open);
+  };
 
   const openSidebar = () => {
     if (handleSidebar === '') {
@@ -89,20 +95,21 @@ export default function Header() {
           </Box>
           <Box component={"div"} className="container">
             <Box component={'div'} className='menu_items'>
-              <Typography component={'a'} href='#' className='active'><Humburgar />SHOP BY DEPARTMENT</Typography>
-              <Typography component={'a'} href='#'>SELL</Typography>
-              <Typography component={'a'} href='#'>BEST SELLERS</Typography>
-              <Typography component={'a'} href='#'>TODAY’S DEALS</Typography>
-              <Typography component={'a'} href='#'>CUSTOMER SERVICE</Typography>
-              <Typography component={'a'} href='#'>NEW RELEASES</Typography>
-              <Typography component={'a'} href='#'>GIFT IDEAS</Typography>
-              <Typography component={'a'} href='#'>ABOUT US</Typography>
+              <Typography component={'a'} href='javascript:void(0)' onClick={toggleDrawer} className='active'><Humburgar />Shop By Department</Typography>
+              <Typography component={'a'} href='#'>Sell</Typography>
+              <Typography component={'a'} href='#'>Best Sellers</Typography>
+              <Typography component={'a'} href='#'>Today's Seals</Typography>
+              <Typography component={'a'} href='#'>Customer Service</Typography>
+              <Typography component={'a'} href='#'>New Releases</Typography>
+              <Typography component={'a'} href='#'>Gidt Ideas</Typography>
+              <Typography component={'a'} href='#'>About Us</Typography>
             </Box>
           </Box>
         </Box>
       </Box>
 
       <Box component={'div'} className={`unlayer ${handleunlayer}`} onClick={openSidebar}></Box>
+      <Categorysidevar open={open} toggleDrawer={toggleDrawer} />
     </>
   );
 }
