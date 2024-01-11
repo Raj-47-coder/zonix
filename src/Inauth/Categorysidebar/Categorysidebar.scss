@@ -2,6 +2,11 @@
   .MuiDrawer-paper {
     max-width: 34rem;
     width: 100%;
+    overflow: hidden;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     .drawer_menu {
       padding: 1rem 1.5rem;
@@ -34,6 +39,12 @@
 
     .category_accordion {
       margin-top: 2rem;
+      height: 100vh;
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
 
       .MuiAccordion-root {
         margin-bottom: 1rem;
@@ -59,8 +70,8 @@
           }
 
           .MuiAccordionSummary-expandIconWrapper {
-            height: 1.4rem;
-            width: 1.4rem;
+            height: 1.8rem;
+            width: 1.8rem;
             color: var(--theme_dark);
 
             svg {
@@ -72,21 +83,46 @@
 
         .MuiCollapse-root {
           .MuiAccordionDetails-root {
-            padding: 1rem;
-            font-size: 1.4rem;
-          }
-        }
+            padding: 0;
 
-        &.Mui-expanded {
-          .MuiButtonBase-root {
+            .category_list {
+              max-height: 19rem;
+              overflow: hidden;
+              position: relative;
+              padding-bottom: 4.4rem;
 
-            .MuiAccordionSummary-content {
-              margin: 0;
+              a {
+                font-size: 1.4rem;
+                color: var(--theme_darkgrey);
+                display: block;
+                width: 100%;
+                padding: 1rem 2rem;
+              }
+
+              &.open {
+                max-height: none;
+              }
             }
 
-            div.Mui-expanded {
+            button.see_all {
+              font-size: 1.4rem;
+              background-color: transparent;
+              color: var(--theme_primary);
+              text-transform: capitalize;
+              padding: 0.6rem 2rem;
+              width: 100%;
+              margin: 0.6rem 0;
+              font-weight: 600;
+              text-align: left;
+              justify-content: left;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              z-index: 2;
+              background-color: var(--theme_white);
+
               svg {
-                // color: var(--theme_white);
+                margin-left: 1rem;
               }
             }
           }

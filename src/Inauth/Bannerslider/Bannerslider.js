@@ -30,8 +30,8 @@ function Bannerslider() {
                 <img src={banner_img} alt={banner_img} />
               </Box>
               <Box component={"div"} className='card_details'>
-                <Typography component={'p'}>Find great deals on ebay for Wallpaper</Typography>
-                <Typography component={'h3'}>sponge tools</Typography>
+                {/* <Typography component={'p'}>Find great deals on ebay for Wallpaper</Typography> */}
+                <Typography component={'h3'}>Buy Online building Materials</Typography>
                 <Typography component={'p'}>There are many variations of passagesges be Lorem Lorem Ipsum available</Typography>
                 <Link component={'a'} to='/store' className='btn_banner'>Shop Now</Link>
               </Box>

@@ -8,7 +8,7 @@ import "./Header.scss";
 export default function Header() {
   const [handleSidebar, setHandleSidebar] = useState('');
   const [handleunlayer, setHandlelayout] = useState('');
-  const [open, setOpen] = React.useState(true)
+  const [open, setOpen] = React.useState(false)
 
   const toggleDrawer = () => {
     setOpen(!open);
@@ -95,14 +95,14 @@ export default function Header() {
           </Box>
           <Box component={"div"} className="container">
             <Box component={'div'} className='menu_items'>
-              <Typography component={'a'} href='javascript:void(0)' onClick={toggleDrawer} className='active'><Humburgar />Shop By Department</Typography>
-              <Typography component={'a'} href='#'>Sell</Typography>
-              <Typography component={'a'} href='#'>Best Sellers</Typography>
-              <Typography component={'a'} href='#'>Today's Seals</Typography>
-              <Typography component={'a'} href='#'>Customer Service</Typography>
-              <Typography component={'a'} href='#'>New Releases</Typography>
-              <Typography component={'a'} href='#'>Gidt Ideas</Typography>
-              <Typography component={'a'} href='#'>About Us</Typography>
+              <Typography component={'a'} href='javascript:void(0)' onClick={toggleDrawer} className='active'><Humburgar />Shop By Category</Typography>
+              <Typography component={'a'} href='#'>Foundation</Typography>
+              <Typography component={'a'} href='#'>Brick</Typography>
+              <Typography component={'a'} href='#'>Cement</Typography>
+              <Typography component={'a'} href='#'>Metal</Typography>
+              <Typography component={'a'} href='#'>Concret</Typography>
+              <Typography component={'a'} href='#'>Steel</Typography>
+              <Typography component={'a'} href='#'>Wooden</Typography>
             </Box>
           </Box>
         </Box>
