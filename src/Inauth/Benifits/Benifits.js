@@ -1,7 +1,8 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
-import './Benifits.scss';
 import { Delivery, Guarantee, Payment, Support } from "../../Zonixzsvgs/Zonixzsvgs";
+import { Box, Typography } from "@mui/material";
+import Benifit from "../../images/benifit.png";
+import './Benifits.scss';
 
 
 function Benifits() {
@@ -10,6 +11,7 @@ function Benifits() {
       <Box component={'div'} className='container'>
         <Box component={'div'} className='benifits'>
           <Box component={'div'} className='benifits_item'>
+            <img src={Benifit} alt={Benifit} className='benifits_deco' />
             <Box component={'div'} className='icon'>
               <Delivery />
             </Box>
@@ -20,6 +22,7 @@ function Benifits() {
           </Box>
 
           <Box component={'div'} className='benifits_item'>
+            <img src={Benifit} alt={Benifit} className='benifits_deco' />
             <Box component={'div'} className='icon'>
               <Guarantee />
             </Box>
@@ -30,6 +33,7 @@ function Benifits() {
           </Box>
 
           <Box component={'div'} className='benifits_item'>
+            <img src={Benifit} alt={Benifit} className='benifits_deco' />
             <Box component={'div'} className='icon'>
               <Payment />
             </Box>
@@ -40,6 +44,7 @@ function Benifits() {
           </Box>
 
           <Box component={'div'} className='benifits_item'>
+            <img src={Benifit} alt={Benifit} className='benifits_deco' />
             <Box component={'div'} className='icon'>
               <Support />
             </Box>
