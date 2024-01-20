@@ -1,5 +1,6 @@
 .announcement {
   background-color: var(--theme_light);
+  background-color: rgba(213, 222, 229, 1);
   border-radius: 1.6rem;
   margin-top: 6rem;
   display: flex;
@@ -93,6 +94,7 @@
       width: 11rem;
       border-radius: 50%;
       background-color: var(--theme_light);
+      background-color: rgba(213, 222, 229, 1);
       border: 6px solid var(--theme_white);
       display: flex;
       align-items: center;

@@ -7,6 +7,7 @@ import Footer from "../Footer/Footer";
 import Whishlist from "../Favourite/Whishlist";
 import Addcart from "../Favourite/Addcart";
 import Faq from "../Mainpages/Faq";
+import About from '../Mainpages/About'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 export default function Mainlayout() {
@@ -20,6 +21,7 @@ export default function Mainlayout() {
         <Route path='/whishlist' element={<Whishlist />} />
         <Route path='/addcart' element={<Addcart />} />
         <Route path='/faq' element={<Faq />} />
+        <Route path='/about' element={<About />} />
       </Routes>
       <Footer />
     </>

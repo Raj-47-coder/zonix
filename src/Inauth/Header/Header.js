@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Box, Button, TextField, Typography } from "@mui/material";
 import { Logo, Pin, Magnifyglass, User, Heart, CartIcon, Humburgar } from "../../Zonixzsvgs/Zonixzsvgs";
 import Categorysidevar from '../Categorysidebar/Categorysidebar'
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./Header.scss";
 
 export default function Header() {
@@ -96,13 +96,15 @@ export default function Header() {
           <Box component={"div"} className="container">
             <Box component={'div'} className='menu_items'>
               <Typography component={'a'} href='javascript:void(0)' onClick={toggleDrawer} className='active'><Humburgar />Shop By Category</Typography>
-              <Typography component={'a'} href='#'>Foundation</Typography>
-              <Typography component={'a'} href='#'>Brick</Typography>
-              <Typography component={'a'} href='#'>Cement</Typography>
-              <Typography component={'a'} href='#'>Metal</Typography>
-              <Typography component={'a'} href='#'>Concret</Typography>
-              <Typography component={'a'} href='#'>Steel</Typography>
-              <Typography component={'a'} href='#'>Wooden</Typography>
+              <NavLink component={'a'} to='#'>Foundation</NavLink>
+              <NavLink component={'a'} to='#'>Brick</NavLink>
+              <NavLink component={'a'} to='#'>Cement</NavLink>
+              <NavLink component={'a'} to='#'>Metal</NavLink>
+              <NavLink component={'a'} to='#'>Concret</NavLink>
+              <NavLink component={'a'} to='#'>Steel</NavLink>
+              <NavLink component={'a'} to='#'>Wooden</NavLink>
+              <NavLink component={'a'} to='/'>Contact us</NavLink>
+              <NavLink component={'a'} to='/about'>About </NavLink>
             </Box>
           </Box>
         </Box>
