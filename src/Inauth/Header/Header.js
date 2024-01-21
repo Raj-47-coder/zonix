@@ -103,7 +103,7 @@ export default function Header() {
               <NavLink component={'a'} to='#'>Concret</NavLink>
               <NavLink component={'a'} to='#'>Steel</NavLink>
               <NavLink component={'a'} to='#'>Wooden</NavLink>
-              <NavLink component={'a'} to='/'>Contact us</NavLink>
+              <NavLink component={'a'} to='/customersupport'>Contact us</NavLink>
               <NavLink component={'a'} to='/about'>About </NavLink>
             </Box>
           </Box>

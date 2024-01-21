@@ -319,4 +319,90 @@ const Doublecheck = () => {
   );
 };
 
-export { CartIcon, Logo, Eye, Pin, Magnifyglass, User, Heart, Humburgar, Delivery, Guarantee, Payment, Support, ArrowRight, Rattingstart, ArrowRightYellow, HomeIcon, StarFilled, StarBordered, CloseRound, Filter, Crossborder, Minus, Plus, Doublecheck };
+const Truck = () => {
+  return (
+    <>
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path opacity="0.2" d="M22 18H2V23C2 23.2652 2.10536 23.5196 2.29289 23.7071C2.48043 23.8946 2.73478 24 3 24H5.5C5.5 23.2044 5.81607 22.4413 6.37868 21.8787C6.94129 21.3161 7.70435 21 8.5 21C9.29565 21 10.0587 21.3161 10.6213 21.8787C11.1839 22.4413 11.5 23.2044 11.5 24H20.5C20.4997 23.4731 20.6381 22.9553 20.9014 22.4989C21.1648 22.0425 21.5437 21.6635 22 21.4V18Z" fill="currentColor" />
+        <path opacity="0.2" d="M26.5 24C26.5003 23.4732 26.362 22.9557 26.0988 22.4993C25.8356 22.043 25.4569 21.664 25.0008 21.4005C24.5447 21.1369 24.0273 20.9982 23.5005 20.9981C22.9737 20.998 22.4562 21.1366 22 21.4V15H30V23C30 23.2652 29.8946 23.5196 29.7071 23.7071C29.5196 23.8946 29.2652 24 29 24H26.5Z" fill="currentColor" />
+        <path d="M22 10H27.325C27.5242 9.99872 27.7192 10.0577 27.8843 10.1693C28.0494 10.2808 28.1769 10.4397 28.25 10.625L30 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M2 18H22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M23.5 27C25.1569 27 26.5 25.6569 26.5 24C26.5 22.3431 25.1569 21 23.5 21C21.8431 21 20.5 22.3431 20.5 24C20.5 25.6569 21.8431 27 23.5 27Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" />
+        <path d="M8.5 27C10.1569 27 11.5 25.6569 11.5 24C11.5 22.3431 10.1569 21 8.5 21C6.84315 21 5.5 22.3431 5.5 24C5.5 25.6569 6.84315 27 8.5 27Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" />
+        <path d="M20.5 24H11.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M5.5 24H3C2.73478 24 2.48043 23.8946 2.29289 23.7071C2.10536 23.5196 2 23.2652 2 23V9C2 8.73478 2.10536 8.48043 2.29289 8.29289C2.48043 8.10536 2.73478 8 3 8H22V21.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M22 15H30V23C30 23.2652 29.8946 23.5196 29.7071 23.7071C29.5196 23.8946 29.2652 24 29 24H26.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </>
+  );
+};
+
+const Lockopen = () => {
+  return (
+    <>
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path opacity="0.2" d="M26 11H6C5.44772 11 5 11.4477 5 12V26C5 26.5523 5.44772 27 6 27H26C26.5523 27 27 26.5523 27 26V12C27 11.4477 26.5523 11 26 11Z" fill="currentColor" />
+        <path d="M26 11H6C5.44772 11 5 11.4477 5 12V26C5 26.5523 5.44772 27 6 27H26C26.5523 27 27 26.5523 27 26V12C27 11.4477 26.5523 11 26 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M11.5 11V6.5C11.5 5.30653 11.9741 4.16193 12.818 3.31802C13.6619 2.47411 14.8065 2 16 2C17.1935 2 18.3381 2.47411 19.182 3.31802C20.0259 4.16193 20.5 5.30653 20.5 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M16.5 19C16.5 19.2761 16.2761 19.5 16 19.5C15.7239 19.5 15.5 19.2761 15.5 19C15.5 18.7239 15.7239 18.5 16 18.5C16.2761 18.5 16.5 18.7239 16.5 19Z" fill="currentColor" stroke="currentColor" stroke-width="2" />
+      </svg>
+    </>
+  );
+};
+
+const Creditcard = () => {
+  return (
+    <>
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path opacity="0.2" d="M3 12.1125H29V24C29 24.2652 28.8946 24.5196 28.7071 24.7071C28.5196 24.8946 28.2652 25 28 25H4C3.73478 25 3.48043 24.8946 3.29289 24.7071C3.10536 24.5196 3 24.2652 3 24V12.1125Z" fill="currentColor" />
+        <path d="M28 7H4C3.44772 7 3 7.44772 3 8V24C3 24.5523 3.44772 25 4 25H28C28.5523 25 29 24.5523 29 24V8C29 7.44772 28.5523 7 28 7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M21 21H25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M15 21H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M3 12.1125H29" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </>
+  );
+};
+
+const Users = () => {
+  return (
+    <>
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path opacity="0.2" d="M16 20C20.4183 20 24 16.4183 24 12C24 7.58172 20.4183 4 16 4C11.5817 4 8 7.58172 8 12C8 16.4183 11.5817 20 16 20Z" fill="currentColor" />
+        <path d="M16 20C20.4183 20 24 16.4183 24 12C24 7.58172 20.4183 4 16 4C11.5817 4 8 7.58172 8 12C8 16.4183 11.5817 20 16 20Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" />
+        <path d="M3.875 27C5.10367 24.8714 6.87104 23.1038 8.99944 21.8749C11.1278 20.6459 13.5423 19.9989 16 19.9989C18.4577 19.9989 20.8722 20.6459 23.0006 21.8749C25.129 23.1038 26.8963 24.8714 28.125 27" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </>
+  );
+};
+
+const Stack = () => {
+  return (
+    <>
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path opacity="0.2" d="M4 10L16 17L28 10L16 3L4 10Z" fill="currentColor" />
+        <path d="M4 22L16 29L28 22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M4 16L16 23L28 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M4 10L16 17L28 10L16 3L4 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </>
+  );
+};
+
+const Notepad = () => {
+  return (
+    <>
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path opacity="0.2" d="M7 5H25C25.2652 5 25.5196 5.10536 25.7071 5.29289C25.8946 5.48043 26 5.73478 26 6V25C26 25.7956 25.6839 26.5587 25.1213 27.1213C24.5587 27.6839 23.7956 28 23 28H9C8.20435 28 7.44129 27.6839 6.87868 27.1213C6.31607 26.5587 6 25.7956 6 25V6C6 5.73478 6.10536 5.48043 6.29289 5.29289C6.48043 5.10536 6.73478 5 7 5V5Z" fill="currentColor" />
+        <path d="M12 16H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M12 20H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M7 5H25C25.2652 5 25.5196 5.10536 25.7071 5.29289C25.8946 5.48043 26 5.73478 26 6V25C26 25.7956 25.6839 26.5587 25.1213 27.1213C24.5587 27.6839 23.7956 28 23 28H9C8.20435 28 7.44129 27.6839 6.87868 27.1213C6.31607 26.5587 6 25.7956 6 25V6C6 5.73478 6.10536 5.48043 6.29289 5.29289C6.48043 5.10536 6.73478 5 7 5V5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M10 3V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M16 3V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M22 3V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </>
+  );
+};
+
+export { CartIcon, Logo, Eye, Pin, Magnifyglass, User, Heart, Humburgar, Delivery, Guarantee, Payment, Support, ArrowRight, Rattingstart, ArrowRightYellow, HomeIcon, StarFilled, StarBordered, CloseRound, Filter, Crossborder, Minus, Plus, Doublecheck, Truck, Lockopen, Creditcard, Users, Stack, Notepad };
