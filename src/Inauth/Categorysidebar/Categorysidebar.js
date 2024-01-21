@@ -92,18 +92,28 @@ const accordionData = [
     ]
   },
 ];
+
+
 const LeftOpenDrawer = (props) => {
   const [expanded, setExpanded] = useState(accordionData[0].id);
+  const [expandedMenus, setExpandedMenus] = useState([]);
   const [count, setCount] = useState('');
 
-
-  const handleSeeItem = () => {
-    if (count => 5) {
-      setCount('open');
-    }
-  };
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
+  };
+
+  const toggleMenu = (menuId) => {
+    setExpandedMenus((prevMenus) =>
+      prevMenus.includes(menuId)
+        ? prevMenus.filter((id) => id !== menuId)
+        : [...prevMenus, menuId]
+    );
+    if (count === '') {
+      setCount('open');
+    } else {
+      setCount('');
+    }
   };
 
   return (
@@ -133,7 +143,7 @@ const LeftOpenDrawer = (props) => {
                 {item.menulist.map((menuItem, i) => (
                   <NavLink key={i} component={'a'} to={'/'}>{menuItem}</NavLink>
                 ))}
-                <Button className='see_all' onClick={handleSeeItem}>See All <KeyboardArrowDownIcon /></Button>
+                <Button className='see_all' onClick={() => toggleMenu(item.id)}>{expandedMenus.includes(item.id) ? 'See Less' : 'See All'} <KeyboardArrowDownIcon /></Button>
               </Box>
             </AccordionDetails>
           </Accordion>

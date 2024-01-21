@@ -6,6 +6,8 @@
   nav {
     ol {
       li {
+        display: flex;
+        align-items: center;
 
         &.MuiBreadcrumbs-separator {
           font-size: 2.4rem;

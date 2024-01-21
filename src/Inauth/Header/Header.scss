@@ -263,7 +263,7 @@
       a {
         font-size: 1.5rem;
         text-transform: capitalize;
-        color: var(--theme_footer);
+        color: var(--theme_darkgrey);
         padding: 1rem 1.4rem;
 
         svg {
@@ -272,6 +272,12 @@
 
         &.active {
           color: var(--theme_primary);
+          font-weight: 600;
+
+          @media screen and (max-width:991px) {
+            background-color: rgba(76, 126, 130, 0.1);
+            border-radius: 0.6rem;
+          }
         }
 
         @media screen and (max-width:1199px) {
@@ -302,6 +308,35 @@
 
       &.open {
         left: 0;
+      }
+    }
+  }
+}
+
+
+.user_menu {
+  margin-top: 1rem;
+
+  .MuiMenu-paper {
+    width: 14rem;
+
+    ul {
+      padding: 1rem 0;
+
+      li {
+        a {
+          width: 100%;
+          font-size: 1.4rem;
+          color: var(--theme_dark);
+        }
+
+        &:hover {
+          background-color: rgba(76, 126, 130, 0.1);
+
+          a {
+            color: var(--theme_primary);
+          }
+        }
       }
     }
   }

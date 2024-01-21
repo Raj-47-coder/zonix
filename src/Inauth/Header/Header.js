@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Button, TextField, Typography } from "@mui/material";
+import { Box, Button, TextField, Typography, Menu, List, ListItem } from "@mui/material";
 import { Logo, Pin, Magnifyglass, User, Heart, CartIcon, Humburgar } from "../../Zonixzsvgs/Zonixzsvgs";
 import Categorysidevar from '../Categorysidebar/Categorysidebar'
 import { Link, NavLink } from "react-router-dom";
@@ -8,7 +8,17 @@ import "./Header.scss";
 export default function Header() {
   const [handleSidebar, setHandleSidebar] = useState('');
   const [handleunlayer, setHandlelayout] = useState('');
-  const [open, setOpen] = React.useState(false)
+  const [open, setOpen] = React.useState(false);
+  const [anchorEl, setAnchorEl] = useState(null);
+
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   const toggleDrawer = () => {
     setOpen(!open);
@@ -48,13 +58,39 @@ export default function Header() {
               </Box>
             </Box>
             <Box component={"div"} className="header_right">
-              <Link component={"a"} to={'/signform'} className="status_bar">
+              {/* <Link component={"a"} to={'/signform'} className="status_bar">
                 <User />
                 <Box component={"div"} className="status_bar_name">
                   <Typography component={"p"} className="title">Login</Typography>
                   <Typography component={"p"} className="name">My Account</Typography>
                 </Box>
-              </Link>
+              </Link> */}
+
+              <Typography component={'a'} href='javascrpt:void(0);' onClick={handleClick} className="status_bar">
+                <User />
+                <Box component={"div"} className="status_bar_name">
+                  <Typography component={"p"} className="title">Login</Typography>
+                  <Typography component={"p"} className="name">My Account</Typography>
+                </Box>
+              </Typography>
+              <Menu
+                anchorEl={anchorEl}
+                open={Boolean(anchorEl)}
+                onClose={handleClose}
+                className='user_menu'
+              // transformOrigin={{ horizontal: 'center', vertical: 'top' }}
+              >
+
+                <ListItem onClick={handleClose}>
+                  <NavLink fullWidth component={'a'} to={'/'}>Profile</NavLink>
+                </ListItem>
+                <ListItem onClick={handleClose}>
+                  <NavLink fullWidth component={'a'} to={'/'}>Order</NavLink>
+                </ListItem>
+                <ListItem onClick={handleClose}>
+                  <NavLink fullWidth component={'a'} to={'/'}>Log out</NavLink>
+                </ListItem>
+              </Menu>
 
               <Link component={"a"} to={'/whishlist'} className="status_bar">
                 <Heart />
@@ -96,13 +132,12 @@ export default function Header() {
           <Box component={"div"} className="container">
             <Box component={'div'} className='menu_items'>
               <Typography component={'a'} href='javascript:void(0)' onClick={toggleDrawer} className='active'><Humburgar />Shop By Category</Typography>
-              <NavLink component={'a'} to='#'>Foundation</NavLink>
-              <NavLink component={'a'} to='#'>Brick</NavLink>
-              <NavLink component={'a'} to='#'>Cement</NavLink>
-              <NavLink component={'a'} to='#'>Metal</NavLink>
-              <NavLink component={'a'} to='#'>Concret</NavLink>
-              <NavLink component={'a'} to='#'>Steel</NavLink>
-              <NavLink component={'a'} to='#'>Wooden</NavLink>
+              <NavLink component={'a'} to='/'>Home</NavLink>
+              <NavLink component={'a'} to='/'>Foundation</NavLink>
+              <NavLink component={'a'} to='/'>Brick</NavLink>
+              <NavLink component={'a'} to='/'>Cement</NavLink>
+              <NavLink component={'a'} to='/'>Metal</NavLink>
+              <NavLink component={'a'} to='/'>Concret</NavLink>
               <NavLink component={'a'} to='/customersupport'>Contact us</NavLink>
               <NavLink component={'a'} to='/about'>About </NavLink>
             </Box>

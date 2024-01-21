@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Box, Typography, Breadcrumbs, Stack } from "@mui/material";
 import { Link } from "react-router-dom";
 import { HomeIcon } from '../../Zonixzsvgs/Zonixzsvgs';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import { useLocation } from 'react-router-dom';
 import './Breadcrumb.scss'
 
@@ -14,13 +15,14 @@ function Store() {
     const pageName = pathname.substring(1);
     setPageName(pageName);
   }, [location.pathname]);
+
   return (
     <>
       <Box component={'div'} className='breadcrumb'>
         <Box component={'div'} className='container'>
 
           <Stack spacing={2}>
-            <Breadcrumbs separator="›" >
+            <Breadcrumbs separator={<KeyboardArrowRightIcon />} >
               <Link underline="hover" key="1" to="/"><HomeIcon /> Home</Link>
               <Typography component={'p'} key="3">{pageName}</Typography>
             </Breadcrumbs>

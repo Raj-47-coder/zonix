@@ -28,11 +28,11 @@ function Footer() {
             <Box component={'div'} className='footer_cols second'>
               <Typography component={'h4'} className='title'>Top Category</Typography>
 
-              <Typography component={'a'} href='#' className='footer_navLink'>Category 1</Typography>
-              <Typography component={'a'} href='#' className='footer_navLink'>Category 2</Typography>
-              <Typography component={'a'} href='#' className='footer_navLink'>Category 3</Typography>
-              <Typography component={'a'} href='#' className='footer_navLink'>Category 4</Typography>
-              <Typography component={'a'} href='#' className='footer_navLink'>Category 5</Typography>
+              <Typography component={'a'} href='#' className='footer_navLink'>Foundation</Typography>
+              <Typography component={'a'} href='#' className='footer_navLink'>Brick</Typography>
+              <Typography component={'a'} href='#' className='footer_navLink'>Cement</Typography>
+              <Typography component={'a'} href='#' className='footer_navLink'>Metal</Typography>
+              <Typography component={'a'} href='#' className='footer_navLink'>Concret</Typography>
               <Typography component={'a'} href='#' className='footer_navLink all'>Browse All Products <ArrowRightYellow /></Typography>
             </Box>
             <Box component={'div'} className='footer_cols third'>
@@ -40,8 +40,8 @@ function Footer() {
 
               <Link component={'a'} to='#' className='footer_navLink'>My Account</Link>
               <Link component={'a'} to='#' className='footer_navLink'>About</Link>
-              <Link component={'a'} to='#' className='footer_navLink'>Privacy Policy</Link>
               <Link component={'a'} to='/faq' className='footer_navLink'>FAQ</Link>
+              <Link component={'a'} to='#' className='footer_navLink'>Privacy Policy</Link>
               <Link component={'a'} to='#' className='footer_navLink'>Term & Conditions</Link>
             </Box>
             <Box component={'div'} className='footer_cols last'>
