@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Breadcrumb from '../Breadcrumb/Breadcrumb';
-import { Magnifyglass, Notepad, Stack, Users, Creditcard, Lockopen, Truck } from '../../Zonixzsvgs/Zonixzsvgs'
+import Csimage from '../../images/customer_support.png';
 import { Box, Typography, TextField, Button, List, ListItem } from "@mui/material";
+import { Magnifyglass, Notepad, Stack, Users, Creditcard, Lockopen, Truck, Phonecall, Chats, ArrowRight } from '../../Zonixzsvgs/Zonixzsvgs'
 
 function Customersupport() {
 
@@ -21,7 +22,7 @@ function Customersupport() {
             </Box>
           </Box>
           <Box component={'div'} className='help_center_right'>
-            img
+            <img src={Csimage} alt={Csimage} />
           </Box>
         </Box>
 
@@ -91,6 +92,46 @@ function Customersupport() {
         </Box>
       </Box>
 
+
+      <Box component={'div'} className='contact_us'>
+
+        <Box component={'div'} className='contact_us_container'>
+          <Box component={'div'} className='contact_usBox'>
+            <Typography component={'p'}>Contact us</Typography>
+            <Typography component={'h2'}>Don’t find your answer.</Typography>
+            <Typography component={'h2'}>Contact with us</Typography>
+          </Box>
+
+
+          <Box component={'div'} className='contact_us_row'>
+            <Box component={'div'} className='contact_us_cols'>
+              <Box component={'div'} className='icon primary'>
+                <Phonecall />
+              </Box>
+              <Box component={'div'} className='details'>
+                <Typography component={'h6'}>Call us now</Typography>
+                <Typography component={'p'}>we are available online from 9:00 AM to 5:00 PM (GMT95:45) Talk with use now</Typography>
+                <Typography component={'h4'}>+1-202-555-0126</Typography>
+
+                <Typography component={'a'} className='primary' href='#'>Call Now <ArrowRight /></Typography>
+              </Box>
+            </Box>
+
+            <Box component={'div'} className='contact_us_cols'>
+              <Box component={'div'} className='icon success'>
+                <Chats />
+              </Box>
+              <Box component={'div'} className='details'>
+                <Typography component={'h6'}>Call us now</Typography>
+                <Typography component={'p'}>we are available online from 9:00 AM to 5:00 PM (GMT95:45) Talk with use now</Typography>
+                <Typography component={'h4'}>+1-202-555-0126</Typography>
+
+                <Typography component={'a'} className='success' href='#'>Contact Us <ArrowRight /></Typography>
+              </Box>
+            </Box>
+          </Box>
+        </Box>
+      </Box>
     </>
   );
 }

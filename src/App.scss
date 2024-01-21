@@ -1572,6 +1572,12 @@ input::-webkit-inner-spin-button {
     .help_center_right {
       max-width: 30%;
       width: 30%;
+      padding: 1rem;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
 
       @media screen and (max-width:991px) {
         max-width: 100%;
@@ -1717,6 +1723,189 @@ input::-webkit-inner-spin-button {
       }
 
       @media screen and (max-width:575px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}
+
+// ============= contact us
+.contact_us {
+  background-color: #F2F4F5;
+  padding: 4rem 0;
+
+  .contact_us_container {
+    max-width: 1320px;
+    margin: 0 auto;
+
+    .contact_usBox {
+      text-align: center;
+
+      p {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        background-color: var(--theme_primary);
+        padding: 0.8rem 1.4rem;
+        color: var(--theme_white);
+        display: inline-block;
+        margin: 0 auto;
+        margin-bottom: 1.6rem;
+      }
+
+      h2 {
+        font-size: 3.2rem;
+        color: var(--theme_dark);
+        font-weight: 600;
+
+        @media screen and (max-width:991px) {
+          font-size: 2.4rem;
+        }
+
+        @media screen and (max-width:575px) {
+          font-size: 1.8rem;
+        }
+      }
+    }
+
+
+    .contact_us_row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.4rem;
+      margin-top: 3rem;
+      padding: 0 1rem;
+
+      .contact_us_cols {
+        background-color: var(--theme_white);
+        box-shadow: 0px 24px 32px 0px rgba(25, 28, 31, 0.08);
+        padding: 3.2rem;
+        display: flex;
+        align-items: start;
+
+        .icon {
+          height: 9rem;
+          width: 9rem;
+          padding: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          svg {
+            height: 4.8rem;
+            width: 4.8rem;
+
+            @media screen and (max-width:991px) {
+              height: 3rem;
+              width: 3rem;
+            }
+
+            @media screen and (max-width:575px) {
+              height: 2.4rem;
+              width: 2.4rem;
+            }
+          }
+
+          &.primary {
+            background-color: rgba(76, 126, 130, 0.1);
+
+            svg {
+              color: var(--theme_primary);
+            }
+          }
+
+          &.success {
+            background-color: rgba(140, 179, 105, 0.1);
+
+            svg {
+              color: #8CB369;
+            }
+          }
+
+          @media screen and (max-width:991px) {
+            height: 6rem;
+            width: 6rem;
+          }
+
+          @media screen and (max-width:575px) {
+            height: 4rem;
+            width: 4rem;
+          }
+        }
+
+
+        .details {
+          width: calc(100% - 9rem);
+          padding-left: 2.4rem;
+
+          h6 {
+            font-size: 1.8rem;
+            color: var(--theme_dark);
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+
+            @media screen and (max-width:575px) {
+              font-size: 1.6rem;
+            }
+          }
+
+          p {
+            font-size: 1.4rem;
+            color: var(--theme_darkgrey);
+            margin-bottom: 1.4rem;
+          }
+
+          h4 {
+            font-size: 2rem;
+            color: var(--theme_dark);
+
+            @media screen and (max-width:575px) {
+              font-size: 1.8rem;
+            }
+          }
+
+          a {
+            padding: 1.2rem 2rem;
+            color: var(--theme_white);
+            text-transform: uppercase;
+            display: inline-flex;
+            align-items: center;
+            font-size: 1.4rem;
+            margin-top: 1.4rem;
+
+            &.primary {
+              background-color: var(--theme_primary);
+            }
+
+            &.success {
+              background-color: #8CB369;
+            }
+
+            svg {
+              color: var(--theme_white);
+              margin-left: 1rem;
+            }
+
+            @media screen and (max-width:575px) {
+              padding: 1rem 1.6rem;
+              font-size: 1.2rem;
+            }
+          }
+
+          @media screen and (max-width:991px) {
+            width: calc(100% - 6rem);
+          }
+
+          @media screen and (max-width:575px) {
+            width: calc(100% - 4rem);
+          }
+        }
+
+        @media screen and (max-width:575px) {
+          padding: 1.6rem;
+        }
+      }
+
+      @media screen and (max-width:991px) {
         grid-template-columns: repeat(1, 1fr);
       }
     }
