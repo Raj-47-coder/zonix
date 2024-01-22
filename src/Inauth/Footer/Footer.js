@@ -39,10 +39,10 @@ function Footer() {
               <Typography component={'h4'} className='title'>Quick Links</Typography>
 
               <Link component={'a'} to='#' className='footer_navLink'>My Account</Link>
-              <Link component={'a'} to='#' className='footer_navLink'>About</Link>
+              <Link component={'a'} to='/about' className='footer_navLink'>About</Link>
               <Link component={'a'} to='/faq' className='footer_navLink'>FAQ</Link>
-              <Link component={'a'} to='#' className='footer_navLink'>Privacy Policy</Link>
-              <Link component={'a'} to='#' className='footer_navLink'>Term & Conditions</Link>
+              <Link component={'a'} to='/privacypolicy' className='footer_navLink'>Privacy Policy</Link>
+              <Link component={'a'} to='/terms' className='footer_navLink'>Term & Conditions</Link>
             </Box>
             <Box component={'div'} className='footer_cols last'>
               <Typography component={'h4'} className='title'>Newsletter</Typography>

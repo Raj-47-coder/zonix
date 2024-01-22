@@ -13,6 +13,7 @@ html {
 
 body {
   font-size: 1.6rem;
+  background-color: #FAF9F7;
 
   * {
     font-family: 'Public Sans', sans-serif !important;
@@ -1907,6 +1908,44 @@ input::-webkit-inner-spin-button {
 
       @media screen and (max-width:991px) {
         grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}
+
+
+.condition_box {
+  background-color: var(--theme_white);
+  padding: 4rem 0;
+
+  h2 {
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: var(--theme_dark);
+    margin-bottom: 2rem;
+    text-align: center;
+
+    @media screen and (max-width:991px) {
+      font-size: 2rem;
+    }
+
+    @media screen and (max-width:767px) {
+      font-size: 1.8rem;
+    }
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+
+    li {
+      font-size: 1.4rem;
+      color: var(--theme_darkgrey);
+      margin-bottom: 1.5rem;
+
+      @media screen and (max-width:767px) {
+        font-size: 1.3rem;
       }
     }
   }
