@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Button, Tabs, Typography, Tab, List, ListItem, TabPanel } from "@mui/material";
+import { Box, Button, Tabs, Typography, Tab, List, ListItem, RadioGroup, TextField, FormControlLabel, Radio } from "@mui/material";
 import { Truck, User } from '../../Zonixzsvgs/Zonixzsvgs';
 import './Profile.scss';
 
@@ -50,10 +50,51 @@ export default function Profile() {
             </Box>
           </Box>
           <Box component={'div'} className='profile_right'>
-            <Box component="div" hidden={value !== 0} className='tab_box'>
-              <Typography component={'h4'}>Personal Information</Typography>
 
-              <Box component={'div'} className='form_box'></Box>
+            {/* Left Profil box Actions */}
+            <Box component="div" hidden={value !== 0} className='tab_box'>
+              <Typography component={'h4'}>Personal Information <Button className='edit_info'>Edit</Button></Typography>
+              <Box component={'div'} className='form_box'>
+                <Box component={'div'} className='form_box_item'>
+                  <TextField placeholder='First name' fullWidth disabled value='jenish' />
+                </Box>
+                <Box component={'div'} className='form_box_item'>
+                  <TextField placeholder='Last name' fullWidth disabled value='Mangukiya' />
+                </Box>
+                <Box component={'div'} className='form_box_item small mobile'>
+                  <Button className='save_info' disabled>Save</Button>
+                </Box>
+              </Box>
+
+              <Typography component={'h4'}>Your Gender</Typography>
+              <Box component={'div'} className='form_box'>
+                <Box component={'div'} className='form_box_item'>
+                  <RadioGroup row >
+                    <FormControlLabel value="male" control={<Radio disabled />} label="Male" />
+                    <FormControlLabel value="female" control={<Radio disabled />} label="Female" />
+                  </RadioGroup>
+                </Box>
+              </Box>
+
+              <Typography component={'h4'}>Email Address <Button className='edit_info'>Edit</Button></Typography>
+              <Box component={'div'} className='form_box'>
+                <Box component={'div'} className='form_box_item'>
+                  <TextField placeholder='E mail' fullWidth disabled value='jenishpatel05@gmail.com' />
+                </Box>
+                <Box component={'div'} className='form_box_item small'>
+                  <Button className='save_info' disabled>Save</Button>
+                </Box>
+              </Box>
+
+              <Typography component={'h4'}>Mobile Number <Button className='edit_info'>Edit</Button></Typography>
+              <Box component={'div'} className='form_box'>
+                <Box component={'div'} className='form_box_item'>
+                  <TextField placeholder='phone' fullWidth disabled value='+91 9016922632' />
+                </Box>
+                <Box component={'div'} className='form_box_item small'>
+                  <Button className='save_info' disabled>Save</Button>
+                </Box>
+              </Box>
             </Box>
             <Box component="div" hidden={value !== 1} className='tab_box'>
               Content for Tab 2

@@ -16,6 +16,7 @@
       margin-bottom: 3rem;
       display: flex;
       align-items: center;
+      box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
 
       .profie_img {
         height: 5rem;
@@ -48,6 +49,7 @@
 
     .setting_box {
       background-color: var(--theme_white);
+      box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
 
       ul {
         padding: 0;
@@ -112,6 +114,24 @@
         }
       }
     }
+
+
+    @media screen and (max-width:991px) {
+      max-width: 30rem;
+      min-width: 30rem;
+      margin-right: 0;
+      position: fixed;
+      top: 0;
+      left: -100%;
+      background-color: var(--theme_white);
+      z-index: 2;
+      height: 100vh;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+      &.open {
+        left: 0;
+      }
+    }
   }
 
   .profile_right {
@@ -123,22 +143,128 @@
     .tab_box {
 
       h4 {
-        font-size: 2.4rem;
+        font-size: 2rem;
         font-weight: 600;
         color: var(--theme_dark);
-        margin-bottom: 2.8rem;
+        margin-bottom: 1rem;
+
+        button.edit_info {
+          padding: 0.6rem;
+          font-size: 1.3rem;
+          color: var(--theme_darkprimary);
+          background-color: transparent;
+          text-transform: capitalize;
+        }
 
         @media screen and (max-width:991px) {
           font-size: 1.8rem;
-          margin-bottom: 1.8rem;
+          margin-bottom: 0rem;
         }
       }
 
       .form_box {
         display: flex;
         align-items: center;
-        margin-bottom: 3.2rem;
+        margin-bottom: 2.6rem;
+        flex-wrap: wrap;
+
+        .form_box_item {
+          max-width: 30rem;
+          margin-right: 2rem;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          &.small {
+            max-width: 12rem;
+            min-width: 12rem;
+
+            &.mobile {
+              margin-top: 0;
+
+              @media screen and (max-width:767px) {
+                margin-top: 1rem;
+              }
+            }
+
+            button.save_info {
+              padding: 1rem 3rem;
+              text-transform: uppercase;
+              background-color: var(--theme_primary);
+              color: var(--theme_white);
+              font-size: 1.4rem;
+              width: 100%;
+              height: auto;
+
+              &.Mui-disabled {
+                opacity: 0.7;
+              }
+            }
+
+            @media screen and (max-width:767px) {
+              max-width: calc(50% - 2rem);
+              min-width: calc(50% - 2rem);
+              margin-right: 0;
+            }
+
+            @media screen and (max-width:575px) {
+              max-width: 100%;
+              min-width: 100%;
+              margin-right: 0;
+            }
+          }
+
+          input.MuiInputBase-input {
+            background-color: #FAF9F7;
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            font-size: 1.6rem;
+            padding: 1.2rem;
+            min-height: auto;
+            color: var(--theme_dark);
+            height: auto;
+          }
+
+          .MuiFormGroup-row {
+            .MuiFormControlLabel-root {
+
+              span.MuiRadio-root {
+                padding: 0.6rem;
+                color: var(--theme_primary);
+
+                svg.MuiSvgIcon-root {
+                  height: 2.2rem;
+                  width: 2.2rem;
+                }
+              }
+
+              span.MuiTypography-root {
+                font-size: 1.6rem;
+                color: var(--theme_dark);
+              }
+            }
+          }
+
+          @media screen and (max-width:767px) {
+            max-width: calc(50% - 2rem);
+            min-width: calc(50% - 2rem);
+          }
+
+          @media screen and (max-width:575px) {
+            max-width: 100%;
+            min-width: 100%;
+            margin-right: 0;
+            margin-bottom: 1rem;
+          }
+        }
       }
+    }
+
+    @media screen and (max-width:991px) {
+      max-width: 100%;
+      min-width: 100%;
+      margin-right: 0;
     }
   }
 }
