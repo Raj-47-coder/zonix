@@ -5,6 +5,7 @@ import IconButton from '@mui/material/IconButton';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+import { NavLink } from "react-router-dom";
 import './Profile.scss';
 
 export default function Profile() {
@@ -70,7 +71,7 @@ export default function Profile() {
             <Box component={'div'} className='setting_box'>
               <List>
                 <ListItem>
-                  <Typography component={'a'} href='#' className='caret'> <Truck />My Order</Typography>
+                  <NavLink component={'a'} to='/order' className='caret'> <Truck />My Order</NavLink>
                 </ListItem>
               </List>
               <List>
@@ -231,7 +232,9 @@ export default function Profile() {
 
                 <Box component={'div'} className='form_box_item fullWidth'>
                   <Button className='address_btn fill'>Upload</Button>
-                  <Button className='address_btn ouline'>Reset</Button>
+                </Box>
+                <Box component={'div'} className='form_box_item fullWidth'>
+                  <NavLink component={'a'} className='pan_cardTerm' target='_blank' to='/terms'>Read Terms & Conditions of PAN Card Information</NavLink>
                 </Box>
               </Box>
             </Box>

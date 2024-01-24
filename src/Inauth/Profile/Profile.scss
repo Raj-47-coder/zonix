@@ -167,9 +167,14 @@
       position: absolute;
       top: 1rem;
       right: 1rem;
+      display: none;
 
       svg {
         font-size: 2.4rem;
+      }
+
+      @media screen and (max-width:991px) {
+        display: block;
       }
     }
 
@@ -236,6 +241,12 @@
             @media screen and (max-width:767px) {
               grid-column: span 1;
             }
+          }
+
+          .pan_cardTerm {
+            font-size: 1.4rem;
+            color: var(--theme_darkprimary);
+            font-weight: 600;
           }
 
           &.small {
@@ -355,6 +366,7 @@
           .check_box {
             .MuiFormControlLabel-root {
               margin: 0;
+              align-items: start;
 
               .MuiCheckbox-root {
                 padding: 0.4rem;
