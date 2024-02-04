@@ -85,7 +85,7 @@ export default function Header() {
                   <NavLink fullWidth component={'a'} to={'/profile'}>Profile</NavLink>
                 </ListItem>
                 <ListItem onClick={handleClose}>
-                  <NavLink fullWidth component={'a'} to={'/'}>Order</NavLink>
+                  <NavLink fullWidth component={'a'} to={'/orders'}>Orders</NavLink>
                 </ListItem>
                 <ListItem onClick={handleClose}>
                   <NavLink fullWidth component={'a'} to={'/'}>Log out</NavLink>

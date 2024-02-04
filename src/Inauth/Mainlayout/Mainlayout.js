@@ -12,6 +12,7 @@ import Customersupport from '../Mainpages/Customersupport';
 import Privacypolicy from '../Mainpages/Privacypolicy';
 import Terms from '../Mainpages/Terms';
 import Profile from '../Profile/Profile';
+import Orders from "../Orders/Orders";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 export default function Mainlayout() {
@@ -30,6 +31,7 @@ export default function Mainlayout() {
         <Route path='/privacypolicy' element={<Privacypolicy />} />
         <Route path='/terms' element={<Terms />} />
         <Route path='/profile' element={<Profile />} />
+        <Route path='/orders' element={<Orders />} />
       </Routes>
       <Footer />
     </>

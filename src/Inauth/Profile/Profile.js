@@ -71,7 +71,7 @@ export default function Profile() {
             <Box component={'div'} className='setting_box'>
               <List>
                 <ListItem>
-                  <NavLink component={'a'} to='/order' className='caret'> <Truck />My Order</NavLink>
+                  <NavLink component={'a'} to='/orders' className='caret'> <Truck />My Order</NavLink>
                 </ListItem>
               </List>
               <List>
