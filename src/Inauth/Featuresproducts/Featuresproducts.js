@@ -26,17 +26,19 @@ function Bestdeals() {
   ]
   return (
     <>
-      <Box component={'div'} className='container'>
-        <Box component={'div'} className='section_title'>
-          <Typography component={'h2'}>Featured Products</Typography>
-          <Link component={'a'} to='/store'>
-            <Typography component={'span'}>Browse All Product </Typography>
-            <ArrowRight />
-          </Link>
-        </Box>
+      <Box component={'div'} sx={{ backgroundColor: '#EDF1F3', padding: '2rem 0', margin: '2rem 0' }}>
+        <Box component={'div'} className='container'>
+          <Box component={'div'} className='section_title'>
+            <Typography component={'h2'}>Featured Products</Typography>
+            <Link component={'a'} to='/store'>
+              <Typography component={'span'}>Browse All Product </Typography>
+              <ArrowRight />
+            </Link>
+          </Box>
 
-        <Box component={'div'} className='product_box'>
-          <Products productsList={productsList} />
+          <Box component={'div'} className='product_box'>
+            <Products productsList={productsList} />
+          </Box>
         </Box>
       </Box>
     </>

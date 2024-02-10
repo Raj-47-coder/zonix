@@ -13,13 +13,17 @@
   .tocategory_cols {
     background-color: var(--theme_white);
     padding: 1.5rem;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 
     h6 {
       font-size: 1.8rem;
       color: var(--theme_dark);
       font-weight: 600;
       margin-bottom: 1.5rem;
+
+      @media screen and (max-width:991px) {
+        font-size: 1.5rem;
+      }
     }
 
     .inner_cardRow {
@@ -36,7 +40,7 @@
           border-radius: 1rem;
 
           @media screen and (max-width:575px) {
-            height: 10rem;
+            height: 9rem;
           }
         }
 
@@ -48,14 +52,23 @@
           margin-bottom: 0;
         }
       }
+
+      @media screen and (max-width:991px) {
+        gap: 0.5rem;
+      }
+    }
+
+    @media screen and (max-width:991px) {
+      max-width: 37rem;
+      min-width: 100%;
+      margin-bottom: 1rem;
     }
   }
 
   @media screen and (max-width:991px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media screen and (max-width:575px) {
     grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
   }
 }
