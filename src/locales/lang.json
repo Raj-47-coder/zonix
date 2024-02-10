@@ -1,0 +1,44 @@
+{
+  "en": {
+    "headerSearch": "Search for Products, Brands and More",
+    "location": "Update Location",
+    "account": "My Account",
+    "whishlist": "Whishlist",
+    "cart": "Your Cart",
+    "titleCategory": "Shop by Category",
+    "titleDeal": "Best Deals",
+    "titleBrand": "Top Brands",
+    "titleFeature": "Featured Product",
+    "titleToday": "FLASH SALE TODAY",
+    "titleRated": "TOP RATED",
+    "titleArrival": "NEW ARRIVAL"
+  },
+  "hi": {
+    "headerSearch": "उत्पाद, ब्रांड और बहुत कुछ खोजें",
+    "location": "स्थान अद्यतन करें",
+    "account": "मेरा खाता",
+    "whishlist": "विश की सूची",
+    "cart": "आपकी कार्ट",
+    "titleCategory": "श्रेणी द्वारा खरीदें",
+    "titleDeal": "सर्वोत्तम सौदे",
+    "titleBrand": "शीर्ष ब्रांड",
+    "titleFeature": "विशेष उत्पाद",
+    "titleToday": "आज की फ़्लैश सेल",
+    "titleRated": "शीर्ष रेटेड",
+    "titleArrival": "नई आगमन"
+  },
+  "ta": {
+    "headerSearch": "பொருட்களை, பிராண்ட்களை மற்றும் மேலும் தேடு",
+    "location": "இடத்தை புதுப்பிக்கவும்",
+    "account": "எனது கணக்கு",
+    "whishlist": "விருப்பப் பட்டியல்",
+    "cart": "உங்கள் கார்ட்",
+    "titleCategory": "வகைப்படுத்தி வாங்கவும்",
+    "titleDeal": "சிறந்த செயல்கள்",
+    "titleBrand": "சிறந்த பிராண்ட்கள்",
+    "titleFeature": "சிறப்பு தயாரிப்பு",
+    "titleToday": "இன்று குறைந்த விற்பனை",
+    "titleRated": "உயர் மதிப்பிட்ட",
+    "titleArrival": "புதிய வருமானம்"
+  }
+}

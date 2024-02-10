@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Box, Button, TextField, Typography, Menu, List, ListItem } from "@mui/material";
+import { Box, Button, TextField, Typography, Menu, Select, MenuItem, ListItem } from "@mui/material";
 import { Logo, Pin, Magnifyglass, User, Heart, CartIcon, Humburgar } from "../../Zonixzsvgs/Zonixzsvgs";
 import Categorysidevar from '../Categorysidebar/Categorysidebar'
 import { Link, NavLink } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 import "./Header.scss";
 
 export default function Header() {
@@ -10,7 +11,14 @@ export default function Header() {
   const [handleunlayer, setHandlelayout] = useState('');
   const [open, setOpen] = React.useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
+  const [language, setLanguage] = useState(0);
+  const { t, i18n } = useTranslation();
 
+  const handleLanguage = (e) => {
+    // setLanguage(e.target.value);
+    const selectedLanguage = e.target.value;
+    i18n.changeLanguage(selectedLanguage);
+  };
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -46,7 +54,7 @@ export default function Header() {
               <Box component={"div"} className="user_location">
                 <Pin />
                 <Box component={"div"} className="location">
-                  <Typography component={"p"} className="title">Update Location</Typography>
+                  <Typography component={"p"} className="title">{t('location')}</Typography>
                   <Typography component={"p"} className="locate">Delivering to Ahmedabad 380001</Typography>
                 </Box>
               </Box>
@@ -54,23 +62,25 @@ export default function Header() {
             <Box component={"div"} className="header_center">
               <Box component={"div"} className="search_product">
                 <Magnifyglass />
-                <TextField type='text' fullWidth placeholder='Search for Products, Brands and More' />
+                <TextField type='text' fullWidth placeholder={t('headerSearch')} />
               </Box>
             </Box>
             <Box component={"div"} className="header_right">
-              {/* <Link component={"a"} to={'/signform'} className="status_bar">
-                <User />
-                <Box component={"div"} className="status_bar_name">
-                  <Typography component={"p"} className="title">Login</Typography>
-                  <Typography component={"p"} className="name">My Account</Typography>
-                </Box>
-              </Link> */}
+              <Select
+                value={i18n.language}
+                onChange={handleLanguage}
+                className='language_select'
+              >
+                <MenuItem value="en">English</MenuItem>
+                <MenuItem value="hi">Hindi(हिंदी)</MenuItem>
+                <MenuItem value="ta">Tamil(तामिल)</MenuItem>
+              </Select>
 
               <Typography component={'a'} href='javascrpt:void(0);' onClick={handleClick} className="status_bar">
                 <User />
                 <Box component={"div"} className="status_bar_name">
                   <Typography component={"p"} className="title">Login</Typography>
-                  <Typography component={"p"} className="name">My Account</Typography>
+                  <Typography component={"p"} className="name">{t('account')}</Typography>
                 </Box>
               </Typography>
               <Menu
@@ -96,7 +106,7 @@ export default function Header() {
                 <Heart />
                 <Box component={"div"} className="status_bar_name">
                   <Typography component={"p"} className="title">Favorite</Typography>
-                  <Typography component={"p"} className="name">My Wishlist</Typography>
+                  <Typography component={"p"} className="name">{t("whishlist")}</Typography>
                 </Box>
               </Link>
 
@@ -106,7 +116,7 @@ export default function Header() {
                   <Typography component={'span'}>2</Typography>
                 </Box>
                 <Box component={"div"} className="status_bar_name">
-                  <Typography component={"p"} className="title">Your Cart :</Typography>
+                  <Typography component={"p"} className="title">{t("cart")} :</Typography>
                   <Typography component={"p"} className="name">$00.00</Typography>
                 </Box>
               </Link>

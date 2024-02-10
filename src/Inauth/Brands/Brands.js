@@ -10,8 +10,10 @@ import cement from '../../images/cement.png';
 import metal from '../../images/metal.png';
 import 'swiper/css';
 import './Brands.scss';
+import { useTranslation } from 'react-i18next';
 
 function Brands() {
+  const { t } = useTranslation();
 
   const categoriesList = [
     { img: concert, title: 'Concert' },
@@ -32,7 +34,7 @@ function Brands() {
 
       <Box component={'div'} className='container'>
         <Box component={'div'} className='section_title'>
-          <Typography component={'h2'}>Top Brands</Typography>
+          <Typography component={'h2'}>{t("titleBrand")}</Typography>
           {/* <Typography component={'a'} href='#'>
             <Typography component={'span'}>Browse All Category</Typography>
             <ArrowRight />

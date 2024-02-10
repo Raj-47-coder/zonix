@@ -121,6 +121,26 @@
       display: flex;
       align-items: center;
 
+      .language_select {
+        max-width: 8rem;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: var(--theme_white);
+
+        .MuiSelect-select {
+          padding: 1rem;
+          padding-right: 2.5rem;
+          font-size: 1.2rem;
+          display: flex;
+          align-items: center;
+          justify-content: left;
+        }
+
+        svg.MuiSvgIcon-root {
+          color: var(--theme_white);
+          font-size: 1.8rem;
+        }
+      }
+
       .status_bar {
         display: flex;
         align-items: center;

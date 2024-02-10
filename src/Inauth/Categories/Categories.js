@@ -8,13 +8,15 @@ import wood from '../../images/wood.png';
 import brick from '../../images/brick.png';
 import cement from '../../images/cement.png';
 import metal from '../../images/metal.png';
-import { ArrowRight } from '../../Zonixzsvgs/Zonixzsvgs'
+import { ArrowRight } from '../../Zonixzsvgs/Zonixzsvgs';
 import 'swiper/css';
 import './Categories.scss';
 import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 
 function Categories() {
+  const { t, i18n } = useTranslation();
 
   const categoriesList = [
     { img: concert, title: 'Concert' },
@@ -34,7 +36,7 @@ function Categories() {
     <>
       <Box component={'div'} className='container'>
         <Box component={'div'} className='section_title'>
-          <Typography component={'h2'}>Shop by Category</Typography>
+          <Typography component={'h2'}>{t("titleCategory")}</Typography>
           <Link component={'a'} to='/store'>
             <Typography component={'span'}>Browse All Category</Typography>
             <ArrowRight />

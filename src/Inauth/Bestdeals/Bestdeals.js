@@ -5,9 +5,10 @@ import { ArrowRight, Rattingstart, CartIcon } from '../../Zonixzsvgs/Zonixzsvgs'
 import 'swiper/css';
 import './Bestdeals.scss';
 import { Link } from "react-router-dom";
-
+import { useTranslation } from 'react-i18next';
 
 function Bestdeals() {
+  const { t, i18n } = useTranslation();
 
   const categoriesList = [
     { img: product1, title: 'Concert' },
@@ -22,8 +23,7 @@ function Bestdeals() {
 
         <Box component={'div'} className='container'>
           <Box component={'div'} className='section_title'>
-            <Typography component={'h2'}>Best Deals
-
+            <Typography component={'h2'}>{t("titleDeal")}
               <Typography component={'span'}>Deals ends in</Typography>
               <Typography component={'span'} className='badges_timer'>16d : 21h : 57m :23s</Typography>
             </Typography>
