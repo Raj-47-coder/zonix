@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Box, Typography, TextField, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Button, TableFooter, List, ListItem } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { ArrowRight, Crossborder } from '../../Zonixzsvgs/Zonixzsvgs';
-import Breadcrumb from '../Breadcrumb/Breadcrumb'
+import Breadcrumb from '../Breadcrumb/Breadcrumb';
+import Brick from '../../images/brick.png'
+import Wood from '../../images/wood.png'
 import './Favourite.scss';
 
 function Addcart() {
@@ -64,7 +66,7 @@ function Addcart() {
       <Breadcrumb />
       <Box component={'div'} className='container'>
         <Box component={'div'} className='cart_row'>
-          <Box component={'div'} className='cart_colLeft'>
+          <Box component={'div'} sx={{ display: 'none' }} className='cart_colLeft'>
             <Box component={'div'} className='favourite_box'>
               <Typography component={'h5'}>Shopping Cart</Typography>
 
@@ -93,9 +95,79 @@ function Addcart() {
               </TableContainer>
             </Box>
           </Box>
+
+          <Box component={'div'} className='cart_colLeft'>
+            <Box component={'div'} className='cardTo_shopBox'>
+
+              <Box component={'div'} className='cardTo_shop'>
+                <Box component={'div'} className='carded_image'>
+                  <Box component={'div'} className='product_image'>
+                    <img src={Brick} alt={Brick} />
+                  </Box>
+                  <Box component={'div'} className='quantity'>
+                    <Button onClick={handleDecrement}>-</Button>
+                    <TextField type="number" fullWidth value={value} readOnly className='count' />
+                    <Button onClick={handleIncrement}>+</Button>
+                  </Box>
+
+                </Box>
+                <Box component={'div'} className='carded_details'>
+                  <NavLink to={'/'} component={'a'}>Indian standard Quality Chips Building Material, Grade Standard: Standard, Packaging Type: Tipper Load Indian standard Quality Chips Building Material, Grade Standard: Standard, Packaging Type: Tipper Load</NavLink>
+                  <Box component={'div'} className='price_product'>
+                    <Typography component={'del'}>$1299</Typography>
+                    <Typography component={'p'}>$999</Typography>
+                  </Box>
+                  <Box component={'div'} className='delivery_add'>
+                    <Typography component={'h5'}>Deliver to :
+                      <Typography component={'span'}>John Cartin, 395608</Typography>
+                    </Typography>
+                    <Typography component={'p'}>Paseo Berta Magaña s/n., Ponferrada, Cbr 25481</Typography>
+                    <NavLink component={'a'} to={'/profile'} className='change_add'>Change</NavLink>
+                  </Box>
+
+                  <Button className="cardProduct_remove">Remove</Button>
+
+                </Box>
+              </Box>
+
+              <Box component={'div'} className='cardTo_shop'>
+                <Box component={'div'} className='carded_image'>
+                  <Box component={'div'} className='product_image'>
+                    <img src={Wood} alt={Wood} />
+                  </Box>
+                  <Box component={'div'} className='quantity'>
+                    <Button onClick={handleDecrement}>-</Button>
+                    <TextField type="number" fullWidth value={value} readOnly className='count' />
+                    <Button onClick={handleIncrement}>+</Button>
+                  </Box>
+
+                </Box>
+                <Box component={'div'} className='carded_details'>
+                  <NavLink to={'/'} component={'a'}>Indian standard Quality Chips Building Material, Grade Standard: Standard, Packaging Type: Tipper Load Indian standard Quality Chips Building Material, Grade Standard: Standard, Packaging Type: Tipper Load</NavLink>
+                  <Box component={'div'} className='price_product'>
+                    <Typography component={'del'}>$900</Typography>
+                    <Typography component={'p'}>$1385</Typography>
+                  </Box>
+                  <Box component={'div'} className='delivery_add'>
+                    <Typography component={'h5'}>Deliver to :
+                      <Typography component={'span'}>Kevin Kara, 0025</Typography>
+                    </Typography>
+                    <Typography component={'p'}>Paseo Berta Magaña s/n., Ponferrada, Cbr 25481</Typography>
+
+                    <NavLink component={'a'} to={'/profile'} className='change_add'>Change</NavLink>
+                  </Box>
+
+                  <Button className="cardProduct_remove">Remove</Button>
+
+                </Box>
+              </Box>
+            </Box>
+          </Box>
+
+
           <Box component={'div'} className='cart_colRight'>
             <Box component={'div'} className='cart_total'>
-              <Typography component={'h4'}>Cart Totals</Typography>
+              <Typography component={'h4'}>Price Details</Typography>
 
               <List className='total_sum'>
                 <ListItem>
