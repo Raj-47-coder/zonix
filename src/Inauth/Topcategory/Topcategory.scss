@@ -1,14 +1,23 @@
+// .topCategory_box {
+//   // padding: 0 1rem;
+// }
+
 .topCategory_box {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, #ccd6db 100%);
-  // padding: 0 1rem;
-  padding-top: 1rem;
+  max-width: 1640px;
+  margin: 0 auto;
+  padding: 0 1.2rem;
+
+  @media screen and (max-width:991px) {
+    padding: 0;
+  }
 }
 
 .tocategory_row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
-  // margin-top: 2rem;
+  padding: 0 1rem;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, #ccd6db 100%);
 
   .tocategory_cols {
     background-color: var(--theme_white);
