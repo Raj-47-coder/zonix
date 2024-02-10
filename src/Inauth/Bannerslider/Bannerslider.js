@@ -21,7 +21,7 @@ function Bannerslider() {
           //   disableOnInteraction: false,
           // }}
           loop={true}
-          pagination={{ clickable: true }}
+          pagination={false}
           className='banner_slider'
         >
           <SwiperSlide>

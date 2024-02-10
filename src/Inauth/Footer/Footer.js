@@ -40,6 +40,7 @@ function Footer() {
 
               <Link component={'a'} to='#' className='footer_navLink'>My Account</Link>
               <Link component={'a'} to='/about' className='footer_navLink'>About</Link>
+              <Link component={'a'} to='/customersupport' className='footer_navLink'>Contact us</Link>
               <Link component={'a'} to='/faq' className='footer_navLink'>FAQ</Link>
               <Link component={'a'} to='/privacypolicy' className='footer_navLink'>Privacy Policy</Link>
               <Link component={'a'} to='/terms' className='footer_navLink'>Term & Conditions</Link>

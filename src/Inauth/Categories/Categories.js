@@ -32,49 +32,51 @@ function Categories() {
   ]
   return (
     <>
-      <Box component={'div'} className='container'>
-        <Box component={'div'} className='section_title'>
-          <Typography component={'h2'}>Shop by Category</Typography>
-          <Link component={'a'} to='/store'>
-            <Typography component={'span'}>Browse All Category</Typography>
-            <ArrowRight />
-          </Link>
+      <Box component={'div'} sx={{ backgroundColor: '#EDF1F3', padding: '2rem', margin: '2rem 0' }}>
+        <Box component={'div'} className='container'>
+          <Box component={'div'} className='section_title'>
+            <Typography component={'h2'}>Shop by Category</Typography>
+            <Link component={'a'} to='/store'>
+              <Typography component={'span'}>Browse All Category</Typography>
+              <ArrowRight />
+            </Link>
+          </Box>
+          <Swiper
+            spaceBetween={20}
+            autoplay={true}
+            speed={1000}
+            loop={true}
+            modules={[Autoplay, Pagination, Navigation]}
+            breakpoints={{
+              375: {
+                slidesPerView: 2,
+              },
+              575: {
+                slidesPerView: 2.5,
+              },
+              768: {
+                slidesPerView: 4,
+              },
+              1200: {
+                slidesPerView: 5,
+              },
+              1350: {
+                slidesPerView: 6,
+              },
+            }}
+          >
+            {categoriesList.map((items, i) => (
+              <SwiperSlide key={i}>
+                <Link component={'a'} to={'/store'} className='category_card'>
+                  <Box component={"div"} className='card_img'>
+                    <img src={items.img} alt={items.img} />
+                  </Box>
+                  <Typography component={'p'}>{items.title}</Typography>
+                </Link>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </Box>
-        <Swiper
-          spaceBetween={20}
-          autoplay={true}
-          speed={1000}
-          loop={true}
-          modules={[Autoplay, Pagination, Navigation]}
-          breakpoints={{
-            375: {
-              slidesPerView: 2,
-            },
-            575: {
-              slidesPerView: 2.5,
-            },
-            768: {
-              slidesPerView: 4,
-            },
-            1200: {
-              slidesPerView: 5,
-            },
-            1350: {
-              slidesPerView: 6,
-            },
-          }}
-        >
-          {categoriesList.map((items, i) => (
-            <SwiperSlide key={i}>
-              <Link component={'a'} to={'/store'} className='category_card'>
-                <Box component={"div"} className='card_img'>
-                  <img src={items.img} alt={items.img} />
-                </Box>
-                <Typography component={'p'}>{items.title}</Typography>
-              </Link>
-            </SwiperSlide>
-          ))}
-        </Swiper>
       </Box>
     </>
   );

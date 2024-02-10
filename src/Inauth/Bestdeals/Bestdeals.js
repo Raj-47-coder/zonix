@@ -65,7 +65,7 @@ function Bestdeals() {
             </Box>
           ))}
         </Box>
-      </Box >
+      </Box>
     </>
   );
 }

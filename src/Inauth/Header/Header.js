@@ -36,7 +36,7 @@ export default function Header() {
   return (
     <>
       <Box component={"div"} className="header">
-        <Box component={"div"} className="container">
+        <Box component={"div"} className=" ">
           <Box component={"div"} className="header_top">
             <Box component={"div"} className="header_left">
               <Link component={"a"} to="/" className='logo'>
@@ -129,7 +129,7 @@ export default function Header() {
               </svg>
             </Button>
           </Box>
-          <Box component={"div"} className="container">
+          <Box component={"div"} className=" ">
             <Box component={'div'} className='menu_items'>
               <Typography component={'a'} href='javascript:void(0)' onClick={toggleDrawer} className='active'><Humburgar />Shop By Category</Typography>
               <NavLink component={'a'} to='/'>Home</NavLink>
@@ -138,8 +138,6 @@ export default function Header() {
               <NavLink component={'a'} to='/'>Cement</NavLink>
               <NavLink component={'a'} to='/'>Metal</NavLink>
               <NavLink component={'a'} to='/'>Concret</NavLink>
-              <NavLink component={'a'} to='/customersupport'>Contact us</NavLink>
-              <NavLink component={'a'} to='/about'>About </NavLink>
             </Box>
           </Box>
         </Box>
