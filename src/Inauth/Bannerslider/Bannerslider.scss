@@ -12,6 +12,11 @@
   position: relative;
   background-color: #ccd6db;
 
+  .swiper-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
   .banner_card {
     position: relative;
     display: flex;
@@ -57,7 +62,7 @@
 
     .card_details {
       z-index: 5;
-      max-width: 30%;
+      max-width: 40%;
       padding-left: 6rem;
 
       p {

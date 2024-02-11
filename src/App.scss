@@ -14,6 +14,7 @@ html {
 body {
   font-size: 1.6rem;
   background-color: #FFFFFF;
+  top: 0 !important;
 
   * {
     font-family: 'Public Sans', sans-serif !important;
@@ -1949,4 +1950,63 @@ input::-webkit-inner-spin-button {
       }
     }
   }
+}
+
+#google_translate_element {
+  max-width: 10rem;
+  width: 10rem;
+
+  // select.goog-te-combo {
+  //   width: 100%;
+  //   margin: 0;
+  //   padding: 0.5rem;
+  //   font-size: 1.4rem;
+  //   outline: none;
+  //   border: none;
+  //   border-radius: 0.5rem;
+  // }
+
+  div.goog-te-gadget {
+    .goog-te-gadget-simple {
+      width: 100%;
+      padding: 1.2rem 0.8rem;
+      border-radius: 0 0.5rem 0.5rem 0;
+      display: flex;
+      align-items: center;
+      border: none;
+      border-left: 1px solid var(--border);
+
+      a {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+
+        span {
+          display: none;
+          width: auto;
+
+          &:first-child {
+            font-size: 1.4rem;
+            color: var(--theme_dark);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: block;
+            width: 100%;
+
+            @media screen and (max-width:991px) {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+
+      @media screen and (max-width:991px) {
+        padding: 0.8rem;
+      }
+    }
+  }
+}
+
+iframe.skiptranslate {
+  top: -100%;
 }

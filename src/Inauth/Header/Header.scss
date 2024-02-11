@@ -72,11 +72,15 @@
     }
 
     .header_center {
-      width: calc(48% - 3rem);
-      margin-left: 3rem;
+      max-width: calc(48% - 4rem);
+      width: 100%;
+      margin: 0 2rem;
+      display: flex;
+      align-items: center;
 
       .search_product {
         position: relative;
+        width: calc(100% - 10rem);
 
         svg {
           position: absolute;
@@ -92,7 +96,7 @@
 
         input.MuiInputBase-input {
           background-color: var(--theme_white);
-          border-radius: 0.4rem;
+          border-radius: 0.5rem 0 0 0.5rem;
           border: none;
           outline: none;
           box-shadow: none;
@@ -238,98 +242,100 @@
 
     @media screen and (max-width:991px) {
       flex-wrap: wrap;
+      padding: 1rem;
+    }
+  }
+}
+
+.header_menu {
+  background-color: var(--theme_white);
+  transition: 0.3s;
+  padding: 0.5rem 2rem;
+
+  .menu_title {
+    width: calc(100% - 0%);
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: var(--theme_primary);
+    margin-bottom: 1.5rem;
+    display: none;
+
+    .logo {
+      height: 2.6rem;
+      width: auto;
+      max-width: 100%;
+
+      svg {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    button.close_button {
+      min-width: 3.2rem;
+      height: 3.2rem;
+    }
+
+    @media screen and (max-width:991px) {
+      display: flex;
     }
   }
 
-  .header_menu {
-    background-color: var(--theme_white);
-    transition: 0.3s;
-    padding: 0.5rem 2rem;
+  .menu_items {
+    display: flex;
+    align-items: center;
+    justify-content: left;
 
-    .menu_title {
-      width: calc(100% - 0%);
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem;
-      background-color: var(--theme_darkprimary);
-      margin-bottom: 1.5rem;
-      display: none;
+    a {
+      font-size: 1.5rem;
+      text-transform: capitalize;
+      color: var(--theme_darkgrey);
+      padding: 1rem 1.4rem;
 
-      .logo {
-        height: 2.6rem;
-        width: auto;
-        max-width: 100%;
-
-        svg {
-          height: 100%;
-          width: 100%;
-        }
+      svg {
+        margin-right: 1rem;
       }
 
-      button.close_button {
-        min-width: 3.2rem;
-        height: 3.2rem;
-      }
-
-      @media screen and (max-width:991px) {
-        display: flex;
-      }
-    }
-
-    .menu_items {
-      display: flex;
-      align-items: center;
-      justify-content: left;
-
-      a {
-        font-size: 1.5rem;
-        text-transform: capitalize;
-        color: var(--theme_darkgrey);
-        padding: 1rem 1.4rem;
-
-        svg {
-          margin-right: 1rem;
-        }
-
-        &.active {
-          color: var(--theme_primary);
-          font-weight: 600;
-
-          @media screen and (max-width:991px) {
-            background-color: rgba(76, 126, 130, 0.1);
-            border-radius: 0.6rem;
-          }
-        }
-
-        @media screen and (max-width:1199px) {
-          font-size: 1.4rem;
-        }
+      &.active {
+        color: var(--theme_primary);
+        font-weight: 600;
 
         @media screen and (max-width:991px) {
-          display: block;
-          width: 100%;
+          background-color: rgba(76, 126, 130, 0.1);
+          border-radius: 0.6rem;
         }
+      }
+
+      @media screen and (max-width:1199px) {
+        font-size: 1.4rem;
       }
 
       @media screen and (max-width:991px) {
         display: block;
+        width: 100%;
       }
     }
 
     @media screen and (max-width:991px) {
-      position: fixed;
-      top: 0;
-      left: -100%;
-      height: 100%;
-      z-index: 999;
-      max-width: 34rem;
-      width: 100%;
-      background-color: transparent;
-      background-color: var(--theme_white);
+      display: block;
+    }
+  }
 
-      &.open {
-        left: 0;
-      }
+  @media screen and (max-width:991px) {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    z-index: 999;
+    max-width: 34rem;
+    width: 100%;
+    background-color: transparent;
+    background-color: var(--theme_white);
+    padding: 0;
+
+    &.open {
+      left: 0;
     }
   }
 }
@@ -370,7 +376,7 @@
   right: -100%;
   width: 100%;
   height: 100%;
-  z-index: 995;
+  z-index: 997;
   opacity: 0.6;
 
   &.open {
