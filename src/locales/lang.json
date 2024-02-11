@@ -11,7 +11,23 @@
     "titleFeature": "Featured Product",
     "titleToday": "FLASH SALE TODAY",
     "titleRated": "TOP RATED",
-    "titleArrival": "NEW ARRIVAL"
+    "titleArrival": "NEW ARRIVAL",
+    "fastDelivery": {
+      "title": "Fasted Delivery",
+      "desc": "Delivery in 24/H"
+    },
+    "return24": {
+      "title": "24 Hours Return",
+      "desc": "100% money-back guarantee"
+    },
+    "payment": {
+      "title": "Secure Payment",
+      "desc": "Your money is safe"
+    },
+    "support": {
+      "title": "Support 24/7",
+      "desc": "Live contact/message"
+    }
   },
   "hi": {
     "headerSearch": "उत्पाद, ब्रांड और बहुत कुछ खोजें",
@@ -25,7 +41,23 @@
     "titleFeature": "विशेष उत्पाद",
     "titleToday": "आज की फ़्लैश सेल",
     "titleRated": "शीर्ष रेटेड",
-    "titleArrival": "नई आगमन"
+    "titleArrival": "नई आगमन",
+    "fastDelivery": {
+      "title": "तेज वितरण",
+      "desc": "24 घंटे में वितरण"
+    },
+    "return24": {
+      "title": "24 घंटे वापसी",
+      "desc": "100% मनी-बैक गारंटी"
+    },
+    "payment": {
+      "title": "सुरक्षित भुगतान",
+      "desc": "आपका पैसा सुरक्षित है"
+    },
+    "support": {
+      "title": "24/7 समर्थन",
+      "desc": "लाइव संपर्क/संदेशन"
+    }
   },
   "ta": {
     "headerSearch": "பொருட்களை, பிராண்ட்களை மற்றும் மேலும் தேடு",
@@ -39,6 +71,22 @@
     "titleFeature": "சிறப்பு தயாரிப்பு",
     "titleToday": "இன்று குறைந்த விற்பனை",
     "titleRated": "உயர் மதிப்பிட்ட",
-    "titleArrival": "புதிய வருமானம்"
+    "titleArrival": "புதிய வருமானம்",
+    "fastDelivery": {
+      "title": "விரைவு விநியோகம்",
+      "desc": "24 மணி நேரத்தில் விநியோகம்"
+    },
+    "return24": {
+      "title": "24 घंटे वापसी",
+      "desc": "100% பணம் திரும்ப உத்தரவாதம்"
+    },
+    "payment": {
+      "title": "सुरक्षित भुगतान",
+      "desc": "உங்கள் பணம் பாதுகாப்பாக உள்ளது"
+    },
+    "support": {
+      "title": "24/7 समर्थन",
+      "desc": "நேரடி தொடர்பு/செய்தி"
+    }
   }
 }

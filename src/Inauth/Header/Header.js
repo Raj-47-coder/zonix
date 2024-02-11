@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Box, Button, TextField, Typography, Menu, Select, MenuItem, ListItem } from "@mui/material";
 import { Logo, Pin, Magnifyglass, User, Heart, CartIcon, Humburgar } from "../../Zonixzsvgs/Zonixzsvgs";
 import Categorysidevar from '../Categorysidebar/Categorysidebar'
-import { Link, NavLink } from "react-router-dom";
-import { useTranslation } from 'react-i18next';
+import { Link, NavLink, render } from "react-router-dom";
+// import { useTranslation } from 'react-i18next';
 import "./Header.scss";
 
 export default function Header() {
@@ -12,12 +12,11 @@ export default function Header() {
   const [open, setOpen] = React.useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
   const [language, setLanguage] = useState(0);
-  const { t, i18n } = useTranslation();
 
   const handleLanguage = (e) => {
     // setLanguage(e.target.value);
     const selectedLanguage = e.target.value;
-    i18n.changeLanguage(selectedLanguage);
+    // i18n.changeLanguage(selectedLanguage);
   };
 
   const handleClick = (event) => {
@@ -41,6 +40,64 @@ export default function Header() {
       setHandlelayout('')
     }
   }
+
+  // useEffect(() => {
+  //   const googleTranslateElementInit = () => {
+  //     new window.google.translate.TranslateElement(
+  //       {
+  //         pageLanguage: 'en',
+  //         includedLanguages: 'en,hi,ma', // include this for selected languages
+  //         layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
+  //       },
+  //       'google_translate_element'
+  //     );
+  //   };
+
+  //   if (window.google && window.google.translate) {
+  //     googleTranslateElementInit();
+  //   } else {
+  //     var addScript = document.createElement('script');
+  //     addScript.setAttribute(
+  //       'src',
+  //       '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit'
+  //     );
+  //     document.body.appendChild(addScript);
+  //   }
+  // }, []);
+
+
+  useEffect(() => {
+    const googleTranslateElementInit = () => {
+      if (window.google && window.google.translate) {
+        new window.google.translate.TranslateElement(
+          {
+            pageLanguage: 'en',
+            includedLanguages: 'en,hi,gu',
+            layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
+          },
+          'google_translate_element'
+        );
+      }
+    };
+
+    const loadScript = () => {
+      const script = document.createElement('script');
+      script.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+      script.async = true;
+      script.onload = googleTranslateElementInit;
+      document.body.appendChild(script);
+    };
+
+    // Check if google.translate is already defined
+    if (!window.google || !window.google.translate) {
+      // If not defined, load the script
+      loadScript();
+    } else {
+      // If already defined, initialize directly
+      googleTranslateElementInit();
+    }
+  }, []);
+
   return (
     <>
       <Box component={"div"} className="header">
@@ -54,7 +111,7 @@ export default function Header() {
               <Box component={"div"} className="user_location">
                 <Pin />
                 <Box component={"div"} className="location">
-                  <Typography component={"p"} className="title">{t('location')}</Typography>
+                  <Typography component={"p"} className="title">Update Location</Typography>
                   <Typography component={"p"} className="locate">Delivering to Ahmedabad 380001</Typography>
                 </Box>
               </Box>
@@ -62,25 +119,27 @@ export default function Header() {
             <Box component={"div"} className="header_center">
               <Box component={"div"} className="search_product">
                 <Magnifyglass />
-                <TextField type='text' fullWidth placeholder={t('headerSearch')} />
+                <TextField type='text' fullWidth placeholder={'Search for Products, Brands and More'} />
               </Box>
             </Box>
             <Box component={"div"} className="header_right">
-              <Select
+              {/* <Select
                 value={i18n.language}
                 onChange={handleLanguage}
                 className='language_select'
               >
                 <MenuItem value="en">English</MenuItem>
                 <MenuItem value="hi">Hindi(हिंदी)</MenuItem>
-                <MenuItem value="ta">Tamil(तामिल)</MenuItem>
-              </Select>
+              </Select> */}
+
+              {/* <Box component={'div'} id="google_translate_element"></Box> */}
+              <div id="google_translate_element"></div>
 
               <Typography component={'a'} href='javascrpt:void(0);' onClick={handleClick} className="status_bar">
                 <User />
                 <Box component={"div"} className="status_bar_name">
                   <Typography component={"p"} className="title">Login</Typography>
-                  <Typography component={"p"} className="name">{t('account')}</Typography>
+                  <Typography component={"p"} className="name">My Account</Typography>
                 </Box>
               </Typography>
               <Menu
@@ -106,7 +165,7 @@ export default function Header() {
                 <Heart />
                 <Box component={"div"} className="status_bar_name">
                   <Typography component={"p"} className="title">Favorite</Typography>
-                  <Typography component={"p"} className="name">{t("whishlist")}</Typography>
+                  <Typography component={"p"} className="name">My Wishlist</Typography>
                 </Box>
               </Link>
 
@@ -116,7 +175,7 @@ export default function Header() {
                   <Typography component={'span'}>2</Typography>
                 </Box>
                 <Box component={"div"} className="status_bar_name">
-                  <Typography component={"p"} className="title">{t("cart")} :</Typography>
+                  <Typography component={"p"} className="title">Your Cart:</Typography>
                   <Typography component={"p"} className="name">$00.00</Typography>
                 </Box>
               </Link>
