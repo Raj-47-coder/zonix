@@ -10,6 +10,7 @@ export default function Header() {
   const [handleunlayer, setHandlelayout] = useState('');
   const [open, setOpen] = React.useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
+  const [showDiv, setShowDiv] = useState(false);
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -33,6 +34,14 @@ export default function Header() {
     }
   }
 
+
+  const handleFocus = () => {
+    setShowDiv(true);
+  };
+
+  const handleBlur = () => {
+    setShowDiv(false);
+  };
   return (
     <>
       <Box component={"div"} className="header">
@@ -45,19 +54,48 @@ export default function Header() {
             <Box component={"div"} className="user_location">
               <Pin />
               <Box component={"div"} className="location">
-                <Typography component={"p"} className="title">Update Location</Typography>
-                <Typography component={"p"} className="locate">Delivering to Ahmedabad 380001</Typography>
+                <Typography component={"p"} className="title">Ahmedabad</Typography>
+                <Typography component={"p"} className="locate">Delivering to Bapunagar 380001</Typography>
               </Box>
             </Box>
           </Box>
           <Box component={"div"} className="header_center">
             <Box component={"div"} className="search_product">
               <Magnifyglass />
-              <TextField type='text' fullWidth placeholder={'Search for Products, Brands and More'} />
+              <TextField type='text'
+                onFocus={handleFocus}
+                onBlur={handleBlur}
+                autoComplete='off' fullWidth placeholder={'Search for Products, Brands and More'} />
+              {showDiv &&
+                <Box component={'div'} className='searchProduct_suggest'>
+                  <Box component={'div'} className='suggested_product'>
+                    <img src='https://www.kgegroup.co.za/wp-content/uploads/2022/10/Construction-Materials.jpg' />
+                    <Box component={'div'} className='suggested_productName'>
+                      <Typography component={"h6"} className="locate">Steel Metal</Typography>
+                      <Typography component={"p"} className="locate">Steel</Typography>
+                    </Box>
+                  </Box>
+                  <Box component={'div'} className='suggested_product'>
+                    <img src='https://5.imimg.com/data5/XK/GK/MY-23300825/construction-cement-500x500.jpg' />
+                    <Box component={'div'} className='suggested_productName'>
+                      <Typography component={"h6"} className="locate">Cement</Typography>
+                      <Typography component={"p"} className="locate">Steel</Typography>
+                    </Box>
+                  </Box>
+                  <Box component={'div'} className='suggested_product'>
+                    <img src='https://www.hanson.my/sites/default/files/assets/images/10/de/concrete_in_construction.jpg' />
+                    <Box component={'div'} className='suggested_productName'>
+                      <Typography component={"h6"} className="locate">Concrete</Typography>
+                      <Typography component={"p"} className="locate">Concrete</Typography>
+                    </Box>
+                  </Box>
+                </Box>
+              }
             </Box>
-            <div id="google_translate_element"></div>
           </Box>
           <Box component={"div"} className="header_right">
+
+            <div id="google_translate_element"></div>
 
             <Typography component={'a'} href='javascrpt:void(0);' onClick={handleClick} className="status_bar">
               <User />

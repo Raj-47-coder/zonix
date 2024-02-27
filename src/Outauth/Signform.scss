@@ -46,6 +46,27 @@
           border: 1px solid #E4E6E9;
         }
       }
+
+      .sign_form_otpBox {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 4rem;
+
+        .sign_form_input {
+          input.MuiInputBase-input {
+            font-size: 1.4rem;
+            padding: 1rem;
+            border: none;
+            border-bottom: 1px solid #E4E6E9;
+            height: 3rem;
+            width: 3rem;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 600;
+          }
+        }
+      }
     }
 
     button.sign_form_button {

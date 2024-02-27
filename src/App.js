@@ -10,8 +10,8 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route exact path="/*" element={<Mainlayout />} />
-          <Route exact path="/signform" element={<Signform />} />
+          <Route exact path="/home" element={<Mainlayout />} />
+          <Route exact path="/*" element={<Signform />} />
         </Routes>
       </Router>
     </>

@@ -80,6 +80,24 @@
           font-weight: 500;
         }
 
+        .social_media {
+          display: flex;
+          align-items: center;
+          justify-content: left;
+
+          a {
+            height: 3.5rem;
+            width: 3.5rem;
+            display: block;
+            margin-right: 1rem;
+
+            img {
+              height: 100%;
+              width: 100%;
+            }
+          }
+        }
+
         @media screen and (max-width:1199px) {
           max-width: 100%;
           width: 100%;

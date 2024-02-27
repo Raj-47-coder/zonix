@@ -14,10 +14,18 @@ import { Link } from "react-router-dom";
 
 function Home() {
   const [value, setValue] = React.useState('1');
+  const [otpRequest, setOtpRequest] = React.useState('none !important');
+  const [loginphonebox, setLoginphonebox] = React.useState('');
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  const handleOtp = () => {
+    setOtpRequest('');
+    setLoginphonebox('none !important');
+  };
+
   return (
     <>
       <Header />
@@ -31,24 +39,25 @@ function Home() {
             <Tab label="Sign up" value="2" />
           </TabList>
           <TabPanel value="1">
-            <Box component={'div'} className='sign_form_item'>
-              <Typography component={'label'} class='label'>Email Address</Typography>
+            <Box component={'div'} className='sign_form_item' sx={{ display: loginphonebox }}>
+              <Typography component={'label'} className='label'>Enter Email & Phone number</Typography>
               <TextField type='text' fullWidth className='sign_form_input' />
             </Box>
 
-            <Box component={'div'} className='sign_form_item'>
-              <Box component={'div'} className='sign_form_labelBox'>
-                <Typography component={'label'} class='label'>Email Address</Typography>
-                <Link component={'a'} to={'/'} class='fp_link'>Forget Password</Link>
-              </Box>
-              <Box component={'div'} className='sign_form_inputBox'>
-                <TextField type='text' fullWidth className='sign_form_input' />
-                <Button className='hideShow_pass'><Eye /></Button>
+            <Box component={'div'} className='sign_form_item' sx={{ display: otpRequest }}>
+              <Box component={'div'} className='sign_form_otpBox'>
+                <TextField type='number' className='sign_form_input' placeholder='0' />
+                <TextField type='number' className='sign_form_input' placeholder='0' />
+                <TextField type='number' className='sign_form_input' placeholder='0' />
+                <TextField type='number' className='sign_form_input' placeholder='0' />
+                <TextField type='number' className='sign_form_input' placeholder='0' />
+                <TextField type='number' className='sign_form_input' placeholder='0' />
               </Box>
             </Box>
 
+            {/* <Link component={'a'} to={'/'} className='fp_link'>Forget Password</Link> */}
             <Box component={'div'} className='sign_form_item'>
-              <Button className='sign_form_button' fullWidth>Sign in <ArrowRight /></Button>
+              <Button className='sign_form_button' onClick={handleOtp} fullWidth>Request OTP</Button>
             </Box>
 
             <Box component={"div"} className='divider'>
@@ -68,18 +77,18 @@ function Home() {
           <TabPanel value="2">
 
             <Box component={'div'} className='sign_form_item'>
-              <Typography component={'label'} class='label'>Full Name</Typography>
+              <Typography component={'label'} className='label'>Full Name</Typography>
               <TextField type='text' fullWidth className='sign_form_input' />
             </Box>
 
             <Box component={'div'} className='sign_form_item'>
-              <Typography component={'label'} class='label'>Email Address</Typography>
+              <Typography component={'label'} className='label'>Email Address</Typography>
               <TextField type='email' fullWidth className='sign_form_input' />
             </Box>
 
 
             <Box component={'div'} className='sign_form_item'>
-              <Typography component={'label'} class='label'>Password</Typography>
+              <Typography component={'label'} className='label'>Password</Typography>
               <Box component={'div'} className='sign_form_inputBox'>
                 <TextField type='password' fullWidth className='sign_form_input' placeholder='8+ Characters' />
                 <Button className='hideShow_pass'><Eye /></Button>
@@ -87,7 +96,7 @@ function Home() {
             </Box>
 
             <Box component={'div'} className='sign_form_item'>
-              <Typography component={'label'} class='label'>Confirm Password</Typography>
+              <Typography component={'label'} className='label'>Confirm Password</Typography>
               <Box component={'div'} className='sign_form_inputBox'>
                 <TextField type='password' fullWidth className='sign_form_input' />
                 <Button className='hideShow_pass'><Eye /></Button>
