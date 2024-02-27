@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Box, Button, TextField, Typography, Menu, ListItem } from "@mui/material";
+import { Box, Button, TextField, Typography, Menu, ListItem, List } from "@mui/material";
 import { Logo, Pin, Magnifyglass, User, Heart, CartIcon, Humburgar } from "../../Zonixzsvgs/Zonixzsvgs";
 import Categorysidevar from '../Categorysidebar/Categorysidebar'
 import { Link, NavLink } from "react-router-dom";
@@ -11,6 +11,7 @@ export default function Header() {
   const [open, setOpen] = React.useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
   const [showDiv, setShowDiv] = useState(false);
+  const [submenu, setSubmenu] = useState(false);
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -34,13 +35,20 @@ export default function Header() {
     }
   }
 
-
   const handleFocus = () => {
     setShowDiv(true);
   };
 
   const handleBlur = () => {
     setShowDiv(false);
+  };
+
+  const handleSubmenu = () => {
+    if (submenu === '') {
+      setSubmenu('open');
+    } else {
+      setSubmenu('');
+    }
   };
   return (
     <>
@@ -160,15 +168,67 @@ export default function Header() {
             </svg>
           </Button>
         </Box>
-        <Box component={"div"} className=" ">
+        <Box component={"div"} className="">
           <Box component={'div'} className='menu_items'>
             <Typography component={'a'} href='javascript:void(0)' onClick={toggleDrawer} className='active'><Humburgar />Shop By Category</Typography>
-            <NavLink component={'a'} to='/' onClick={openSidebar}>Home</NavLink>
-            <NavLink component={'a'} to='/' onClick={openSidebar}>Foundation</NavLink>
-            <NavLink component={'a'} to='/' onClick={openSidebar}>Brick</NavLink>
-            <NavLink component={'a'} to='/' onClick={openSidebar}>Cement</NavLink>
-            <NavLink component={'a'} to='/' onClick={openSidebar}>Metal</NavLink>
-            <NavLink component={'a'} to='/' onClick={openSidebar}>Concret</NavLink>
+            <Box component={'div'} className='menu sub_menu' onClick={handleSubmenu}>
+              <Typography component={'a'} href='#'>Foundation</Typography>
+
+              <Box component={'div'} className={`subMenu ${submenu}`}>
+                <List>
+                  <ListItem>
+                    <NavLink component={'a'} to={'/store'}>Sub Menu 1</NavLink>
+                  </ListItem>
+                  <ListItem>
+                    <NavLink component={'a'} to={'/store'}>Sub Menu 1</NavLink>
+                  </ListItem>
+                  <ListItem>
+                    <NavLink component={'a'} to={'/store'}>Sub Menu 1</NavLink>
+                  </ListItem>
+                  <ListItem>
+                    <NavLink component={'a'} to={'/store'}>Sub Menu 1</NavLink>
+                  </ListItem>
+                </List>
+              </Box>
+            </Box>
+
+            <Box component={'div'} className='menu  '>
+              <NavLink component={'a'} to='/store' onClick={openSidebar}>Brick</NavLink>
+            </Box>
+
+            <Box component={'div'} className='menu  '>
+              <NavLink component={'a'} to='/store' onClick={openSidebar}>Cement</NavLink>
+            </Box>
+
+            <Box component={'div'} className='menu sub_menu' onClick={handleSubmenu}>
+              <NavLink component={'a'} to='/store'>Metal</NavLink>
+
+              <Box component={'div'} className='subMenu'>
+                <List>
+                  <ListItem>
+                    <NavLink component={'a'} to={'/store'}>Sub Menu 1</NavLink>
+                  </ListItem>
+                  <ListItem>
+                    <NavLink component={'a'} to={'/store'}>Sub Menu 1</NavLink>
+                  </ListItem>
+                  <ListItem>
+                    <NavLink component={'a'} to={'/store'}>Sub Menu 1</NavLink>
+                  </ListItem>
+                  <ListItem>
+                    <NavLink component={'a'} to={'/store'}>Sub Menu 1</NavLink>
+                  </ListItem>
+                </List>
+              </Box>
+            </Box>
+
+            <Box component={'div'} className='menu  '>
+              <NavLink component={'a'} to='/store' onClick={openSidebar}>Concret</NavLink>
+            </Box>
+
+            <Box component={'div'} className='menu  '>
+              <NavLink component={'a'} to='/store' onClick={openSidebar}>Wooden</NavLink>
+            </Box>
+
           </Box>
         </Box>
       </Box>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, TextField, Typography, Button, ListItem, List, Table, TableBody, TableCell, TableRow } from "@mui/material";
+import { Box, TextField, Typography, Button, ListItem, List, Table, TableBody, TableCell, TableRow, Menu, MenuItem } from "@mui/material";
 import Breadcrumb from '../Breadcrumb/Breadcrumb'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, FreeMode, Thumbs } from 'swiper/modules';
@@ -12,14 +12,28 @@ import brick from '../../images/brick.png';
 import cement from '../../images/cement.png';
 import concert from '../../images/concert.png';
 import steel from '../../images/steel.png';
+import mail from '../../images/mail.svg';
+import pinterest from '../../images/pinterest.svg';
+import fb from '../../images/fb.svg';
+import link from '../../images/link.svg';
 import { Heart, Rattingstart } from '../../Zonixzsvgs/Zonixzsvgs';
 import { Link } from "react-router-dom";
+import IosShareIcon from '@mui/icons-material/IosShare';
 import Similarproduct from "../Similarproduct/Similarproduct";
 
 
 function Productview() {
   const [selectedImagePath, setSelectedImagePath] = useState(product1);
   const [value, setValue] = useState(0);
+  const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
+
+  const handleOpenSocial = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleCloseSocial = () => {
+    setAnchorEl(null);
+  };
 
   const handleClick = (path) => {
     setSelectedImagePath(path);
@@ -44,6 +58,45 @@ function Productview() {
           <Box component={'div'} className='product_images'>
             <Box className='thumb_preview' >
               <img src={selectedImagePath} alt={selectedImagePath} />
+
+              <Button
+                aria-controls={open ? 'basic-menu' : undefined}
+                aria-expanded={open ? 'true' : undefined}
+                onClick={handleOpenSocial}
+                className='productShare_icon'
+              >
+                <IosShareIcon />
+              </Button>
+              <Menu
+                anchorEl={anchorEl}
+                open={open}
+                onClose={handleCloseSocial}
+                MenuListProps={{
+                  'aria-labelledby': 'basic-button',
+                }}
+                className='socialShare_menu'
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'center',
+                }}
+              >
+                <MenuItem>
+                  <Typography component={'a'} href='#'>
+                    <img src={mail} alt='Email' />Email</Typography>
+                </MenuItem>
+                <MenuItem>
+                  <Typography component={'a'} href='#'>
+                    <img src={pinterest} alt='pinterest' />pinterest</Typography>
+                </MenuItem>
+                <MenuItem>
+                  <Typography component={'a'} href='#'>
+                    <img src={fb} alt='fb' />Facebook</Typography>
+                </MenuItem>
+                <MenuItem>
+                  <Typography component={'a'} href='#'>
+                    <img src={link} alt='Copylink' />Copy Link</Typography>
+                </MenuItem>
+              </Menu>
             </Box>
 
             <Swiper
