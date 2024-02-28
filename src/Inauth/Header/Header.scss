@@ -343,14 +343,14 @@
     justify-content: left;
 
     .menu {
-      .sub_menu {
+      &.sub_menu {
         position: relative;
 
         &::after {
           content: '';
           position: absolute;
           top: 50%;
-          right: 0.6rem;
+          right: 0rem;
           transform: translateY(-50%) rotate(45deg);
           height: 0.5rem;
           width: 0.5rem;
@@ -498,6 +498,8 @@
       padding: 1rem 0;
 
       li {
+        padding: 1rem !important;
+
         a {
           width: 100%;
           font-size: 1.4rem;

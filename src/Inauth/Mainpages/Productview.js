@@ -21,7 +21,6 @@ import { Link } from "react-router-dom";
 import IosShareIcon from '@mui/icons-material/IosShare';
 import Similarproduct from "../Similarproduct/Similarproduct";
 
-
 function Productview() {
   const [selectedImagePath, setSelectedImagePath] = useState(product1);
   const [value, setValue] = useState(0);

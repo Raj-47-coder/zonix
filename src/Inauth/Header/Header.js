@@ -11,7 +11,7 @@ export default function Header() {
   const [open, setOpen] = React.useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
   const [showDiv, setShowDiv] = useState(false);
-  const [submenu, setSubmenu] = useState(false);
+  const [submenu, setSubmenu] = useState('');
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -105,7 +105,7 @@ export default function Header() {
 
             <div id="google_translate_element"></div>
 
-            <Typography component={'a'} href='javascrpt:void(0);' onClick={handleClick} className="status_bar">
+            <Typography component={'a'} href='javascrpt:void(0);' onMouseEnter={handleClick} className="status_bar">
               <User />
               <Box component={"div"} className="status_bar_name">
                 <Typography component={"p"} className="title">Login</Typography>
@@ -115,9 +115,8 @@ export default function Header() {
             <Menu
               anchorEl={anchorEl}
               open={Boolean(anchorEl)}
-              onClose={handleClose}
+              onClick={handleClose}
               className='user_menu'
-            // transformOrigin={{ horizontal: 'center', vertical: 'top' }}
             >
 
               <ListItem onClick={handleClose}>
