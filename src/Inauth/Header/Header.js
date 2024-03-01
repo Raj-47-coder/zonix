@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Box, Button, TextField, Typography, Menu, ListItem, List } from "@mui/material";
-import { Logo, Pin, Magnifyglass, User, Heart, CartIcon, Humburgar } from "../../Zonixzsvgs/Zonixzsvgs";
-import Categorysidevar from '../Categorysidebar/Categorysidebar'
+import { Logo, Pin, Magnifyglass, Order, Language, User, Heart, CartIcon, Humburgar } from "../../Zonixzsvgs/Zonixzsvgs";
+import Categorysidevar from '../Categorysidebar/Categorysidebar';
+import languageSquare from '../../images/language-square.png'
 import { Link, NavLink } from "react-router-dom";
 import "./Header.scss";
 
@@ -50,6 +51,7 @@ export default function Header() {
       setSubmenu('');
     }
   };
+
   return (
     <>
       <Box component={"div"} className="header">
@@ -103,7 +105,11 @@ export default function Header() {
           </Box>
           <Box component={"div"} className="header_right">
 
-            <div id="google_translate_element"></div>
+            <div id="google_translate_element">
+              {/* <Box component={'div'} className='icon_language'>
+                <Language />
+              </Box> */}
+            </div>
 
             <Typography component={'a'} href='javascrpt:void(0);' onMouseEnter={handleClick} className="status_bar">
               <User />
@@ -129,6 +135,14 @@ export default function Header() {
                 <NavLink fullWidth component={'a'} to={'/'}>Log out</NavLink>
               </ListItem>
             </Menu>
+
+            <Link component={"a"} to={'/whishlist'} className="status_bar">
+              <Order />
+              <Box component={"div"} className="status_bar_name">
+                <Typography component={"p"} className="title">Order</Typography>
+                <Typography component={"p"} className="name">My Order</Typography>
+              </Box>
+            </Link>
 
             <Link component={"a"} to={'/whishlist'} className="status_bar">
               <Heart />

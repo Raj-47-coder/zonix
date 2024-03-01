@@ -203,7 +203,7 @@
       .status_bar {
         display: flex;
         align-items: center;
-        margin-left: 3rem;
+        margin-left: 2.5rem;
 
         &:last-child {
           display: none;
@@ -214,8 +214,8 @@
         }
 
         svg {
-          height: 3rem;
-          width: 3rem;
+          height: 2.8rem;
+          width: 2.8rem;
           color: var(--theme_white);
 
           @media screen and (max-width:991px) {

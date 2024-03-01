@@ -119,6 +119,21 @@ const CartIcon = () => {
   );
 };
 
+const Order = () => {
+  return (
+    <>
+      <svg width="55" height="54" viewBox="0 0 55 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 49.5C17.6569 49.5 19 48.1569 19 46.5C19 44.8431 17.6569 43.5 16 43.5C14.3431 43.5 13 44.8431 13 46.5C13 48.1569 14.3431 49.5 16 49.5Z" fill="currentColor" />
+        <path d="M35.5 49.5C37.1569 49.5 38.5 48.1569 38.5 46.5C38.5 44.8431 37.1569 43.5 35.5 43.5C33.8431 43.5 32.5 44.8431 32.5 46.5C32.5 48.1569 33.8431 49.5 35.5 49.5Z" fill="currentColor" />
+        <path d="M8.93125 19.5H42.5687L37.6188 36.825C37.4421 37.4538 37.0639 38.0071 36.5423 38.4001C36.0206 38.793 35.3843 39.0038 34.7312 39H16.7687C16.1157 39.0038 15.4794 38.793 14.9577 38.4001C14.4361 38.0071 14.0579 37.4538 13.8812 36.825L7.09375 13.0875C7.00406 12.7739 6.81459 12.4981 6.55407 12.3019C6.29355 12.1056 5.97616 11.9997 5.65 12H2.5" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+        <rect x="32.25" y="1.25" width="21.5" height="21.5" rx="10.75" fill="currentColor" />
+        <rect x="32.25" y="1.25" width="21.5" height="21.5" rx="10.75" stroke="currentColor" stroke-width="1.5" />
+        <path d="M48.4451 11.184V13.356L37.5491 13.368V11.196L48.4451 11.184ZM44.1011 17.712H41.9291L41.9171 6.816H44.0891L44.1011 17.712Z" fill="#4C7E82" />
+      </svg>
+    </>
+  );
+};
+
 const Humburgar = () => {
   return (
     <>
@@ -432,6 +447,19 @@ const Chats = () => {
       </svg>
     </>
   );
+}
+const Language = () => {
+  return (
+    <>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.9915 8.96002H7.01147" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M12.0015 7.28003V8.96002" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M14.5015 8.94C14.5015 13.24 11.1415 16.72 7.00146 16.72" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M17.0015 16.72C15.2015 16.72 13.6015 15.76 12.4515 14.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M9.00146 22H15.0015C20.0015 22 22.0015 20 22.0015 15V9C22.0015 4 20.0015 2 15.0015 2H9.00146C4.00146 2 2.00146 4 2.00146 9V15C2.00146 20 4.00146 22 9.00146 22Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </>
+  );
 };
 
-export { CartIcon, Logo, Eye, Pin, Magnifyglass, User, Heart, Humburgar, Delivery, Guarantee, Payment, Support, ArrowRight, Rattingstart, ArrowRightYellow, HomeIcon, StarFilled, StarBordered, CloseRound, Filter, Crossborder, Minus, Plus, Doublecheck, Truck, Lockopen, Creditcard, Users, Stack, Notepad, Phonecall, Chats };
+export { CartIcon, Order, Logo, Eye, Pin, Magnifyglass, User, Heart, Humburgar, Delivery, Guarantee, Payment, Support, ArrowRight, Rattingstart, ArrowRightYellow, HomeIcon, StarFilled, StarBordered, CloseRound, Filter, Crossborder, Minus, Plus, Doublecheck, Truck, Lockopen, Creditcard, Users, Stack, Notepad, Phonecall, Chats, Language };
