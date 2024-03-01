@@ -13,6 +13,7 @@ export default function Header() {
   const [anchorEl, setAnchorEl] = useState(null);
   const [showDiv, setShowDiv] = useState(false);
   const [submenu, setSubmenu] = useState('');
+  const [openMenu, setOpenMenu] = useState(null);
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -50,6 +51,10 @@ export default function Header() {
     } else {
       setSubmenu('');
     }
+  };
+
+  const toggleMenu = (menuId) => {
+    setOpenMenu(openMenu === menuId ? null : menuId);
   };
 
   return (
@@ -104,12 +109,7 @@ export default function Header() {
             </Box>
           </Box>
           <Box component={"div"} className="header_right">
-
-            <div id="google_translate_element">
-              {/* <Box component={'div'} className='icon_language'>
-                <Language />
-              </Box> */}
-            </div>
+            <div id="google_translate_element"></div>
 
             <Typography component={'a'} href='javascrpt:void(0);' onMouseEnter={handleClick} className="status_bar">
               <User />
@@ -124,7 +124,6 @@ export default function Header() {
               onClick={handleClose}
               className='user_menu'
             >
-
               <ListItem onClick={handleClose}>
                 <NavLink fullWidth component={'a'} to={'/profile'}>Profile</NavLink>
               </ListItem>
@@ -184,22 +183,25 @@ export default function Header() {
         <Box component={"div"} className="">
           <Box component={'div'} className='menu_items'>
             <Typography component={'a'} href='javascript:void(0)' onClick={toggleDrawer} className='active'><Humburgar />Shop By Category</Typography>
-            <Box component={'div'} className='menu sub_menu' onClick={handleSubmenu}>
-              <Typography component={'a'} href='#'>Foundation</Typography>
+            <Box component={'div'} className='menu sub_menu' onClick={() => toggleMenu('subMenu1')}>
+              <Typography component={'a'} href='#'>Steel</Typography>
 
-              <Box component={'div'} className={`subMenu ${submenu}`}>
+              <Box component={'div'} id='subMenu1' className={openMenu === 'subMenu1' ? "subMenu open" : "subMenu"}>
                 <List>
                   <ListItem>
-                    <NavLink component={'a'} to={'/store'}>Sub Menu 1</NavLink>
+                    <Typography component={'a'} href={'#'}>
+                      <img src={'https://iea.imgix.net/5009c499-0666-4626-9602-ce914398ed48/shutterstock_239544715.jpg?auto=compress%2Cformat&fit=min&q=80&rect=0%2C0%2C5184%2C3456&w=1280&h=853&fit=crop&fm=jpg&q=70&auto=format'} />
+                      5 MM</Typography>
                   </ListItem>
                   <ListItem>
-                    <NavLink component={'a'} to={'/store'}>Sub Menu 1</NavLink>
+                    <Typography component={'a'} href={'#'}>
+                      <img src={'https://static.javatpoint.com/difference/images/difference-between-iron-and-steel.png'} />
+                      4 MM</Typography>
                   </ListItem>
                   <ListItem>
-                    <NavLink component={'a'} to={'/store'}>Sub Menu 1</NavLink>
-                  </ListItem>
-                  <ListItem>
-                    <NavLink component={'a'} to={'/store'}>Sub Menu 1</NavLink>
+                    <Typography component={'a'} href={'#'}>
+                      <img src={'https://aftabir.com/uploads/reportages/1292/pics/1705921460.jpg'} />
+                      6 MM Square</Typography>
                   </ListItem>
                 </List>
               </Box>
@@ -213,22 +215,25 @@ export default function Header() {
               <NavLink component={'a'} to='/store' onClick={openSidebar}>Cement</NavLink>
             </Box>
 
-            <Box component={'div'} className='menu sub_menu' onClick={handleSubmenu}>
-              <NavLink component={'a'} to='/store'>Metal</NavLink>
+            <Box component={'div'} className='menu sub_menu' onClick={() => toggleMenu('subMenu2')}>
+              <Typography component={'a'} href='#'>Metal</Typography>
 
-              <Box component={'div'} className='subMenu'>
+              <Box component={'div'} id='subMenu2' className={openMenu === 'subMenu2' ? "subMenu open" : "subMenu"}>
                 <List>
                   <ListItem>
-                    <NavLink component={'a'} to={'/store'}>Sub Menu 1</NavLink>
+                    <Typography component={'a'} href={'#'}>
+                      <img src={'https://iea.imgix.net/5009c499-0666-4626-9602-ce914398ed48/shutterstock_239544715.jpg?auto=compress%2Cformat&fit=min&q=80&rect=0%2C0%2C5184%2C3456&w=1280&h=853&fit=crop&fm=jpg&q=70&auto=format'} />
+                      1-10 Gauge</Typography>
                   </ListItem>
                   <ListItem>
-                    <NavLink component={'a'} to={'/store'}>Sub Menu 1</NavLink>
+                    <Typography component={'a'} href={'#'}>
+                      <img src={'https://static.javatpoint.com/difference/images/difference-between-iron-and-steel.png'} />
+                      11-20 Gauge</Typography>
                   </ListItem>
                   <ListItem>
-                    <NavLink component={'a'} to={'/store'}>Sub Menu 1</NavLink>
-                  </ListItem>
-                  <ListItem>
-                    <NavLink component={'a'} to={'/store'}>Sub Menu 1</NavLink>
+                    <Typography component={'a'} href={'#'}>
+                      <img src={'https://aftabir.com/uploads/reportages/1292/pics/1705921460.jpg'} />
+                      21-30 Gauge</Typography>
                   </ListItem>
                 </List>
               </Box>

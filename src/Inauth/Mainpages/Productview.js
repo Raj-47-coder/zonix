@@ -8,11 +8,12 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/free-mode';
 import product1 from '../../images/product-1.png';
-import brick from '../../images/brick.png';
-import cement from '../../images/cement.png';
-import concert from '../../images/concert.png';
-import steel from '../../images/steel.png';
 import mail from '../../images/mail.svg';
+import tmtbar1 from '../../images/tmt-bar1.webp'
+import tmtbar2 from '../../images/tmt-bar2.webp'
+import tmtbar3 from '../../images/tmt-bar3.webp'
+import tmtbar4 from '../../images/tmt-bar4.webp'
+import tmtbar5 from '../../images/tmt-bar5.webp'
 import pinterest from '../../images/pinterest.svg';
 import fb from '../../images/fb.svg';
 import link from '../../images/link.svg';
@@ -20,9 +21,11 @@ import { Heart, Rattingstart } from '../../Zonixzsvgs/Zonixzsvgs';
 import { Link } from "react-router-dom";
 import IosShareIcon from '@mui/icons-material/IosShare';
 import Similarproduct from "../Similarproduct/Similarproduct";
+import 'react-medium-image-zoom/dist/styles.css'
+import ReactImageMagnify from 'react-image-magnify';
 
 function Productview() {
-  const [selectedImagePath, setSelectedImagePath] = useState(product1);
+  const [selectedImagePath, setSelectedImagePath] = useState(tmtbar1);
   const [value, setValue] = useState(0);
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
@@ -56,7 +59,22 @@ function Productview() {
         <Box component={'div'} className='product_viewBox'>
           <Box component={'div'} className='product_images'>
             <Box className='thumb_preview' >
-              <img src={selectedImagePath} alt={selectedImagePath} />
+              <ReactImageMagnify {...{
+                smallImage: {
+                  isFluidWidth: true,
+                  src: selectedImagePath,
+                  height: 400
+                },
+                largeImage: {
+                  src: selectedImagePath,
+                  width: 1800,
+                  height: 1800,
+                  className: 'demo'
+                },
+                enlargedImageContainerStyle: {
+                  zIndex: "100"
+                }
+              }} />
 
               <Button
                 aria-controls={open ? 'basic-menu' : undefined}
@@ -99,7 +117,7 @@ function Productview() {
             </Box>
 
             <Swiper
-              loop={true}
+              loop={false}
               spaceBetween={15}
               freeMode={true}
               watchSlidesProgress={true}
@@ -123,20 +141,20 @@ function Productview() {
               }}
               className="thumbNails"
             >
-              <SwiperSlide className='thumbs' onClick={() => handleClick(product1)}>
-                <img src={product1} alt={product1} />
+              <SwiperSlide className='thumbs' onClick={() => handleClick(tmtbar1)}>
+                <img src={tmtbar1} alt={'bar'} />
               </SwiperSlide>
-              <SwiperSlide className='thumbs' onClick={() => handleClick(brick)}>
-                <img src={brick} alt={brick} />
+              <SwiperSlide className='thumbs' onClick={() => handleClick(tmtbar2)}>
+                <img src={tmtbar2} alt={'bar'} />
               </SwiperSlide>
-              <SwiperSlide className='thumbs' onClick={() => handleClick(cement)}>
-                <img src={cement} alt={cement} />
+              <SwiperSlide className='thumbs' onClick={() => handleClick(tmtbar3)}>
+                <img src={tmtbar3} alt={'bar'} />
               </SwiperSlide>
-              <SwiperSlide className='thumbs' onClick={() => handleClick(concert)}>
-                <img src={concert} alt={concert} />
+              <SwiperSlide className='thumbs' onClick={() => handleClick(tmtbar4)}>
+                <img src={tmtbar4} alt={'bar'} />
               </SwiperSlide>
-              <SwiperSlide className='thumbs' onClick={() => handleClick(steel)}>
-                <img src={steel} alt={steel} />
+              <SwiperSlide className='thumbs' onClick={() => handleClick(tmtbar5)}>
+                <img src={tmtbar5} alt={'bar'} />
               </SwiperSlide>
             </Swiper>
           </Box>

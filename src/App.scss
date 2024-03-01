@@ -434,6 +434,10 @@ input::-webkit-inner-spin-button {
 
 
 // =========== Product view css ==========
+.demo {
+  z-index: 50;
+}
+
 .product_viewBox {
   display: flex;
   align-items: start;
@@ -447,12 +451,15 @@ input::-webkit-inner-spin-button {
     .thumb_preview {
       border-radius: 1rem;
       max-height: 50rem;
+      max-width: 100%;
+      min-height: 50rem;
       width: 100%;
-      background-color: var(--theme_light);
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      padding: 1.5rem 1rem;
 
       .productShare_icon {
         position: absolute;
@@ -462,13 +469,13 @@ input::-webkit-inner-spin-button {
         height: 3.5rem;
         width: 3.5rem;
         min-width: 3.5rem;
-        background-color: var(--theme_white);
+        background-color: var(--theme_primary);
         border-radius: 50%;
-        color: var(--theme_dark);
+        color: var(--theme_white);
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
         svg {
-          font-size: 2rem;
+          font-size: 1.8rem;
         }
       }
 
@@ -498,16 +505,20 @@ input::-webkit-inner-spin-button {
       margin-top: 2rem;
 
       .thumbs {
-        height: 12rem;
-        width: 12rem;
+        height: 8rem;
+        width: 8rem;
         background-color: var(--theme_light);
-        border-radius: 1rem;
+        border-radius: 0.6rem;
+        overflow: hidden;
         cursor: pointer;
+        padding: 0;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 
         img {
           height: 100%;
           width: 100%;
-          border-radius: 1rem;
+          border-radius: 0;
+          object-fit: cover;
         }
 
         @media screen and (max-width:1299px) {

@@ -93,7 +93,10 @@ export default function Profile() {
             </Box>
           </Box>
           <Box component={'div'} className='profile_right'>
-            <Button className='profile_leftBtn' onClick={handleprofile}>{profile === '' ? <KeyboardArrowRightIcon /> : <KeyboardArrowLeftIcon />}</Button>
+            <Box component={'div'} className='order_filter'>
+              <Typography component={'p'}>Order Filter</Typography>
+              <Button className='profile_leftBtn' onClick={handleprofile}>{profile === '' ? <KeyboardArrowRightIcon /> : <KeyboardArrowLeftIcon />}</Button>
+            </Box>
             {/* Left Profil box Actions */}
             <Box component="div" hidden={value !== 0} className='tab_box'>
               <Typography component={'h4'}>Personal Information <Button className='edit_info'>Edit</Button></Typography>
