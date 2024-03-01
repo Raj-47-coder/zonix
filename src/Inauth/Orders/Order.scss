@@ -5,7 +5,7 @@
   margin: 4rem auto;
 
   .orders_left {
-    max-width: 25%;
+    max-width: 20%;
     width: 100%;
     background-color: var(--theme_white);
     padding: 2rem;
@@ -79,13 +79,13 @@
   }
 
   .orders_right {
-    max-width: 75%;
+    max-width: 80%;
     width: 100%;
     margin-left: 1.5rem;
     background-color: var(--theme_white);
     padding: 2rem;
     border-radius: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    // box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
     position: relative;
 
     button.profile_leftBtn {
@@ -112,7 +112,7 @@
       border: 1px solid var(--border);
       padding: 1rem;
       border-radius: 1rem;
-      background-color: var(--theme_light);
+      background-color: #FFFFFF;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -120,7 +120,8 @@
 
       .orders_item {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
+        max-width: 40%;
 
         img {
           height: 8rem;
@@ -133,86 +134,104 @@
           }
         }
 
-        p {
-          font-size: 1.4rem;
-          color: var(--theme_dark);
-          font-weight: 500;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          display: -webkit-box;
-          -webkit-line-clamp: 2;
-          -webkit-box-orient: vertical;
-          max-width: 40rem;
+        .orders_details {
+          width: 100%;
 
-          @media screen and (max-width:991px) {
-            max-width: 18rem;
-          }
-        }
-      }
+          p {
+            font-size: 1.4rem;
+            color: var(--theme_darkgrey);
+            font-weight: 400;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            max-width: 40rem;
 
-      .orders_price {
-        p {
-          font-size: 1.4rem;
-          color: var(--theme_dark);
-          font-weight: 600;
-        }
-
-        @media screen and (max-width:575px) {
-          padding: 1rem 0;
-        }
-      }
-
-      .orders_status {
-        h6 {
-          font-size: 1.4rem;
-          color: var(--theme_dark);
-          font-weight: 600;
-
-          &.status {
-            position: relative;
-            padding-left: 1rem;
-
-            &::after {
-              content: '';
-              position: absolute;
-              top: 50%;
-              left: -0.5rem;
-              transform: translateY(-50%);
-              height: 1rem;
-              width: 1rem;
-              border-radius: 50%;
+            @media screen and (max-width:991px) {
+              max-width: 24rem;
             }
+          }
 
-            &.success {
-              &::after {
-                background-color: #8CB369;
+
+          p.orders_price {
+            font-size: 1.4rem;
+            color: var(--theme_dark);
+            font-weight: 600;
+            margin-top: 1.5rem;
+          }
+
+          .orders_status {
+            margin-top: 1rem;
+
+            h6 {
+              font-size: 1.4rem;
+              color: var(--theme_dark);
+              font-weight: 600;
+
+              &.status {
+                position: relative;
+                padding-left: 1rem;
+
+                &::after {
+                  content: '';
+                  position: absolute;
+                  top: 50%;
+                  left: -0.5rem;
+                  transform: translateY(-50%);
+                  height: 1rem;
+                  width: 1rem;
+                  border-radius: 50%;
+                }
+
+                &.success {
+                  &::after {
+                    background-color: #8CB369;
+                  }
+                }
+
+                &.danger {
+                  &::after {
+                    background-color: #FF6F61;
+                  }
+                }
               }
             }
 
-            &.danger {
-              &::after {
-                background-color: #FF6F61;
-              }
+            p {
+              font-size: 1.3rem;
+              color: var(--theme_darkgrey);
             }
           }
         }
 
-        p {
-          font-size: 1.3rem;
-          color: var(--theme_darkgrey);
+        @media screen and (max-width:991px) {
+          max-width: 100%;
+          width: 100%;
         }
       }
 
-      @media screen and (max-width:575px) {
+      @media screen and (max-width:991px) {
         display: block;
       }
     }
 
     .order_tracking {
-      margin-top: 2rem;
+      max-width: 60%;
+      width: 100%;
 
       .MuiStepper-root {
+        overflow-x: auto;
+        white-space: noWrap;
+        padding-top: 6rem;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
         .MuiStep-root {
+          position: relative;
+
           .MuiStepLabel-root {
             .MuiStepLabel-iconContainer {
               position: relative;
@@ -266,25 +285,32 @@
               }
             }
 
-
             .MuiStepLabel-label {
               font-size: 1.4rem;
               color: var(--theme_darkgrey);
               font-weight: 500;
+              opacity: 0.6;
 
               &.Mui-active {
                 color: var(--theme_primary);
+                opacity: 1;
+              }
+
+              @media screen and (max-width:991px) {
+                font-size: 1.2rem;
               }
             }
           }
 
           .MuiStepConnector-root {
             top: 6px;
-            left: calc(-50% - -14px);
-            right: calc(50% - -14px);
+            left: -50%;
+            right: 50%;
+            z-index: 1;
 
             .MuiStepConnector-line {
               border-top-width: 2px;
+              border-color: rgba(44, 73, 77, 0.2);
 
             }
 
@@ -295,7 +321,39 @@
               }
             }
           }
+
+          .tracking_details {
+            padding-top: 1rem;
+            position: relative;
+            // display: none;
+            position: absolute;
+            top: -100%;
+            left: 50%;
+            transform: translateX(-50%);
+
+            p {
+              font-size: 1.3rem;
+              color: var(--theme_darkgrey);
+              font-weight: 500;
+              text-align: center;
+            }
+          }
+
+          &.Mui-completed {
+            .tracking_details {
+              display: block;
+            }
+          }
+
+          @media screen and (max-width:767px) {
+            margin-top: 1rem;
+          }
         }
+      }
+
+      @media screen and (max-width:991px) {
+        max-width: 100%;
+        width: 100%;
       }
     }
 
@@ -305,6 +363,7 @@
       margin-right: 0;
       margin-left: 0;
       padding-top: 6rem;
+      padding: 1rem;
     }
   }
 }

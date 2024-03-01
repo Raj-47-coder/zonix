@@ -203,7 +203,7 @@
       .status_bar {
         display: flex;
         align-items: center;
-        margin-left: 2.5rem;
+        margin-left: 2rem;
 
         &:last-child {
           display: none;
@@ -283,7 +283,7 @@
         }
 
         @media screen and (max-width:991px) {
-          margin-left: 1.4rem;
+          margin-left: 1rem;
         }
       }
 

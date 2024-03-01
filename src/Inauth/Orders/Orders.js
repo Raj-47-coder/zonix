@@ -12,15 +12,21 @@ const orderList = [
     orderPrice: '1099',
     orderStatus: 'success',
   },
-  // {
-  //   orderimg: OrderImg,
-  //   orderName: 'Indian standard Quality Chips Building Material, Grade Standard:',
-  //   orderPrice: '599',
-  //   orderStatus: 'danger',
-  // },
+  {
+    orderimg: OrderImg,
+    orderName: 'Indian standard Quality Chips Building Material, Grade Standard:',
+    orderPrice: '599',
+    orderStatus: 'danger',
+  },
 ]
 
-const steps = ['Order Comfirmed', 'Shipped', 'Out of Delivery', 'Step 4'];
+const steps2 = [
+  { orderDetails: 'Order Comfirmed', orderDate: 'Fri, 1st Mar' },
+  { orderDetails: 'Shipped', orderDate: 'Sat, 2nd Mar' },
+  { orderDetails: 'Out of Delivery', orderDate: '' },
+  { orderDetails: 'Delivery', orderDate: 'Expected byTue, 5th' }
+];
+
 
 export default function Orders() {
   const [profile, setProfile] = React.useState('');
@@ -107,35 +113,38 @@ export default function Orders() {
                 <Box component={'div'} className='order_card'>
                   <Box component={'div'} className='orders_item'>
                     <img src={items.orderimg} alt='Brick' />
-                    <Typography component={'p'}>{items.orderName}</Typography>
+                    <Box component={'div'} className='orders_details'>
+                      <Typography component={'p'}>{items.orderName}</Typography>
+                      <Typography component={'p'} className='orders_price'>₹{items.orderPrice}</Typography>
+
+                      <Box component={'div'} className='orders_status'>
+                        <Typography component={'h6'} className={`status ${items.orderStatus}`}>Deliver on Tue 5th, 2024</Typography>
+                        {/* {items.orderStatus === 'success' ? <Typography component={'p'}>Your item has been delivered</Typography> : ''} */}
+                      </Box>
+                    </Box>
                   </Box>
 
-                  <Box component={'div'} className='orders_price'>
-                    <Typography component={'p'}>₹{items.orderPrice}</Typography>
-                  </Box>
+                  <Box component={'div'} className='order_tracking'>
+                    <Stepper activeStep={activeStep} alternativeLabel >
+                      {steps2.map((label, index) => (
+                        <Step key={index}>
+                          <StepLabel>{label.orderDetails}</StepLabel>
+                          <Box component={'div'} className='tracking_details'>
+                            <Typography component={'p'}>{label.orderDate}</Typography>
+                          </Box>
+                        </Step>
+                      ))}
+                    </Stepper>
 
-                  <Box component={'div'} className='orders_status'>
-                    <Typography component={'h6'} className={`status ${items.orderStatus}`}>Delivered on Dec 14, 2023</Typography>
-                    {items.orderStatus === 'success' ? <Typography component={'p'}>Your item has been delivered</Typography> : ''}
+                    {/* <div style={{ marginTop: 20 }}>
+                      <Button disabled={activeStep === 0} onClick={handleBack}>
+                        Back
+                      </Button>
+                      <Button variant="contained" color="primary" onClick={handleNext}>
+                        {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
+                      </Button>
+                    </div> */}
                   </Box>
-                </Box>
-                <Box component={'div'} className='order_tracking'>
-                  <Stepper activeStep={activeStep} alternativeLabel>
-                    {steps.map((label, index) => (
-                      <Step key={index}>
-                        <StepLabel>{label}</StepLabel>
-                      </Step>
-                    ))}
-                  </Stepper>
-
-                  {/* <div style={{ marginTop: 20 }}>
-                    <Button disabled={activeStep === 0} onClick={handleBack}>
-                      Back
-                    </Button>
-                    <Button variant="contained" color="primary" onClick={handleNext}>
-                      {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
-                    </Button>
-                  </div> */}
                 </Box>
               </>
             ))}

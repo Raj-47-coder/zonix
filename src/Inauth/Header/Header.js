@@ -136,7 +136,7 @@ export default function Header() {
               </ListItem>
             </Menu>
 
-            <Link component={"a"} to={'/whishlist'} className="status_bar">
+            <Link component={"a"} to={'/orders'} className="status_bar">
               <Order />
               <Box component={"div"} className="status_bar_name">
                 <Typography component={"p"} className="title">Order</Typography>
