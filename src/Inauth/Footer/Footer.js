@@ -25,7 +25,7 @@ function Footer() {
 
               <Typography component={'p'}>Customer Supports :</Typography>
               <Typography component={'h5'}>(629) 555-0129</Typography>
-              <Typography component={'p'}>4517 Washington Ave. Manchester, Kentucky 39495</Typography>
+              <Typography component={'p'}>410206 Navi Mumbai, <br /> Maharashtra India</Typography>
               <Typography component={'h5'}>info@zonixz.com</Typography>
 
               <Box component={'div'} className='social_media'>
@@ -47,10 +47,11 @@ function Footer() {
               <Typography component={'h4'} className='title'>Top Category</Typography>
 
               <Link component={'a'} to={'/store'} className='footer_navLink'>Foundation</Link>
-              <Link component={'a'} to={'/store'} className='footer_navLink'>Brick</Link>
-              <Link component={'a'} to={'/store'} className='footer_navLink'>Cement</Link>
-              <Link component={'a'} to={'/store'} className='footer_navLink'>Metal</Link>
-              <Link component={'a'} to={'/store'} className='footer_navLink'>Concret</Link>
+              <Link component={'a'} to={'/store'} className='footer_navLink'>Conventional Shuttering</Link>
+              <Link component={'a'} to={'/store'} className='footer_navLink'>AAC</Link>
+              <Link component={'a'} to={'/store'} className='footer_navLink'>Civil SUb/Super-Structure</Link>
+              <Link component={'a'} to={'/store'} className='footer_navLink'>Finishing</Link>
+              <Link component={'a'} to={'/store'} className='footer_navLink'>Dry Cladding</Link>
               <Link component={'a'} to={'/store'} className='footer_navLink all'>Browse All Products <ArrowRightYellow /></Link>
             </Box>
             <Box component={'div'} className='footer_cols third'>
@@ -68,15 +69,15 @@ function Footer() {
 
               <Typography component={'p'} className='footer_navLink'>Lorem Ipsum is simply dummy text of the printing and.</Typography>
               <Box component={'div'} className='newsletter_box'>
-                <TextField fullWidth type='text' />
+                <TextField fullWidth type='email' placeholder="Your E-Mail here"/>
                 <Button className='newsletter'>Subscribe</Button>
               </Box>
 
               <Box component={'div'} className='app_box'>
-                <Typography component={'a'} href=''>
+                <Typography component={'a'} href='https://play.google.com/store/games?hl=en_IN&gl=US&pli=1'>
                   <img src={Googleplay} alt={Googleplay} />
                 </Typography>
-                <Typography component={'a'} href=''>
+                <Typography component={'a'} href='https://www.apple.com/in/app-store/'>
                   <img src={Appstore} alt={Appstore} />
                 </Typography>
               </Box>
@@ -84,7 +85,7 @@ function Footer() {
           </Box>
         </Box>
         <Box component={'div'} className='footer_bottom'>
-          <Typography component={'p'}>Zonixz - E-Commerce online store © 2024. Design by Brainfleck Graphics</Typography>
+          <Typography component={'p'}>Copyright ©2024 All rights reserved by @ Zonixz Pvt Ltd</Typography>
         </Box>
       </Box>
     </>

@@ -68,9 +68,9 @@ export default function Header() {
 
             <Box component={"div"} className="user_location">
               <Pin />
-              <Box component={"div"} className="location">
-                <Typography component={"p"} className="title">Ahmedabad</Typography>
-                <Typography component={"p"} className="locate">Delivering to Bapunagar 380001</Typography>
+              <Box component={"a"} href="https://maps.app.goo.gl/fN5wREpYeCc5qVtn9" className="location">
+                <Typography component={"p"} className="title">Ulwe </Typography>
+                <Typography component={"p"} className="locate">Delivering Navi Mumbai, 410206</Typography>
               </Box>
             </Box>
           </Box>
@@ -80,7 +80,7 @@ export default function Header() {
               <TextField type='text'
                 onFocus={handleFocus}
                 onBlur={handleBlur}
-                autoComplete='off' fullWidth placeholder={'Search for Products, Brands and More'} />
+                autoComplete='off' fullWidth placeholder={'Search for More'} />
               {showDiv &&
                 <Box component={'div'} className='searchProduct_suggest'>
                   <Box component={'div'} className='suggested_product'>
@@ -180,6 +180,7 @@ export default function Header() {
             </svg>
           </Button>
         </Box>
+         {/* ----------------{ Humburgar---------------- } */}
         <Box component={"div"} className="">
           <Box component={'div'} className='menu_items'>
             <Typography component={'a'} href='javascript:void(0)' onClick={toggleDrawer} className='active'><Humburgar />Shop By Category</Typography>
