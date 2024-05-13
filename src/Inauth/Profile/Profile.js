@@ -64,7 +64,7 @@ export default function Profile() {
               </Box>
               <Box component={'div'} className='profie_details'>
                 <Typography component={'p'}>Hello,</Typography>
-                <Typography component={'h4'}>Jenish Patel</Typography>
+                <Typography component={'h4'}>Zonix User</Typography>
               </Box>
             </Box>
 
@@ -99,16 +99,16 @@ export default function Profile() {
             </Box>
             {/* Left Profil box Actions */}
             <Box component="div" hidden={value !== 0} className='tab_box'>
-              <Typography component={'h4'}>Personal Information <Button className='edit_info'>Edit</Button></Typography>
+              <Typography component={'h4'}>Profile Information <Button className='edit_info'>Edit</Button></Typography>
               <Box component={'div'} className='form_box'>
                 <Box component={'div'} className='form_box_item'>
-                  <TextField placeholder='First name' fullWidth disabled value='jenish' />
+                  <TextField placeholder='First name' fullWidth enable value='' />
                 </Box>
                 <Box component={'div'} className='form_box_item'>
-                  <TextField placeholder='Last name' fullWidth disabled value='Mangukiya' />
+                  <TextField placeholder='Last name' fullWidth enable value='' />
                 </Box>
                 <Box component={'div'} className='form_box_item small mobile'>
-                  <Button className='save_info' disabled>Save</Button>
+                  <Button className='save_info' enable>Save</Button>
                 </Box>
               </Box>
 
@@ -116,8 +116,8 @@ export default function Profile() {
               <Box component={'div'} className='form_box'>
                 <Box component={'div'} className='form_box_item'>
                   <RadioGroup row >
-                    <FormControlLabel value="male" control={<Radio disabled />} label="Male" />
-                    <FormControlLabel value="female" control={<Radio disabled />} label="Female" />
+                    <FormControlLabel value="male" control={<Radio enable />} label="Male" />
+                    <FormControlLabel value="female" control={<Radio enable />} label="Female" />
                   </RadioGroup>
                 </Box>
               </Box>
@@ -125,20 +125,20 @@ export default function Profile() {
               <Typography component={'h4'}>Email Address <Button className='edit_info'>Edit</Button></Typography>
               <Box component={'div'} className='form_box'>
                 <Box component={'div'} className='form_box_item'>
-                  <TextField placeholder='E mail' fullWidth disabled value='jenishpatel05@gmail.com' />
+                  <TextField placeholder='Type your e-mail' fullWidth enable value='' />
                 </Box>
                 <Box component={'div'} className='form_box_item small'>
-                  <Button className='save_info' disabled>Save</Button>
+                  <Button className='save_info' enable>Save</Button>
                 </Box>
               </Box>
 
               <Typography component={'h4'}>Mobile Number <Button className='edit_info'>Edit</Button></Typography>
               <Box component={'div'} className='form_box'>
                 <Box component={'div'} className='form_box_item'>
-                  <TextField placeholder='phone' fullWidth disabled value='+91 9016922632' />
+                  <TextField placeholder='Phone number' fullWidth disabled value='' />
                 </Box>
                 <Box component={'div'} className='form_box_item small'>
-                  <Button className='save_info' disabled>Save</Button>
+                  <Button className='save_info' enable>Save</Button>
                 </Box>
               </Box>
             </Box>
@@ -153,19 +153,19 @@ export default function Profile() {
               <Box component={'div'} className='addressForm_box' sx={{ display: addAddress }}>
                 <Box component={'div'} className='form_box form_simple'>
                   <Box component={'div'} className='form_box_item'>
-                    <TextField type='text' placeholder='name' fullWidth />
+                    <TextField type='text' placeholder='Full Name' fullWidth />
                   </Box>
                   <Box component={'div'} className='form_box_item'>
-                    <TextField type='number' placeholder='10-digit mobile number' fullWidth />
+                    <TextField type='number' placeholder='Phone Number' fullWidth />
                   </Box>
                   <Box component={'div'} className='form_box_item'>
                     <TextField type='number' placeholder='Pincode' fullWidth />
                   </Box>
                   <Box component={'div'} className='form_box_item'>
-                    <TextField type='number' placeholder='Locality' fullWidth />
+                    <TextField type='text' placeholder='Locality' fullWidth />
                   </Box>
                   <Box component={'div'} className='form_box_item'>
-                    <TextField type='number' placeholder='City/District/Town' fullWidth />
+                    <TextField type='text' placeholder='City/District/Town' fullWidth />
                   </Box>
                   <Box component={'div'} className='form_box_item'>
                     <Select
@@ -178,13 +178,13 @@ export default function Profile() {
                     </Select>
                   </Box>
                   <Box component={'div'} className='form_box_item'>
-                    <TextField type='number' placeholder='Landmark(Optional)' fullWidth />
+                    <TextField type='text' placeholder='Landmark(Optional)' fullWidth />
                   </Box>
                   <Box component={'div'} className='form_box_item'>
                     <TextField type='number' placeholder='Alternate Phone (Optional)' fullWidth />
                   </Box>
                   <Box component={'div'} className='form_box_item fullWidth'>
-                    <TextField multiline rows={5} type='number' placeholder='Address (Area and Street)' fullWidth />
+                    <TextField multiline rows={5} type='text' placeholder='Address (Area and Street)' fullWidth />
                   </Box>
                   <Box component={'div'} className='form_box_item'>
                     <Button className='address_btn fill'>Save</Button>
@@ -195,9 +195,9 @@ export default function Profile() {
 
               <Box component={'div'} className='address_preview'>
                 <Box component={'div'} className='user_name'>
-                  <Typography component={'h4'}>John Cina</Typography>
-                  <Typography component={'span'}>+91 9016922632</Typography>
-                  <Typography component={'p'}>4517 Washington Ave. Manchester, Kentucky 39495</Typography>
+                  <Typography component={'h4'}>Randy Orton</Typography>
+                  <Typography component={'span'}>+1 2243776655</Typography>
+                  <Typography component={'p'}>5055 Forsyth Commerce Road Suite 100. Orlando, FL 32807. USA </Typography>
                 </Box>
                 <IconButton onClick={handleClick}>
                   <MoreVertIcon sx={{ fontSize: '2.2rem' }} />
@@ -217,10 +217,10 @@ export default function Profile() {
 
               <Box component={'div'} className='form_box form_simple'>
                 <Box component={'div'} className='form_box_item'>
-                  <TextField type='text' placeholder='PAn card number' fullWidth />
+                  <TextField type='text' placeholder='PAN Card Number' fullWidth />
                 </Box>
                 <Box component={'div'} className='form_box_item'>
-                  <TextField type='number' placeholder='Full name' fullWidth />
+                  <TextField type='number' placeholder='Name as on PAN Card' fullWidth />
                 </Box>
                 <Box component={'div'} className='form_box_item fullWidth'>
                   <TextField type='file' placeholder='Pincode' fullWidth />

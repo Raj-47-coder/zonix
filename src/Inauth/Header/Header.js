@@ -69,7 +69,7 @@ export default function Header() {
             <Box component={"div"} className="user_location">
               <Pin />
               <Box component={"a"} href="https://maps.app.goo.gl/fN5wREpYeCc5qVtn9" className="location">
-                <Typography component={"p"} className="title">Ulwe </Typography>
+                <Typography component={"p"} className="title">Sector 19,</Typography>
                 <Typography component={"p"} className="locate">Delivering Navi Mumbai, 410206</Typography>
               </Box>
             </Box>
