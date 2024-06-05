@@ -16,6 +16,7 @@ function Bestdeals() {
     { img: product1, title: 'Wood' },
     { img: product1, title: 'Brick' },
     { img: product1, title: 'Cement' },
+    { img: product1, title: 'Cement' },
   ]
   return (
     <>

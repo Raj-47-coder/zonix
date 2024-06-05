@@ -10,6 +10,7 @@ import telegram from '../../images/telegram.png';
 import 'swiper/css';
 import './Footer.scss';
 import { Link } from "react-router-dom";
+import Benifits from "../Benifits/Benifits";
 
 function Footer() {
 
@@ -17,6 +18,7 @@ function Footer() {
     <>
       <Box component={'div'} className='footer'>
         <Box component={'div'} className='footer_container'>
+        <Benifits />
           <Box component={'div'} className='footer_rows'>
             <Box component={'div'} className='footer_cols first'>
               <Typography component={'a'} href='#' className='logo'>

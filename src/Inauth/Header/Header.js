@@ -60,17 +60,22 @@ export default function Header() {
   return (
     <>
       <Box component={"div"} className="header">
+        <Box component={"div"} className="top_logo">
+          <Link component={"a"} to="/" className='logo'>
+            <Logo />
+          </Link>
+        </Box>
         <Box component={"div"} className="header_top">
           <Box component={"div"} className="header_left">
-            <Link component={"a"} to="/" className='logo'>
+            {/* <Link component={"a"} to="/" className='logo'>
               <Logo />
-            </Link>
+            </Link> */}
 
             <Box component={"div"} className="user_location">
               <Pin />
               <Box component={"a"} href="https://maps.app.goo.gl/fN5wREpYeCc5qVtn9" className="location">
-                <Typography component={"p"} className="title">Sector 19,</Typography>
-                <Typography component={"p"} className="locate">Delivering Navi Mumbai, 410206</Typography>
+                <Typography component={"p"} className="locate">Delivering in Mumbai, 410206</Typography>
+                <Typography component={"p"} className="title">Update location</Typography>
               </Box>
             </Box>
           </Box>
@@ -127,11 +132,11 @@ export default function Header() {
               <ListItem onClick={handleClose}>
                 <NavLink fullWidth component={'a'} to={'/profile'}>Profile</NavLink>
               </ListItem>
-              <ListItem onClick={handleClose}>
+              {/* <ListItem onClick={handleClose}>
                 <NavLink fullWidth component={'a'} to={'/orders'}>Orders</NavLink>
-              </ListItem>
+              </ListItem> */}
               <ListItem onClick={handleClose}>
-                <NavLink fullWidth component={'a'} to={'/'}>Log out</NavLink>
+                <NavLink fullWidth component={'a'} to={'/signform'}>Sign In</NavLink>
               </ListItem>
             </Menu>
 
@@ -180,7 +185,7 @@ export default function Header() {
             </svg>
           </Button>
         </Box>
-         {/* ----------------{ Humburgar---------------- } */}
+        {/* ----------------{ Humburgar---------------- } */}
         <Box component={"div"} className="">
           <Box component={'div'} className='menu_items'>
             <Typography component={'a'} href='javascript:void(0)' onClick={toggleDrawer} className='active'><Humburgar />Shop By Category</Typography>
