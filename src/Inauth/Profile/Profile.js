@@ -222,7 +222,7 @@ export default function Profile() {
                 <Box component={'div'} className='form_box_item'>
                   <TextField type='number' placeholder='Name as on PAN Card' fullWidth />
                 </Box>
-                <Box component={'div'} className='form_box_item fullWidth'>
+                <Box component={'div'} className='form_box_item fullWidth'> 
                   <TextField type='file' placeholder='Pincode' fullWidth />
                 </Box>
                 <Box component={'div'} className='form_box_item fullWidth'>
