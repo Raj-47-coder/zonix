@@ -25,7 +25,7 @@
       align-items: center;
 
       .logo {
-        height: 3.2rem;
+        height: 3rem;
         width: auto;
         max-width: 100%;
 
@@ -46,9 +46,8 @@
       .user_location {
         display: flex;
         align-items: center;
-        margin-left: 2rem;
+        margin-left: 1rem;
         cursor: pointer;
-        // padding: 0.6rem 1rem;
         border-radius: 0.3rem;
        
 
@@ -90,8 +89,8 @@
 
     .header_center {
       max-width: calc(48% - 4rem);
-      width: 40%;
-      margin: 0 2rem;
+      width: 35%;
+      margin: 0 1.5rem;
       display: flex;
       align-items: center;
 
@@ -190,13 +189,13 @@
       align-items: center;
 
       .language_select {
-        max-width: 8rem;
+        max-width: 5rem;
         background-color: rgba(255, 255, 255, 0.1);
         color: var(--theme_white);
 
         .MuiSelect-select {
           padding: 1rem;
-          padding-right: 2.5rem;
+          padding-right: 1rem;
           font-size: 1.2rem;
           display: flex;
           align-items: center;
