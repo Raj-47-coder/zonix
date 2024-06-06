@@ -25,7 +25,7 @@
       align-items: center;
 
       .logo {
-        height: 3.2rem;
+        height: 3rem;
         width: auto;
         max-width: 100%;
 
@@ -189,13 +189,13 @@
       align-items: center;
 
       .language_select {
-        max-width: 8rem;
+        max-width: 5rem;
         background-color: rgba(255, 255, 255, 0.1);
         color: var(--theme_white);
 
         .MuiSelect-select {
           padding: 1rem;
-          padding-right: 2.5rem;
+          padding-right: 1rem;
           font-size: 1.2rem;
           display: flex;
           align-items: center;
