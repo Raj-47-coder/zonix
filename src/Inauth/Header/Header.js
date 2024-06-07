@@ -60,16 +60,11 @@ export default function Header() {
   return (
     <>
       <Box component={"div"} className="header">
-        <Box component={"div"} className="top_logo">
-          <Link component={"a"} to="/" className='logo'>
-            <Logo />
-          </Link>
-        </Box>
         <Box component={"div"} className="header_top">
           <Box component={"div"} className="header_left">
-            {/* <Link component={"a"} to="/" className='logo'>
+            <Link component={"a"} to="/" className='logo'>
               <Logo />
-            </Link> */}
+            </Link>
 
             <Box component={"div"} className="user_location">
               <Pin />

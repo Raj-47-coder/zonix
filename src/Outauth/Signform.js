@@ -12,6 +12,7 @@ import Apple from '../images/Apple.png';
 import './Signform.scss'
 import { Link } from "react-router-dom";
 
+
 function Home() {
   const [value, setValue] = React.useState('1');
   const [otpRequest, setOtpRequest] = React.useState('none !important');

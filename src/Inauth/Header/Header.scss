@@ -6,19 +6,11 @@
   z-index: 996;
   box-shadow: 0px 0px 30px 0px rgba(82, 63, 105, 0.08);
 
-  .top_logo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 0.7rem;
-    
-  }
-
   .header_top {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem 2rem;
+    padding: 1rem 1rem;
 
     .header_left {
       display: flex;
@@ -46,14 +38,14 @@
       .user_location {
         display: flex;
         align-items: center;
-        margin-left: 1rem;
+        // margin-left: 0.5rem;
         cursor: pointer;
         border-radius: 0.3rem;
        
 
         svg {
-          height: 4.8rem;
-          width: 3rem;
+          height: 3.8rem;
+          width: 2rem;
         }
 
         .location {
@@ -88,9 +80,9 @@
     }
 
     .header_center {
-      max-width: calc(48% - 4rem);
-      width: 35%;
-      margin: 0 1.5rem;
+      max-width: calc(48% - 2rem);
+      width: 30%;
+      margin: 0rem 2rem;
       display: flex;
       align-items: center;
 
@@ -112,12 +104,12 @@
 
         input.MuiInputBase-input {
           background-color: var(--theme_white);
-          border-radius: 0.5rem;
+          // border-radius: 0.5rem;
           border: none;
           outline: none;
           box-shadow: none;
           font-size: 1.6rem;
-          padding: 1.2rem;
+          padding: 1rem;
           padding-left: 5.5rem;
           height: auto;
 
@@ -222,8 +214,8 @@
         }
 
         svg {
-          height: 2.8rem;
-          width: 2.8rem;
+          height: 2rem;
+          width: 2rem;
           color: var(--theme_white);
 
           @media screen and (max-width:991px) {
@@ -358,7 +350,7 @@
         &::after {
           content: '';
           position: absolute;
-          top: 50%;
+          top: 45%;
           right: 0rem;
           transform: translateY(-50%) rotate(45deg);
           height: 0.5rem;
