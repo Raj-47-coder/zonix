@@ -79,7 +79,7 @@ function Brands() {
             </Box>
           </SwiperSlide>
         ))}
-      </Swiper >
+      </Swiper>
     </>
   );
 }

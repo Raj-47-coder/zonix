@@ -7,7 +7,7 @@ import './Favourite.scss';
 
 function Whishlist() {
   const whishlist = [];
-  for (let i = 0; i < 15; i++) {
+  for (let i = 0; i < 4; i++) {
     whishlist.push(
       <TableRow>
         <TableCell>

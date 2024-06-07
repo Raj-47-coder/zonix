@@ -444,15 +444,15 @@ input::-webkit-inner-spin-button {
   flex-wrap: wrap;
 
   .product_images {
-    max-width: 35%;
-    width: 35%;
-    padding-right: 2rem;
+    max-width: 25%;
+    width: 25%;
+    padding-right: 1.5rem;
 
     .thumb_preview {
       border-radius: 1rem;
-      max-height: 50rem;
+      max-height: 40rem;
       max-width: 100%;
-      min-height: 50rem;
+      min-height: 40rem;
       width: 100%;
       display: flex;
       align-items: center;
@@ -1988,8 +1988,8 @@ input::-webkit-inner-spin-button {
   }
 
   .icon_language {
-    height: 2.6rem;
-    width: 2.6rem;
+    height: 2.2rem;
+    width: 2.2rem;
     color: var(--theme_white);
 
     svg {

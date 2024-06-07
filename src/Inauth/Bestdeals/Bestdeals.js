@@ -24,10 +24,10 @@ function Bestdeals() {
 
         <Box component={'div'} className='container'>
           <Box component={'div'} className='section_title'>
-            <Typography component={'h2'}>{t("titleDeal")}
+            {/* <Typography component={'h2'}>{t("titleDeal")}
               <Typography component={'span'}>Deals ends in</Typography>
               <Typography component={'span'} className='badges_timer'>16d : 21h : 57m :23s</Typography>
-            </Typography>
+            </Typography> */}
             <Link component={'a'} to='/store'>
               <Typography component={'span'}>Browse All Product </Typography>
               <ArrowRight />

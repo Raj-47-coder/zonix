@@ -212,12 +212,12 @@ function Productview() {
           </Box>
           <Box component={'div'} className='order_manage'>
             <Box component={'div'} className='set_order'>
-              <Box component={'div'} className='offerBox'>
+              {/* <Box component={'div'} className='offerBox'>
                 <Typography component={'h6'}>25% offer
                   <Typography component={'span'}>If order over ₹120</Typography>
                 </Typography>
                 <Box component={'div'} className='closeOffer'>Until Jan 30, 2024</Box>
-              </Box>
+              </Box> */}
             </Box>
 
             <Box component={'div'} className='product_stock'>
