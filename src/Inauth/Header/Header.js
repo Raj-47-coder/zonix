@@ -69,8 +69,8 @@ export default function Header() {
             <Box component={"div"} className="user_location">
               <Pin />
               <Box component={"a"} href="https://maps.app.goo.gl/fN5wREpYeCc5qVtn9" className="location">
-                <Typography component={"p"} className="locate">Delivering in Mumbai, 410206</Typography>
-                <Typography component={"p"} className="title">Update location</Typography>
+                <Typography component={"p"} className="locate">Delivering to</Typography>
+                <Typography component={"p"} className="title">Navi mumbai, 410206</Typography>
               </Box>
             </Box>
           </Box>
@@ -108,8 +108,11 @@ export default function Header() {
               }
             </Box>
           </Box>
-          <Box component={"div"} className="header_right">
+          <Box component={"div"} className="langu">
             <div id="google_translate_element"></div>
+          </Box>
+          <Box component={"div"} className="header_right">
+            {/* <div id="google_translate_element"></div> */}
 
             <Typography component={'a'} href='javascrpt:void(0);' onMouseEnter={handleClick} className="status_bar">
               <User />

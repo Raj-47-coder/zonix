@@ -38,10 +38,8 @@
       .user_location {
         display: flex;
         align-items: center;
-        // margin-left: 0.5rem;
+        padding: 0.2rem;
         cursor: pointer;
-        border-radius: 0.3rem;
-       
 
         svg {
           height: 3.8rem;
@@ -49,7 +47,7 @@
         }
 
         .location {
-          margin-left: 0.8rem;
+          margin-left: 0.1rem;
 
           .title {
             font-size: 1.4rem;
@@ -80,11 +78,10 @@
     }
 
     .header_center {
-      max-width: calc(48% - 2rem);
+      max-width: calc(40% - 2rem);
       width: 30%;
-      margin: 0rem 2rem;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
 
       .search_product {
         position: relative;

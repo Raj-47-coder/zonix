@@ -88,7 +88,6 @@ const accordionData = [
     id: 8, heading: 'Help & Settings', menulist: [
       'Your Account',
       'Customer Service',
-      'Sign In',
     ]
   },
 ];
@@ -119,7 +118,7 @@ const LeftOpenDrawer = (props) => {
   return (
     <Drawer open={props.open} onClose={props.toggleDrawer}>
       <Box component={'div'} className='drawer_menu'>
-        <Typography component={"h4"}>Hi, Jenish Mangukiya</Typography>
+        <Typography component={"h4"}>Hi, Zonixz User</Typography>
         <Button className='handle_drawer' onClick={props.toggleDrawer}><Plus /></Button>
       </Box>
 
