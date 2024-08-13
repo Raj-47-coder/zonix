@@ -21,10 +21,10 @@ function Bannerslider() {
           spaceBetween={10}
           slidesPerView={1}
           modules={[Autoplay, Pagination, Navigation]}
-          // autoplay={{
-          //   delay: 2500,
-          //   disableOnInteraction: false,
-          // }}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
           loop={true}
           pagination={false}
           className='banner_slider'

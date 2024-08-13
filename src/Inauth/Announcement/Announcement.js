@@ -20,8 +20,8 @@ function Announcement() {
           <Box component={'div'} className='announcement_right'>
             <img src={announesment} alt={announesment} />
 
+            <Typography component={'p'}>$1999</Typography>
             <Box component={'div'} className='price'>
-              <Typography component={'p'}>$1999</Typography>
             </Box>
           </Box>
         </Box>

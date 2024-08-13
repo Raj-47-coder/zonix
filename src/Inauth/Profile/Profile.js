@@ -97,6 +97,7 @@ export default function Profile() {
               <Typography component={'p'}>Order Filter</Typography>
               <Button className='profile_leftBtn' onClick={handleprofile}>{profile === '' ? <KeyboardArrowRightIcon /> : <KeyboardArrowLeftIcon />}</Button>
             </Box>
+            
             {/* Left Profil box Actions */}
             <Box component="div" hidden={value !== 0} className='tab_box'>
               <Typography component={'h4'}>Profile Information <Button className='edit_info'>Edit</Button></Typography>
